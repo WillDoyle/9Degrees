@@ -623,9 +623,10 @@ button:hover {
   padding: 0 10%;
 }
 
-/* PRICING / MEMBERSHIP SECTION */
 #pricing {
+  padding: 0;
 }
+
 .pricing__wrapper {
   display: flex;
   flex-direction: column;
@@ -633,7 +634,7 @@ button:hover {
 
 .membership__options {
   display: flex;
-  flex: 1;
+  justify-content: center;
   flex-direction: row;
   transform: scale(0.9);
 }
@@ -643,13 +644,12 @@ button:hover {
   justify-content: start;
   align-items: center;
   flex-direction: column;
-
-  margin: 32px;
-  border-radius: 25px 25px 25px 25px;
   max-width: 400px;
+  width: 100%;
 
+  border-radius: 25px;
   background-color: #dbdbdb;
-  margin: 128px 48px;
+  margin: 56px 48px;
   transition: all 200ms ease-in-out;
 }
 
@@ -660,12 +660,35 @@ button:hover {
 .membership__option:hover .membership__img {
   filter: brightness(50%);
 }
+
 .membership__img {
   border-radius: 25px 25px 0 0;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 400px;
   object-fit: cover;
   transition: all 200ms ease-in-out;
+}
+
+.membership__background {
+  background-color: #f8fff4;
+  border-radius: 0 0 25px 25px;
+  width: 100%;
+  padding: 24px;
+}
+
+.membership__text {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  color: #242424;
+}
+
+.membership__h1 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #242424;
+  margin-bottom: 12px;
 }
 
 .membership__price {
@@ -673,50 +696,25 @@ button:hover {
   color: #242424;
   background-color: #fff;
   border-radius: 10px;
-  padding: 12px;
+  margin-bottom: 6px;
+  padding: 6px;
   border: 4px solid #73f07d;
-}
-
-.membership__text {
-  display: flex;
-  justify-content: flex-start;
-  align-items: start;
-  flex-direction: column;
-  padding: 24px;
-  color: #242424;
-}
-
-.membership__background {
-  background-color: #f8fff4;
-  border-radius: 0;
-  height: 10.5%;
-}
-
-.membership__h1 {
-  font-size: 26px;
-  font-weight: 900;
-  color: #242424;
-
-  height: 100%;
-  width: 100%;
-  margin-bottom: 12px;
-}
-
-.membership__price {
-  margin-bottom: 24px;
 }
 
 .button__membership {
   color: #242424;
   background-color: #73f07d;
   border: 1px solid #242424;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .button__membership:hover {
   color: #73f088;
   background-color: #242424;
-  border: 1px solid #242424;
 }
+
 /* BANNER */
 
 #banner {
@@ -969,6 +967,14 @@ footer {
   font-size: 12px;
 }
 
+/* Media Query for 1200px */
+@media (max-width: 1200px) {
+  .membership__option {
+    flex-basis: 45%; /* Adjust card width to fit two cards per row */
+    margin: 24px; /* Reduce margin to provide spacing between cards */
+  }
+}
+
 /* Small phones, tablets, large smartphones  */
 @media (max-width: 932px) {
   .nav__links {
@@ -1042,5 +1048,22 @@ footer {
     font-style: normal;
     font-size: 32px;
     margin: 0 16px;
+  }
+
+  /* PRICING SECTION */
+  .membership__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .membership__option {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  .membership__img {
+    max-width: 800px;
   }
 }
