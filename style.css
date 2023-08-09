@@ -967,6 +967,11 @@ footer {
 
 /* Media Query for 1200px */
 @media only screen and (max-width: 1200px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
   .membership__option {
     flex-basis: 45%; /* Adjust card width to fit two cards per row */
     margin: 24px; /* Reduce margin to provide spacing between cards */
@@ -1071,5 +1076,60 @@ footer {
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .reveal {
+      opacity: 1;
+    }
+
+    #primary-action {
+      padding: 0;
+      padding-top: 5rem;
+      height: 80vh;
+    }
+
+    .shapes {
+      height: 200px;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .first__time--wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+    }
+    .primary__paragraph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .text__wrapper {
+      padding: 0;
+      height: 100%;
+    }
+
+    .button__white {
+    }
+
+    .promo__image {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #primary-action:nth-child(2) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }

@@ -1,24 +1,5 @@
 window.onscroll = function() {scrollFunction(), scrollFunction2()};
 
-window.onload = function(){        document.getElementById('landing__button').style.border = "1px solid black";
-document.getElementById('landing__button').style.color ="#000"}
-
-const para = document.querySelector("p");
-const mql = window.matchMedia("(max-width: 600px)");
-
-function screenTest(e) {
-  if (e.matches) {
-    /* the viewport is 600 pixels wide or less */
-    para.textContent = "This is a narrow screen — less than 600px wide.";
-    document.body.style.backgroundColor = "red";
-  } else {
-    /* the viewport is more than 600 pixels wide */
-    para.textContent = "This is a wide screen — more than 600px wide.";
-    document.body.style.backgroundColor = "blue";
-  }
-}
-
-mql.addEventListener("change", screenTest);
 
 
 function scrollFunction() {
@@ -32,10 +13,8 @@ function scrollFunction() {
         document.getElementById("subtitle").style.padding = "0px 0";
         //Button
         document.getElementById("down__arrow").style.color = "#000";
-        document.getElementById("landing__button").style.scale = "1";
+        
         document.getElementById("down__arrow").style.scale = "0.5";
-    document.getElementById('landing__button').style.color ="#000"
-    document.getElementById('landing__button').style.border = "1px solid black"
 
 
   } else {
@@ -48,9 +27,6 @@ function scrollFunction() {
     document.getElementById("down__arrow").style.scale = "1";
     document.getElementById("down__arrow").style.color = "#fff";
     //Button
-    document.getElementById("landing__button").style.scale = "1";
-    document.getElementById('landing__button').style.color ="#fff"
-    document.getElementById('landing__button').style.border = "1px solid white"
     
     
   }
@@ -71,7 +47,7 @@ function scrollFunction2() {
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 0;
+      var elementVisible = 150;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
@@ -80,19 +56,5 @@ function scrollFunction2() {
       }
     }
   }
-  
-  function myFunction(x) {
-    if (x.matches) { // If media query matches
-      document.body.style.backgroundColor = "yellow";
-    } else {
-     document.body.style.backgroundColor = "pink";
-    }
-  }
-  
-  var x = window.matchMedia("(max-width: 700px)")
-  myFunction(x) // Call listener function at run time
-  x.addEventListener('change', myFunction) // Attach listener function on state changes
-
-
   
   window.addEventListener("scroll", reveal);
