@@ -19,11 +19,15 @@
   color: #2b443c;
 }
 
+body,
+html {
+  overflow-x: hidden;
+}
+
 html {
   height: 100%;
   -webkit-text-size-adjust: none; /* for iOS Safari */
   text-size-adjust: none; /* for other mobile browsers */
-  overflow-x: hidden;
 }
 
 .centre-main {
@@ -966,12 +970,7 @@ footer {
 }
 
 /* Media Query for 1200px */
-@media only screen and (max-width: 1200px) {
-  body,
-  html {
-    overflow-x: hidden;
-  }
-
+@media (max-width: 1200px) {
   .membership__option {
     flex-basis: 45%; /* Adjust card width to fit two cards per row */
     margin: 24px; /* Reduce margin to provide spacing between cards */
@@ -983,7 +982,10 @@ footer {
 }
 
 /* Small phones, tablets, large smartphones  */
-@media (max-width: 932px) {
+@media screen and (max-width: 932px) {
+  #down__arrow {
+    display: none;
+  }
   .nav__links {
     display: none;
   }
@@ -1084,7 +1086,7 @@ footer {
   }
 
   /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     * {
       padding: 0;
       margin: 0;
