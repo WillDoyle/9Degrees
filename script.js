@@ -2,9 +2,28 @@ window.onscroll = function() {scrollFunction(), scrollFunction2()};
 
 window.onload = function(){        document.getElementById('landing__button').style.border = "1px solid black";
 document.getElementById('landing__button').style.color ="#000"}
+
+const para = document.querySelector("p");
+const mql = window.matchMedia("(max-width: 600px)");
+
+function screenTest(e) {
+  if (e.matches) {
+    /* the viewport is 600 pixels wide or less */
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
+  } else {
+    /* the viewport is more than 600 pixels wide */
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
+  }
+}
+
+mql.addEventListener("change", screenTest);
+
+
 function scrollFunction() {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
-    document.getElementById("background-video").style.scale = "0.4";
+    document.getElementById("background-video").style.scale = "1";
 
         //Text
         document.getElementById("title").style.scale = "1";
@@ -20,7 +39,7 @@ function scrollFunction() {
 
 
   } else {
-    document.getElementById("background-video").style.scale = "0.7";
+    document.getElementById("background-video").style.scale = "0.5";
 
 
     //Text
@@ -62,6 +81,17 @@ function scrollFunction2() {
     }
   }
   
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      document.body.style.backgroundColor = "yellow";
+    } else {
+     document.body.style.backgroundColor = "pink";
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addEventListener('change', myFunction) // Attach listener function on state changes
 
 
   

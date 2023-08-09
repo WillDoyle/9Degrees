@@ -287,24 +287,22 @@ button:hover {
 #landing {
   display: flex;
   align-items: center;
-  height: calc(120vh - 80px);
+  justify-content: center;
+  height: 100vh;
 }
 
 #background-video {
-  width: 100vw;
-  height: 120vh;
+  width: 90vw;
+  height: 90vh;
   object-fit: cover;
   position: absolute;
   overflow: hidden;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+
   z-index: -1;
   filter: blur(2px);
   filter: brightness(80%);
   transition: all 300ms ease-in-out;
-  scale: 0.2;
+  padding: 35px;
 }
 
 .landing__title {
@@ -321,7 +319,7 @@ button:hover {
 .down__arrow {
   font-size: 56px;
   position: absolute;
-  margin-top: 700px;
+  margin-top: 825px;
   animation: moveArrow 300ms infinite ease-in-out;
   animation-delay: 5s;
 }
@@ -968,15 +966,19 @@ footer {
 }
 
 /* Media Query for 1200px */
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   .membership__option {
     flex-basis: 45%; /* Adjust card width to fit two cards per row */
     margin: 24px; /* Reduce margin to provide spacing between cards */
   }
+
+  .landing__title {
+    font-size: 6rem;
+  }
 }
 
 /* Small phones, tablets, large smartphones  */
-@media (max-width: 932px) {
+@media only screen and (max-width: 932px) {
   .nav__links {
     display: none;
   }
@@ -1065,5 +1067,9 @@ footer {
 
   .membership__img {
     max-width: 800px;
+  }
+
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
   }
 }
