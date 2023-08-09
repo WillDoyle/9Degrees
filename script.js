@@ -3,6 +3,18 @@ window.onscroll = function() {scrollFunction(), scrollFunction2()};
 
 
 function scrollFunction() {
+
+  // Create a media condition that targets viewports at least 768px wide
+const mediaQuery = window.matchMedia('(min-width: 768px)')
+// Check if the media query is true
+if (mediaQuery.matches) {
+  // Then trigger an alert
+}
+
+else{
+  console.log('hi');
+
+
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
     document.getElementById("background-video").style.scale = "1";
 
@@ -30,6 +42,7 @@ function scrollFunction() {
     
     
   }
+}
 }
 
 function scrollFunction2() {
