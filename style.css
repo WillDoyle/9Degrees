@@ -442,7 +442,7 @@ button:hover {
   height: 100%;
   top: 0;
   left: 0;
-  transform: translate(50vw, 1700px) scale(0.8);
+  transform: translate(50vw, 100px) scale(0.8);
   opacity: 0.4;
 }
 
@@ -633,9 +633,11 @@ button:hover {
 
 .membership__options {
   display: flex;
+  width: 100%;
   justify-content: center;
   flex-direction: row;
-  transform: scale(0.9);
+  transform: scale(1);
+  padding: 0 5%;
 }
 
 .membership__option {
@@ -647,7 +649,6 @@ button:hover {
   width: 100%;
 
   border-radius: 25px;
-  background-color: #dbdbdb;
   margin: 56px 48px;
   transition: all 200ms ease-in-out;
 }
@@ -663,16 +664,19 @@ button:hover {
 .membership__img {
   border-radius: 25px 25px 0 0;
   width: 100%;
-  max-width: 400px;
   object-fit: cover;
+  max-height: 400px;
   transition: all 200ms ease-in-out;
 }
 
 .membership__background {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   background-color: #f8fff4;
   border-radius: 0 0 25px 25px;
-  width: 100%;
-  padding: 24px;
+  height: 100%;
+  padding: 12px 24px;
 }
 
 .membership__text {
@@ -980,6 +984,13 @@ footer {
 
 /* Small phones, tablets, large smartphones  */
 @media screen and (max-width: 932px) {
+  .underline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    align-self: center;
+  }
   #down__arrow {
     display: none;
   }
@@ -1136,15 +1147,16 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    transform: scale(1);
+    padding: 16px 48px;
   }
 
   .membership__option {
     max-width: 800px;
     width: 100%;
-  }
-
-  .membership__img {
-    max-width: 800px;
+    height: 100%;
+    transform: scale(1);
   }
 
   .pricing__sub-header {
@@ -1154,10 +1166,11 @@ footer {
 
   .pricing__wrapper {
     display: flex;
-
-    width: 300px;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     padding: 0;
+    margin: 0;
+    height: 100%;
   }
 
   .membership__options {

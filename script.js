@@ -12,7 +12,6 @@ if (mediaQuery.matches) {
 }
 
 else{
-  console.log('hi');
 
 
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
@@ -55,12 +54,16 @@ function scrollFunction2() {
 
 
   function reveal() {
+    if (window.innerWidth < 960) {
+      //Do nothing
+   }
+   else {
     var reveals = document.querySelectorAll(".reveal");
   
     for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
+      var elementVisible = 0;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
@@ -68,6 +71,8 @@ function scrollFunction2() {
         reveals[i].classList.remove("active");
       }
     }
+   }
+
   }
   
   window.addEventListener("scroll", reveal);
