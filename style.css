@@ -1164,6 +1164,35 @@ footer {
     height: auto;
   }
 
+  /* DIFFICULTY SECTION FOR MOBILE */
+  #difficulty {
+    height: 100vh;
+    padding: 0;
+  }
+  .difficulty__list {
+    padding: 0 26px;
+  }
+
+  .circle {
+    flex: 33%;
+  }
+
+  .hold__img {
+    height: 100px;
+  }
+
+  /* CARBON NEUTRAL SECTION FOR MOBILE */
+
+  #carbon__neutral {
+    height: 90vh;
+  }
+
+  .carbon__neutral--header {
+    padding: 48px;
+  }
+
+  
+
   /* Extra small devices (phones, 600px and down) */
   @media screen and (max-width: 600px) {
     * {
