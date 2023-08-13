@@ -1325,8 +1325,10 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 25px;
+      padding: 15px;
+
       height: 50%;
+      width: 100vw;
     }
     .primary__paragraph {
       display: flex;
@@ -1335,8 +1337,12 @@ footer {
       width: 100%;
     }
 
+    h1 {
+      font-size: 4em;
+    }
+
     .text__wrapper {
-      padding-bottom: 3em;
+      padding: 0em 0em 0em 0em;
       margin: 0;
     }
 
