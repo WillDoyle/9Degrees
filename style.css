@@ -147,7 +147,7 @@ img {
   border-radius: 50px;
   max-width: 800px;
   width: 100%;
-  margin: 0px 0px 0px 0;
+  margin: 0px 0px 16px 0px;
 }
 
 .white {
@@ -660,6 +660,10 @@ button:hover {
   filter: brightness(50%);
 }
 
+.membership__option:hover .membership__background {
+  background: #fff;
+}
+
 .membership__img {
   border-radius: 25px 25px 0 0;
   width: 100%;
@@ -807,7 +811,7 @@ button:hover {
 }
 
 .carbon__neutral--sub-header {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -1161,7 +1165,7 @@ footer {
 
   .banner__sub-header {
     font-size: 2em;
-    max-width: 10em;
+    max-width: 15em;
   }
 
   /* TESTIMONIALS SECTION FOR MOBILE */
@@ -1298,7 +1302,10 @@ footer {
     }
 
     .events__section--header {
-      font-size: 3em;
+      font-size: 5em;
+      height: auto;
+      white-space: normal;
+      margin-bottom: 0.4em;
     }
 
     .pricing__sub-header {
@@ -1354,6 +1361,18 @@ footer {
     }
 
     .button__white {
+    }
+
+    .banner__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner__button {
+      margin: 48px auto;
+      padding: 0;
+      max-width: 200px;
     }
 
     .promo__image {

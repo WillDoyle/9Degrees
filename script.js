@@ -7,13 +7,9 @@ function scrollFunction() {
   // Create a media condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 // Check if the media query is true
-if (mediaQuery.matches) {
-  // Then trigger an alert
-}
-
-else{
 
 
+  if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
     document.getElementById("background-video").style.scale = "1";
 
@@ -41,14 +37,19 @@ else{
     
     
   }
+  }
+  else{
+    //Do nothing
+  }
+  
 }
-}
+
 
 function scrollFunction2() {
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       document.getElementById("difficulty").style.scale = "1";
     } else {
-      document.getElementById("difficulty").style.scale = "0.2";
+      document.getElementById("difficulty").style.scale = "1";
     }
   }
 
