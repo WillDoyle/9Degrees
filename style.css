@@ -661,7 +661,7 @@ button:hover {
 }
 
 .membership__option:hover .membership__background {
-  background: #fff;
+  background: #c1ff9d;
 }
 
 .membership__img {
@@ -676,7 +676,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #d8e4d1;
+  background-color: #f3f3f3;
   border-radius: 0 0 25px 25px;
   height: 100%;
   padding: 12px 24px;
