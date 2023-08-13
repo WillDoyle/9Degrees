@@ -55,7 +55,11 @@ function scrollFunction2() {
 
   function reveal() {
     if (window.innerWidth < 960) {
-      //Do nothing
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i=0; i< reveals.length; i++){
+        reveals[i].style.transform = "translateY(0px)";
+        reveals[i].style.opacity = 1;
+      }
    }
    else {
     var reveals = document.querySelectorAll(".reveal");
