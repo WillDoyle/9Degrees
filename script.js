@@ -3,7 +3,7 @@ window.onscroll = function() {scrollFunction(), scrollFunction2()};
 
 
 function scrollFunction() {
-
+  
   // Create a media condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 // Check if the media query is true
@@ -41,8 +41,35 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
   else{
     //Do nothing
   }
-  
 }
+
+
+
+ function myFunction(x) {
+  
+  x.classList.toggle("change");
+ }
+
+
+ function toggleNavBarOpacity() {
+  
+  var navBar = document.getElementById('navBar');
+  
+  if (navBar.style.opacity === '' || navBar.style.opacity === '1') {
+    navBar.style.zIndex = '-3';
+    navBar.style.opacity = '0';
+    
+
+  } else {
+    navBar.style.zIndex = '3';
+    navBar.style.opacity = '1';
+    
+      
+      
+
+  }
+}
+
 
 
 function scrollFunction2() {
@@ -81,3 +108,4 @@ function scrollFunction2() {
   }
   
   window.addEventListener("scroll", reveal);
+  

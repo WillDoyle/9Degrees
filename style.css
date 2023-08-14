@@ -243,6 +243,8 @@ button:hover {
   width: 100%;
   max-width: 70px;
   margin: 0 16px;
+  min-width: 70px;
+  min-height: 70px;
 }
 
 /* SUBNAV BAR */
@@ -645,6 +647,7 @@ button:hover {
   align-items: center;
   flex-direction: column;
   max-width: 400px;
+  min-width: 200px;
   width: 100%;
 
   border-radius: 25px;
@@ -975,13 +978,26 @@ footer {
 
 /* Media Query for 1200px */
 @media (max-width: 1230px) {
+  .membership__options {
+    flex-wrap: wrap;
+  }
   .membership__option {
-    flex-basis: 45%; /* Adjust card width to fit two cards per row */
-    margin: 24px; /* Reduce margin to provide spacing between cards */
+    flex-basis: calc(50% - 96px);
+    margin: 24px 48px;
   }
 
   .landing__title {
     font-size: 6rem;
+  }
+
+  .testimonials__wrapper {
+    flex-direction: column;
+  }
+
+  .testimonials__img {
+    padding: 0;
+    margin: 48px 0;
+    max-height: 500px;
   }
 }
 
@@ -994,20 +1010,117 @@ footer {
     width: 40%;
     align-self: center;
   }
-  #down__arrow {
-    display: none;
-  }
+
   .nav__links {
-    display: none;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    transform: translateY(70px);
+    flex-direction: column;
+    text-align: left;
+    background: #fff;
   }
 
-  .nav__links .burger__menu--button:active {
+  .show {
     display: block;
+    opacity: 1;
+    /* or any other appropriate value to make the navigation visible */
+    -webkit-transition: all 0.5s ease-in-out;
+  }
+
+  #navBar {
+    opacity: 0;
+    -webkit-transition: all 300ms ease-in-out;
+  }
+
+  .nav__link {
+    position: relative;
+
+    font-size: 4em;
+  }
+
+  .nav__sub--links {
+    display: none;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+    top: 0;
+    right: 0;
+  }
+
+  .sub__links {
+  }
+
+  .nav__link--anchor {
+    padding: 0;
+    margin: 0;
+  }
+  #down__arrow {
+    display: none;
   }
 
   nav {
     justify-content: space-between;
     align-items: center;
+  }
+
+  .burger__menu--button {
+    position: absolute;
+    right: 0;
+    transform: translateX(-10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 4em;
+    width: 3em;
+    justify-content: flex-end;
+    border: none;
+    margin-top: 0;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    transform: translate(0, -22px) rotate(45deg);
+  }
+
+  .burger__menu--button:hover,
+  .burger__menu--button:hover .burger__menu--icon {
+    border: none;
+    background-color: #ffffff00;
+    opacity: 0.4;
+  }
+
+  .burger__menu--button:active .nav__links,
+  .burger__menu--button:active #navBar {
+    display: block;
+    opacity: 1; /* or any other appropriate value to show the navigation */
   }
 
   h1 {
@@ -1101,21 +1214,13 @@ footer {
 
   /* TIMELINE SECTION FOR MOBILE */
 
-  .burger__menu--button {
-    color: #000;
-  }
-
-  .burger__menu--button:hover {
-    background-color: #fff;
-    opacity: 0.4;
-  }
-
   .burger__menu--icon {
     display: block;
     font-style: normal;
     font-size: 32px;
     margin: 0 16px;
   }
+
   #timeline {
     height: fit-content;
     margin-bottom: 4em;
@@ -1169,14 +1274,7 @@ footer {
   }
 
   /* TESTIMONIALS SECTION FOR MOBILE */
-  .testimonials__wrapper {
-    flex-direction: column;
-  }
 
-  .testimonials__img {
-    padding: 0;
-    margin: 48px 0;
-  }
   /* PRICING SECTION FOR MOBILE*/
 
   #pricing {
@@ -1199,6 +1297,7 @@ footer {
     width: 100%;
     height: 100%;
     transform: scale(1);
+    margin: 48px 0;
   }
 
   .membership__img {
