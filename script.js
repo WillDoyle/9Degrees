@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction(), scrollFunction2()};
+window.onscroll = function() {scrollFunction(), scrollFunction2(), checkWindowWidth()};
 
 
 
@@ -50,24 +50,43 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
   x.classList.toggle("change");
  }
 
+ function checkWindowWidth() {
+  const windowWidth = window.innerWidth;
+  console.log(`Window width: ${windowWidth}px`);
+  
+  // Add your custom logic here based on the window width
+  
+  // For example, you can change styles or perform actions based on different width ranges
+  if (windowWidth < 960) {
+    // Do something for small screens
+    
+    
+  }
+   else {
+    
+    // Do something for large screens
+  }
+}
+
+// Initial check when the page loads
+checkWindowWidth();
+
+// Listen for the 'resize' event and trigger the function
+window.addEventListener('resize', checkWindowWidth);
 
  function toggleNavBarOpacity() {
-  
-  var navBar = document.getElementById('navBar');
-  
+  console.log('toggle Nav');
+  var navBar = document.getElementById('mobile--navBar');
   if (navBar.style.opacity === '' || navBar.style.opacity === '1') {
-    navBar.style.zIndex = '-3';
+    navBar.style.zIndex = '-7';
     navBar.style.opacity = '0';
-    
-
+    navBar.style.transform = "translate(-40px, 0px)";
   } else {
     navBar.style.zIndex = '3';
     navBar.style.opacity = '1';
-    
-      
-      
-
+    navBar.style.transform = "translate(0, 0px)"; 
   }
+
 }
 
 

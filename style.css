@@ -178,6 +178,11 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  opacity: 1;
+}
+
+.mobile--nav__links {
+  display: none;
 }
 
 .nav__link {
@@ -245,6 +250,7 @@ button:hover {
   margin: 0 16px;
   min-width: 70px;
   min-height: 70px;
+  z-index: 5;
 }
 
 /* SUBNAV BAR */
@@ -263,10 +269,10 @@ button:hover {
   width: 100%;
   z-index: 1;
   text-align: left;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease-in-out;
   opacity: 0;
   white-space: nowrap;
-
+  transform: translateX(-50px);
   background-color: white;
 }
 
@@ -1012,7 +1018,7 @@ footer {
   }
 
   .nav__links {
-    display: flex;
+    display: none;
     justify-content: start;
     align-items: start;
     position: absolute;
@@ -1022,12 +1028,73 @@ footer {
     margin: 0;
     padding-top: 64px;
     padding-bottom: 64px;
-    transform: translateY(70px);
+    transform: translateY(64px);
     flex-direction: column;
     text-align: left;
     background: #fff;
+    height: 100vh;
+    transition: all 300ms ease-in-out;
   }
 
+  .mobile--nav__sub--links {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+  }
+
+  .locations:hover .mobile--nav__sub--links,
+  .about-us:hover .mobile--nav__sub--links,
+  .pricing:hover .mobile--nav__sub--links {
+    animation: fadeInAndExpand 0.5s ease-in-out forwards;
+  }
+
+  .mobile--nav__links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 78px;
+    padding: 24px 24px 24px 42px;
+    background: #fff;
+    width: 100vw;
+    transition: all 100ms ease-in-out;
+  }
+
+  @keyframes fadeInAndExpand {
+    0% {
+      opacity: 0;
+      height: 0%;
+      padding: 0 8px;
+    }
+    100% {
+      opacity: 1;
+      height: 0%;
+      padding: 16px 16px;
+    }
+  }
+
+  .mobile--nav__sub--links {
+    display: flex;
+    flex-direction: column;
+    background: #cacaca;
+  }
+
+  .nav__link--anchor {
+    font-size: 3em;
+  }
+
+  .mobile--nav__link {
+    margin-bottom: 3px;
+  }
+
+  .mobile__sub--links {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 8px;
+    animation: fadeInAndExpand 0.5s ease-in-out alternate;
+  }
   .show {
     display: block;
     opacity: 1;
@@ -1035,7 +1102,7 @@ footer {
     -webkit-transition: all 0.5s ease-in-out;
   }
 
-  #navBar {
+  #mobile--navBar {
     opacity: 0;
     -webkit-transition: all 300ms ease-in-out;
   }
@@ -1055,9 +1122,12 @@ footer {
     max-width: 800px;
     top: 0;
     right: 0;
+    height: 0;
+    background: #c7c7c7;
   }
 
   .sub__links {
+    font-size: 1.5em;
   }
 
   .nav__link--anchor {
@@ -1086,6 +1156,29 @@ footer {
     justify-content: flex-end;
     border: none;
     margin-top: 0;
+    z-index: 3;
+  }
+
+  .plus::before,
+  .plus::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    background: rgb(0, 0, 0);
+  }
+
+  .plus:before {
+    width: 21px;
+    height: 5px;
+    right: 4px;
+  }
+
+  .plus:after {
+    width: 5px;
+    height: 21px;
+    right: 12px;
   }
 
   .bar1,
@@ -1118,7 +1211,7 @@ footer {
   }
 
   .burger__menu--button:active .nav__links,
-  .burger__menu--button:active #navBar {
+  .burger__menu--button:active #mobile--navBar {
     display: block;
     opacity: 1; /* or any other appropriate value to show the navigation */
   }
@@ -1166,7 +1259,7 @@ footer {
     top: 0;
     left: 0;
     transform: translateY(580px), scale(0.4);
-    z-index: 3;
+    z-index: 2;
   }
 
   .first__time--wrapper {
@@ -1405,6 +1498,37 @@ footer {
       height: auto;
       white-space: normal;
       margin-bottom: 0.4em;
+    }
+
+    .nav__link--anchor {
+      font-size: 10vw;
+    }
+
+    .nav__links {
+      width: 100vw;
+    }
+
+    .sub--links {
+      font-size: 2vw;
+    }
+
+    .locations:hover .nav__sub--links,
+    .about-us:hover .nav__sub--links,
+    .pricing:hover .nav__sub--links {
+      transition: all 300ms ease-in-out;
+      display: none;
+      flex-direction: column;
+      justify-content: start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      height: 60%;
+      flex: 0 0 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sub__links {
+      flex: 0 0 auto;
     }
 
     .pricing__sub-header {
