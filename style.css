@@ -186,7 +186,6 @@ nav {
 
 .mobile--nav__links {
   display: none;
-  overflow: hidden;
 }
 
 .mobile--nav__links::after {
@@ -815,7 +814,8 @@ button:hover {
   font-size: 32px;
   height: 60px;
   text-align: center;
-  font-weight: 100;
+  font-weight: 300;
+  font-family: "Poppins";
 }
 
 /* CARBON NEUTRAL */
@@ -1060,12 +1060,19 @@ footer {
   .locations:hover .mobile--nav__sub--links,
   .about-us:hover .mobile--nav__sub--links,
   .pricing:hover .mobile--nav__sub--links {
-    animation: fadeInAndExpand 0.3s ease-in-out forwards;
+    animation: fadeInAndExpand 0.4s ease-in-out forwards;
   }
 
   .locations:hover .plus,
   .about-us:hover .plus,
   .pricing:hover .plus {
+    top: 0;
+    margin-top: 2.5em;
+  }
+
+  .locations:hover .plus::after,
+  .about-us:hover .plus::after,
+  .pricing:hover .plus::after {
     opacity: 0;
   }
 
@@ -1085,12 +1092,12 @@ footer {
   @keyframes fadeInAndExpand {
     0% {
       opacity: 0;
-      height: 0%;
+      height: 0;
       padding: 0 8px;
     }
     100% {
       opacity: 1;
-      height: 0%;
+      height: auto;
       padding: 16px 16px;
     }
   }
@@ -1326,10 +1333,9 @@ footer {
   }
 
   .text__wrapper--right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0em 0em 0em 0em;
+    margin: 0;
+    font-size: 0.9em;
   }
 
   .promo__image {
@@ -1547,6 +1553,14 @@ footer {
       height: auto;
       white-space: normal;
       margin-bottom: 0.4em;
+    }
+
+    .h1__banner {
+      font-size: 7em;
+    }
+
+    .banner__sub-header {
+      font-size: 1.8em;
     }
 
     .landing__title {
