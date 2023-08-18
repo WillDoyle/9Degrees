@@ -1549,6 +1549,13 @@ footer {
       margin-bottom: 0.4em;
     }
 
+    .landing__title {
+      font-size: 3.5em;
+    }
+    .landing__sub-header {
+      font-size: 2em;
+    }
+
     .nav__link--anchor {
       font-size: 10vw;
     }
