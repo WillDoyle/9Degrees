@@ -15,7 +15,7 @@
   
 </head>
 
-<body>
+<body onload="setNavStyle()">
   <header>
 
     <!-- NAV BAR  -->
@@ -25,7 +25,7 @@
   <main>
     <!-- MAIN/LANDING SECTION -->
     <section id="landing">
-      <video id="background-video" autoplay loop muted poster="./assets/LDP04213222.jpg">
+      <video id="background-video" autoplay loop muted poster="./assets/9degrees-cover.jpg">
         <source src="./assets/9 degrees - a part of your life..mp4" type="video/mp4" />
       </video>
       <div class="row">
@@ -297,14 +297,7 @@
                 </figure>
               
             </li>
-            <li class="circle">
-              
-                <figure>
-                  <img class="hold__img" src="./assets/green-hold.svg" alt="Green climbing hold" />
-                  <p class="hold__text">Green</p>
-                </figure>
-              
-            </li>
+
             <li class="circle">
            
                 <figure>
@@ -315,12 +308,21 @@
             </li>
             <li class="circle">
               
+              <figure>
+                <img class="hold__img" src="./assets/green-hold.svg" alt="Green climbing hold" />
+                <p class="hold__text">Green</p>
+              </figure>
+            
+          </li>
+            <li class="circle">
+              
                 <figure>
                   <img class="hold__img" src="./assets/red-hold.svg" alt="Red climbing hold" />
                   <p class="hold__text">Red</p>
                 </figure>
               
             </li>
+            
             <li class="circle">
            
                 <figure>

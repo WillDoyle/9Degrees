@@ -1,6 +1,6 @@
 window.onscroll = function() {scrollFunction(), scrollFunction2(), checkWindowWidth()};
 
-
+let navOpen = false;
 
 function scrollFunction() {
   
@@ -44,6 +44,19 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
 }
 
 
+function setNavStyle(){
+  console.log('hi');
+  var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
+  var mobileNavLinksAfter = document.querySelectorAll('.mobile--nav__link::after');
+  var navBar = document.getElementById('mobile--navBar');
+  var anchors = document.querySelectorAll('.mobile--nav__link--anchor');
+    navBar.style.zIndex = '-7';
+    navBar.style.opacity = '0';
+    navBar.style.height = '0';
+    
+  
+}
+
 
  function myFunction(x) {
   
@@ -52,6 +65,8 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
 
  function checkWindowWidth() {
   const windowWidth = window.innerWidth;
+
+
   console.log(`Window width: ${windowWidth}px`);
   
   // Add your custom logic here based on the window width
@@ -59,10 +74,12 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
   // For example, you can change styles or perform actions based on different width ranges
   if (windowWidth < 960) {
     // Do something for small screens
-    
+    console.log('small screen');
+
     
   }
    else {
+
     
     // Do something for large screens
   }
@@ -76,17 +93,62 @@ window.addEventListener('resize', checkWindowWidth);
 
  function toggleNavBarOpacity() {
   console.log('toggle Nav');
+  var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
+  var mobileNavLinksAfter = document.querySelectorAll('.mobile--nav__link::after');
   var navBar = document.getElementById('mobile--navBar');
+  var anchors = document.querySelectorAll('.mobile--nav__link--anchor');
   if (navBar.style.opacity === '' || navBar.style.opacity === '1') {
+    navOpen = false;
     navBar.style.zIndex = '-7';
     navBar.style.opacity = '0';
+    navBar.style.height = '0';
     navBar.style.transform = "translate(-40px, 0px)";
+    
+
+    for (var i = 0; i < anchors.length; i++) {
+      anchors[i].style.height = '0';
+      anchors[i].style.opacity = '0';
+      anchors[i].style.zIndex = -3;  
+      console.log('set Zindex to 3');
+    }
+    setTimeout(smoothNavTransition, 300);
+    
   } else {
+    navOpen = true;
     navBar.style.zIndex = '3';
     navBar.style.opacity = '1';
     navBar.style.transform = "translate(0, 0px)"; 
+    navBar.style.height = 'auto';
+    for (var i = 0; i < mobileNavLinks.length; i++) {
+      mobileNavLinks[i].style.height = '100%';
+      
+    }
+    for (var i = 0; i < anchors.length; i++) {
+      anchors[i].style.height = '100%';
+      anchors[i].style.opacity = '1';
+      anchors[i].style.zIndex = 3;
+      console.log('set Zindex to -3');
+    }
+    
   }
 
+}
+
+function smoothNavTransition(){
+  var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
+  if(navOpen === true){
+    for (var i = 0; i < mobileNavLinks.length; i++) {
+      mobileNavLinks[i].style.height = '100%';
+      
+      
+    }
+  }
+  
+  else{
+    for (var i = 0; i < mobileNavLinks.length; i++) {
+      mobileNavLinks[i].style.height = '0';
+    }
+  }
 }
 
 
