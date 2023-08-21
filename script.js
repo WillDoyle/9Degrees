@@ -44,6 +44,23 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
 }
 
 
+
+function toggleMenu(element) {
+  // Find the closest parent <li> element
+  var parentLi = element.closest('li');
+
+  // Find the mobile--nav__sub--links element within the parent <li>
+  var subLinks = parentLi.querySelector('.mobile--nav__sub--links');
+
+  // Toggle the visibility of the sub-links using the visible class
+  subLinks.classList.toggle('hidden');
+
+  // Toggle the 'active' class on the clicked button
+  element.classList.toggle('active');
+}
+
+
+
 function setNavStyle(){
   console.log('hi');
   var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
@@ -95,6 +112,7 @@ window.addEventListener('resize', checkWindowWidth);
   console.log('toggle Nav');
   var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
   var mobileNavLinksAfter = document.querySelectorAll('.mobile--nav__link::after');
+  var darkOverlay = document.getElementById('dark__overlay::after');
   var navBar = document.getElementById('mobile--navBar');
   var anchors = document.querySelectorAll('.mobile--nav__link--anchor');
   if (navBar.style.opacity === '' || navBar.style.opacity === '1') {
@@ -103,6 +121,7 @@ window.addEventListener('resize', checkWindowWidth);
     navBar.style.opacity = '0';
     navBar.style.height = '0';
     navBar.style.transform = "translate(-40px, 0px)";
+
     
 
     for (var i = 0; i < anchors.length; i++) {
@@ -119,12 +138,13 @@ window.addEventListener('resize', checkWindowWidth);
     navBar.style.opacity = '1';
     navBar.style.transform = "translate(0, 0px)"; 
     navBar.style.height = 'auto';
+
     for (var i = 0; i < mobileNavLinks.length; i++) {
       mobileNavLinks[i].style.height = '100%';
       
     }
     for (var i = 0; i < anchors.length; i++) {
-      anchors[i].style.height = '100%';
+      anchors[i].style.height = '10vh';
       anchors[i].style.opacity = '1';
       anchors[i].style.zIndex = 3;
       console.log('set Zindex to -3');
