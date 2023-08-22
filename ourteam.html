@@ -31,6 +31,7 @@
             <div class="text__wrapper">
               <h1 class="team__header">Meet the team</h1>
               <div class="underline "></div>
+              
               <h2 class="pricing__sub-header" style="color: #293833">EMBODYING  BOULDERING MAKES YOU HAPPY</h2>
               <p>9 Degrees started in 2015 with our first location in Alexandria, Sydney. Today, between 5 locations, we are a home to thousands of boulderers and employ over 90 staff members.
               </p>
@@ -46,6 +47,7 @@
         </figure>
         <h3 class="avatar__name">Tory</h3>
         <h4 class="avatar__location">Enoggera</h4>
+        <span class="hand-wave">👋</span>
     </div>
 
     <div class="avatar__container">
@@ -54,6 +56,7 @@
         </figure>
         <h3 class="avatar__name">Jack</h3>
         <h4 class="avatar__location">Waterloo</h4>
+        <span class="hand-wave">👋</span>
     </div>
 
     <div class="avatar__container">
@@ -62,6 +65,7 @@
         </figure>
         <h3 class="avatar__name">Amy</h3>
         <h4 class="avatar__location">Lane Cove</h4>
+        <span class="hand-wave">👋</span>
     </div>
 
     <div class="avatar__container">
@@ -70,6 +74,7 @@
         </figure>
         <h3 class="avatar__name">Michael</h3>
         <h4 class="avatar__location">Parramatta</h4>
+        <span class="hand-wave">👋</span>
     </div>
 
     <div class="avatar__container">
@@ -78,9 +83,22 @@
         </figure>
         <h3 class="avatar__name">Nick</h3>
         <h4 class="avatar__location">Alexandria</h4>
+        <span class="hand-wave">👋</span>
     </div>
 </div>
 
+    </section>
+    <section id="director">
+        <div class="director__wrapper">
+            <div class="director__text--wrapper">
+            <h1 class="director__name reveal">Martijn, Managing Director</h1>
+            <h3 class="reveal">THE BOSS. THE MAN BEHIND IT ALL, OUR MANAGING DIRECTOR.</h3>
+            <img class="reveal" style="width: 100px; height: 100px; padding: 2em;" src="/assets/9degrees-logo-dark.svg" alt="">
+        </div>
+        <div class="director__text--wrapper ">
+        <iframe class="reveal" width="100%" height="230px" src="https://www.youtube-nocookie.com/embed/TGevNSAiKL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+        </div>
     </section>
     <script id="replace_with_footer" src="footer.js"></script>
     <script src="script.js"></script>
@@ -123,6 +141,8 @@
 
     #avatars{
         height: fit-content;
+        
+        z-index: -2;
     }
 
     
@@ -146,8 +166,46 @@
         
     }
 
+    .hand-wave{
+        position: absolute;
+        display: none;
+        top: 40%;
+        transform: translate(0%, 0%);
+        font-size: 3em;
+        text-align: center;
+        z-index: -1;
+        animation: hand-gesture 1s ease-in-out;
+    }
+
+    .avatar__container:hover .hand-wave{
+        display: block;
+
+    }
+
+    @keyframes hand-gesture {
+  0% {
+    transform: rotate(0);
+  }
+
+  35%{
+    transform: translateY(-150px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-150px) rotate(30deg);
+  }
+
+  65%{
+    transform: translateY(-150px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
     .avatar__name{
-        transition: all 300ms ease-in-out;
+        transition: all 300ms;
         margin-top: 1em;
     }
 
@@ -172,6 +230,10 @@
         
     }
 
+    .team__img{
+        border-radius: 50%;
+    }
+
 
 
     .avatar__container:hover .team__img--wrapper{
@@ -181,6 +243,40 @@
 
     h4{
         font-weight: 300;
+    }
+
+    .director__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #cfff4f;
+        
+    }
+
+    .director__text--wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em;
+        flex-direction: column;
+
+        
+    }
+
+    .director__text--wrapper:nth-child(2){
+        padding: 0;
+        width: 30%;
+        
+    }
+
+    ::selection{
+        background:#242424;
+        color: #fff;
+    }
+
+    .director__name{
+        font-size: 2em;
+        margin: 2em 0em;
     }
     @media screen and (max-width: 1096px) {
         .avatars__wrapper{
@@ -212,6 +308,26 @@
     @media screen and (max-width: 600px) {
         p{
             padding: 0;
+        }
+
+        #director{
+            height: fit-content;
+        }
+
+        .director__wrapper{
+            height: fit-content;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .director__text--wrapper{
+            width: 100%;
+            height: 100%;
+        }
+
+        .director__text--wrapper:nth-child(2){
+            width: 100%;
+            height: 100%;
         }
 
     }
