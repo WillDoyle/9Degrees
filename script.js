@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction(), scrollFunction2(), checkWindowWidth()};
+window.onscroll = function() {scrollFunction(), scrollFunction2()};
 
 let navOpen = false;
 
@@ -8,7 +8,7 @@ function scrollFunction() {
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 // Check if the media query is true
 
-
+if(location.pathname=="/index.html"){
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
     document.getElementById("background-video").style.scale = "1";
@@ -38,6 +38,7 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
     
   }
   }
+}
   else{
     //Do nothing
   }
@@ -54,15 +55,15 @@ function toggleMenu(element) {
 
   // Toggle the visibility of the sub-links using the visible class
   subLinks.classList.toggle('hidden');
-
+  
   // Toggle the 'active' class on the clicked button
   element.classList.toggle('active');
+  
 }
 
 
 
 function setNavStyle(){
-  console.log('hi');
   var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
   var mobileNavLinksAfter = document.querySelectorAll('.mobile--nav__link::after');
   var navBar = document.getElementById('mobile--navBar');
@@ -80,36 +81,7 @@ function setNavStyle(){
   x.classList.toggle("change");
  }
 
- function checkWindowWidth() {
-  const windowWidth = window.innerWidth;
-
-
-  console.log(`Window width: ${windowWidth}px`);
-  
-  // Add your custom logic here based on the window width
-  
-  // For example, you can change styles or perform actions based on different width ranges
-  if (windowWidth < 960) {
-    // Do something for small screens
-    console.log('small screen');
-
-    
-  }
-   else {
-
-    
-    // Do something for large screens
-  }
-}
-
-// Initial check when the page loads
-checkWindowWidth();
-
-// Listen for the 'resize' event and trigger the function
-window.addEventListener('resize', checkWindowWidth);
-
  function toggleNavBarOpacity() {
-  console.log('toggle Nav');
   var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
   var mobileNavLinksAfter = document.querySelectorAll('.mobile--nav__link::after');
   var darkOverlay = document.getElementById('dark__overlay::after');
@@ -128,7 +100,7 @@ window.addEventListener('resize', checkWindowWidth);
       anchors[i].style.height = '0';
       anchors[i].style.opacity = '0';
       anchors[i].style.zIndex = -3;  
-      console.log('set Zindex to 3');
+      
     }
     setTimeout(smoothNavTransition, 300);
     
@@ -174,13 +146,16 @@ function smoothNavTransition(){
 
 
 function scrollFunction2() {
+  if(location.pathname=="/index.html"){
+
+  
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
       document.getElementById("difficulty").style.scale = "1";
     } else {
       document.getElementById("difficulty").style.scale = "1";
     }
   }
-
+}
 
   function reveal() {
     if (window.innerWidth < 960) {

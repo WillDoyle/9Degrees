@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    </style>
+    <title>9 Degrees Bouldering</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/9degrees-logo-dark.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/5082f4a3a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- NAV BAR  -->
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+    <section id="all-gyms">
+      <div class="text__wrapper">
+        <div class="text__wrapper">
+          <h1 class="">9 Degrees Gyms</h1>
+          <div class="underline "></div>
+          <h2 class="pricing__sub-header" style="color: #293833">NSW & QLD. 7 LOCATIONS, ALL UNDER 1 MEMBERSHIP.</h2>
+          
+        </div>
+        <div class="containers">
+          <h2 class="sub__header">NSW</h1>
+        <div class="timeline__container">
+          <div class="timeline__location">
+            <h2 class="timeline__header--location">Alexandria</h2>
+            <h1 class="timeline__header"></h1>
+            <figure class="timeline__img--wrapper">
+              <a href="alexandria.html">
+              <img class="timeline__img" src="./assets/alexandria-2.jpg" alt="">
+            </a>
+            </figure>
+          </div>
+          <div class="timeline__location">
+            <h2 class="timeline__header--location">Paramatta</h2>
+            <h1 class="timeline__header "></h1>
+  
+            <figure class="timeline__img--wrapper">
+              <a href="paramatta.html">
+              <img class="timeline__img" src="./assets/paramatta.jpg" alt="">
+            </a>
+            </figure>
+          </div>
+          <div class="timeline__location">
+            <h2 class="timeline__header--location">Lane Cove</h2>
+            <h1 class="timeline__header "></h1>
+            <figure class="timeline__img--wrapper">
+              <a href="lanecove.html">
+              <img class="timeline__img" src="./assets/lane cove.jpg" alt="">
+            </a>
+            </figure>
+          </div>
+
+          <div class="timeline__location">
+            <h2 class="timeline__header--location">Waterloo</h2>
+            <h1 class="timeline__header "></h1>
+            <figure class="timeline__img--wrapper">
+              <a href="waterloo.html">
+              <img class="timeline__img" src="./assets/waterloo.jpg" alt="">
+              </a>
+            </figure>
+          </div>
+
+        </div>
+
+        <h2 class="sub__header">QLD</h1>
+
+        <div class="timeline__container">
+          
+          <div class="timeline__location">
+ 
+            <h2 class="timeline__header--location">Enoggera</h2>
+            <h1 class="timeline__header "></h1>
+            <figure class="timeline__img--wrapper">
+              <a href="enoggera.html">
+              <img class="timeline__img" src="./assets/enoggera-2.jpg" alt="">
+              </a>
+            </figure>
+          </div>
+        
+          
+          <div class="timeline__location">
+            
+            <h2 class="timeline__header--location">Morningside</h2>
+            <h1 class="timeline__header "></h1>
+            <figure class="timeline__img--wrapper">
+              <a href="morningside.html">
+              <img class="timeline__img" src="./assets/morning-side.jpg" alt="">
+            </a>
+            </figure>
+          
+          </div>
+      
+        </div>
+        
+  
+        </div>
+      </div>
+  
+  
+    </div>
+    </section>
+
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+    #all-gyms{
+        display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 10em;
+    }
+
+    a{
+      height: 100%;
+      width: 100%;
+    }
+
+    .text__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    .underline{
+        max-width: 300px;
+    }
+
+    .timeline__container{
+        margin: 2em 2em;
+    }
+
+    .containers{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sub__header{
+      font-size: 3em;
+      text-align: center;
+      padding: 0.5em 0em;
+    }
+
+
+    @media screen and (max-width: 932px) {
+
+        #all-gyms{
+            height: fit-content;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .timeline__container{
+            margin: 3em;
+        }
+    }
+</style>
