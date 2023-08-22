@@ -25,9 +25,275 @@
       <!-- NAV BAR  -->
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
+    <section id="safety-landing">
+      <div class="safety__wrapper">
+        <h1 class="team__header">Safety In Bouldering</h1>
+        <div class="underline"></div>
 
+        <h2 class="pricing__sub-header" style="color: #293833">
+          BOULDERING IS A FUN AND CHALLENGING SPORT, BUT NOT ENTIRELY WITHOUT
+          RISKS.
+        </h2>
+        <p>
+          We offer you the facilities to climb, however, you remain responsible
+          for your own actions when climbing, falling or jumping off.
+        </p>
+      </div>
+
+      <div class="safety__container">
+        <div class="safety__div">
+          <h2 class="house__rules--text">House Rules</h2>
+          <ol class="house__rules">
+            <li>
+              1.
+              <a class="waiver link__hover-effect" href="#waiver"
+                >Sign waiver </a
+              >and check in at front desk for each visit.
+            </li>
+            <li>2. Obey staff instructions.</li>
+            <li>3. Climb down instead of jumping.</li>
+            <li>4. Keep mats clear always.</li>
+            <li>5. Empty pockets and remove jewelry.</li>
+            <li>6. Maintain distance from other climbers.</li>
+            <li>7. Warm up before challenging climbs; stop if in pain.</li>
+            <li>8. Climbing shoes must be worn</li>
+          </ol>
+        </div>
+        <div class="safety__div">
+          <figure class="safety__img--wrapper">
+            <img class="safety__img" src="./assets/safety-img-1.jpg" alt="" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section id="waiver">
+      <div class="safety__container">
+        <div class="safety__div">
+          <button class="button__white">
+            <a
+              class="waiver__link"
+              href="https://waiver.smartwaiver.com/w/5d6049a2af029/web/?fbclid=IwAR11WTJWtt6lkCnD1_oN50UYMn7RjNEGcgQCzYNVLgnnuGAWQ-C0mlMwdHY"
+            >
+              Sign Waiver
+            </a>
+          </button>
+        </div>
+        <div class="safety__div">
+          <h2 class="house__rules--text">Waiver</h2>
+          <h3>
+            EVERY PERSON CLIMBING AT 9 DEGREES NEEDS TO SIGN A WAIVER ON THEIR
+            FIRST VISIT. NO WAIVER, NO CLIMBING.
+          </h3>
+          <p>
+            A signed waiver is valid across all 9 Degrees gyms so you will not
+            need to re-sign when visiting a different 9 Degrees. For any
+            climbers under the age of 18, a parent or legal guardian must also
+            sign the form. You can read more about our under 18 guidelines here.
+          </p>
+
+          <p>
+            If you sign the waiver online please let our staff know so they can
+            get you started quicker!
+          </p>
+        </div>
+      </div>
+    </section>
     <script id="replace_with_footer" src="footer.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
-<style></style>
+<style>
+  p {
+    padding: 1.5em 0;
+  }
+  #safety-landing {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 10em;
+  }
+
+  .safety__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 2em 10em;
+  }
+
+  .safety__img--wrapper {
+    overflow: hidden;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+  }
+
+  .safety__img--wrapper .safety__img:hover {
+    transform: scale(1.5);
+  }
+
+  .safety__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform-origin: center;
+    transition: all 300ms ease-in-out;
+  }
+
+  .underline {
+    background-color: #242424;
+  }
+
+  .safety__img {
+    object-fit: cover;
+    height: 100%;
+  }
+  .safety__container {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: row;
+
+    height: fit-content;
+  }
+  .safety__div {
+    width: 50%;
+    border: 1px solid #242424;
+    padding: 0em 4em;
+  }
+
+  .safety__div:nth-child(1) {
+    padding: 3em;
+    background-color: #ffc20e;
+  }
+
+  #safety-landing .safety__div:nth-child(2) {
+    padding: 0em 0em;
+  }
+
+  .house__rules {
+    margin: 2em;
+    line-height: 2;
+    font-size: 1.3em;
+  }
+
+  .waiver {
+    font-weight: 700;
+  }
+
+  .waiver__link {
+    font-weight: 300;
+    transition: all 300ms ease-in-out;
+  }
+
+  button:hover a {
+    opacity: 1;
+  }
+
+  .button__white:hover .waiver__link {
+    color: #fff;
+  }
+
+  .house__rules--text {
+    background: #fff;
+    max-width: 300px;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    color: #242424;
+    font-weight: 500;
+    font-size: 2em;
+    font-family: "Poppins", sans-serif;
+  }
+
+  #waiver .safety__div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+
+  #waiver .safety__div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    line-height: 2;
+    text-align: center;
+    padding: 5em 10em;
+  }
+
+  #waiver .safety__container {
+    flex-direction: column-reverse;
+  }
+
+  #waiver .safety__div {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  #waiver .house__rules--text {
+    background-color: #ffc20e;
+    padding: 0em 1em;
+    margin: 2em;
+  }
+  #waiver {
+    height: fit-content;
+  }
+
+  @media screen and (max-width: 932px) {
+    .team__header {
+      text-align: center;
+    }
+    .safety__container {
+      flex-direction: column;
+    }
+
+    .safety__wrapper {
+    }
+
+    #safety-landing .house__rules--text {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .safety__div {
+      width: 100%;
+      min-height: 500px;
+    }
+
+    #safety-landing .safety__div:nth-child(2) {
+      height: 100%;
+      min-height: 100%;
+    }
+
+    p {
+      padding: 2em 0em;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .safety__wrapper {
+      padding: 0 1em;
+    }
+    .safety__div:nth-child(1) {
+      padding: 3em 1em;
+    }
+
+    .house__rules {
+      font-size: 1.2em;
+    }
+
+    li {
+      padding: 1em 0;
+    }
+
+    .safety__div {
+      padding: 0 1em;
+    }
+
+    #waiver .safety__div:nth-child(2) {
+      padding: 1em 1em;
+    }
+  }
+</style>
