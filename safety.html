@@ -41,17 +41,17 @@
       </div>
 
       <div class="safety__container">
-        <div class="safety__div">
+        <div class="safety__div reveal">
           <h2 class="house__rules--text">House Rules</h2>
           <ol class="house__rules">
             <li>
               1.
-              <a class="waiver link__hover-effect" href="#waiver"
+              <a class="waiver link__hover-effect reveal" href="#waiver"
                 >Sign waiver </a
               >and check in at front desk for each visit.
             </li>
             <li>2. Obey staff instructions.</li>
-            <li>3. Climb down instead of jumping.</li>
+            <li>3. Attempt to climb down instead of jumping.</li>
             <li>4. Keep mats clear always.</li>
             <li>5. Empty pockets and remove jewelry.</li>
             <li>6. Maintain distance from other climbers.</li>
@@ -59,16 +59,49 @@
             <li>8. Climbing shoes must be worn</li>
           </ol>
         </div>
-        <div class="safety__div">
+        <div class="safety__div reveal">
           <figure class="safety__img--wrapper">
             <img class="safety__img" src="./assets/safety-img-1.jpg" alt="" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="safety__container">
+        <div class="safety__div reveal">
+          <h2 class="house__rules--text">Risks of Falling</h2>
+          <h2 class="pricing__sub-header">Falling Rules & Techniques</h2>
+          <br />
+
+          <ol>
+            <li>Always climb down using extra holds for grip.</li>
+            <li>Land on both feet for a softer impact.</li>
+            <li>Don't reach for holds if you're unsure or tired.</li>
+            <li>Bend your knees, not your hips, to absorb impact.</li>
+            <li>Avoid twisting while climbing.</li>
+            <li>Learn to fall and roll from low heights.</li>
+            <li>Check the area before starting to climb.</li>
+            <br />
+            <br />
+            <strong
+              >Watch our safety video below for proper falling
+              techniques!</strong
+            >
+          </ol>
+        </div>
+        <div class="safety__div reveal">
+          <figure class="safety__img--wrapper">
+            <img
+              class="safety__img"
+              src="./assets/risks-of-falling.jpg"
+              alt=""
+            />
           </figure>
         </div>
       </div>
     </section>
     <section id="safety-video">
       <iframe
-        class="safety__vid"
+        class="safety__vid reveal"
         src="https://www.youtube.com/embed/kDfqXDB2lpI"
         title="YouTube video player"
         frameborder="0"
@@ -77,16 +110,18 @@
       ></iframe>
     </section>
     <section id="waiver">
-      <div class="safety__container">
+      <div class="safety__container reveal">
         <div class="safety__div">
           <button class="button__white">
             <a
-              class="waiver__link"
+              class="waiver__link reveal"
               href="https://waiver.smartwaiver.com/w/5d6049a2af029/web/?fbclid=IwAR11WTJWtt6lkCnD1_oN50UYMn7RjNEGcgQCzYNVLgnnuGAWQ-C0mlMwdHY"
             >
               Sign Waiver
             </a>
           </button>
+
+          <img class="qr__code" src="./assets/waiver-qr-code.png" alt="" />
         </div>
         <div class="safety__div">
           <h2 class="house__rules--text">Waiver</h2>
@@ -150,6 +185,10 @@
     transition: all 300ms ease-in-out;
   }
 
+  .safety__container:nth-child(3) {
+    flex-direction: row-reverse;
+  }
+
   .underline {
     background-color: #242424;
   }
@@ -175,6 +214,13 @@
     min-height: 600px;
     width: 100%;
     height: 100%;
+    border-radius: 15px;
+    border: 4px solid #ffc20e;
+    transition: all 300ms ease-in-out;
+  }
+
+  .safety__vid:hover {
+    border: 4px solid #242424;
   }
 
   .safety__container {
@@ -184,11 +230,16 @@
     flex-direction: row;
 
     height: fit-content;
+    padding: 1em;
   }
   .safety__div {
     width: 50%;
-    border: 1px solid #242424;
+    border: 2px solid #242424;
+    border-radius: 15px;
+
     padding: 0em 5em;
+    transition: all 300ms ease-in-out;
+    overflow: hidden;
   }
 
   .team__header {
@@ -197,15 +248,17 @@
 
   .safety__div:nth-child(1) {
     padding: 3em;
+    margin: 1em 0;
     background-color: #ffc20e;
   }
 
   #safety-landing .safety__div:nth-child(2) {
     padding: 0em 0em;
+    margin: 1em 1em;
   }
 
   .house__rules {
-    margin: 2em;
+    margin: 0em;
     line-height: 2;
     font-size: 1.3em;
   }
@@ -219,6 +272,19 @@
     transition: all 300ms ease-in-out;
   }
 
+  p,
+  li {
+    font-family: "Roboto", sans-serif;
+  }
+
+  li {
+    padding: 1em 0;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+
   button:hover a {
     opacity: 1;
   }
@@ -228,14 +294,17 @@
   }
 
   .house__rules--text {
-    background: #fff;
-    max-width: 300px;
-    padding: 0.5em 1em;
+    max-width: 1200px;
+    padding: 0.3em 0.5em 0.3em 0;
     border-radius: 15px;
     color: #242424;
-    font-weight: 500;
-    font-size: 2em;
+    font-weight: 800;
+    font-size: 5em;
     font-family: "Poppins", sans-serif;
+  }
+
+  .risk__text {
+    line-height: 2;
   }
 
   #safety-video {
@@ -245,9 +314,12 @@
 
   #waiver .safety__div:nth-child(1) {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    border: 1px solid #242424;
+    border-radius: 15px;
+    background-color: #fff;
   }
 
   #waiver .safety__div:nth-child(2) {
@@ -255,7 +327,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #fff;
+
     line-height: 2;
     text-align: center;
     padding: 5em 10em;
@@ -263,6 +335,16 @@
 
   #waiver .safety__container {
     flex-direction: column-reverse;
+  }
+
+  .qr__code {
+    max-width: 250px;
+    padding: 2em;
+  }
+
+  .safety__container .pricing__sub-header {
+    padding: 2em 0em;
+    font-size: 1.5em;
   }
 
   #waiver .safety__div {
@@ -279,6 +361,14 @@
     height: fit-content;
   }
 
+  #waiver .safety__div {
+    border-radius: 0px;
+    border: none;
+    margin: 0;
+
+    background-color: #fff;
+  }
+
   @media screen and (max-width: 932px) {
     .team__header {
       text-align: center;
@@ -287,11 +377,23 @@
       flex-direction: column;
     }
 
+    .safety__container:nth-child(3) {
+      flex-direction: column;
+    }
+
     .safety__vid {
       max-height: 750px;
       max-width: 1250px;
       min-height: 300px;
       min-width: 500px;
+    }
+
+    #safety-landing .safety__div:nth-child(2) {
+      margin: 0;
+    }
+
+    #waiver .safety__div:nth-child(1) {
+      border: 1px solid #242424;
     }
 
     .safety__wrapper {
@@ -336,7 +438,7 @@
     }
 
     li {
-      padding: 1em 0;
+      padding: 0em 0;
     }
 
     .safety__div {
