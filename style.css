@@ -250,6 +250,10 @@ img {
   flex-direction: column;
 }
 
+#carbon-neutral .row {
+  padding: 48px;
+}
+
 .row__wrapper {
   display: flex;
   flex-direction: row;
@@ -637,6 +641,7 @@ button:hover {
   font-style: italic;
   margin-bottom: 28px 0;
   text-align: center;
+  padding: 48px;
 }
 
 .hold__text {
@@ -950,6 +955,10 @@ button:hover {
 #carbon__neutral {
   background-color: #fff;
   height: fit-content;
+}
+
+.carbon__neutral--header {
+  padding: 48px;
 }
 .carbon__neutral--figure {
   width: 100%;
