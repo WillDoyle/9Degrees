@@ -576,6 +576,21 @@ button:hover {
   transition: all 500ms ease-in-out;
 }
 
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
@@ -874,6 +889,82 @@ button:hover {
 .button__membership:hover {
   color: #73f088;
   background-color: #242424;
+}
+
+/* LOCATION TEMPLATE SECTION */
+
+#location {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 10em;
+}
+
+#location__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: fit-content;
+}
+
+.left-image {
+  flex: 1;
+  max-width: 70%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.location__container {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 3em;
+  max-width: 1200px;
+}
+
+.right-images {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1em;
+  padding: 0em 1em 0em 1em;
+}
+
+.right-image {
+  flex: 1;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.location__info--header {
+  font-size: 2.5em;
+  margin: 0.5em 0em;
+}
+
+#location__details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 50%;
+  padding: 2em 3em;
+}
+
+.location__info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+
+  padding: 2em 2em;
+  flex-direction: column;
+}
+
+#location__details li {
+  line-height: 1.5;
+  margin: 0.5em 0em;
+}
+
+#location__details h2 {
+  font-weight: 400;
 }
 
 /* BANNER */

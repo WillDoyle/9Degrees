@@ -26,18 +26,106 @@
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
     <section id="under-18">
+      <div class="under18__wrapper">
+        <h1 class="team__header">Under 18s</h1>
+        <div class="underline"></div>
+
+        <h2 class="pricing__sub-header" style="color: #293833">
+          AT 9 DEGREES WE CATER PREDOMINANTLY FOR THOSE 16 AND OVER.
+        </h2>
+        <p>
+          Although 9 Degrees endeavours to be an inclusive facility we are first
+          and foremost an adult venue with climbing most suitable for those 5ft
+          tall and above.
+        </p>
+
+        <p>
+          If you want to go rock climbing with your child, but you're not sure
+          if 9 Degrees is a good choice, feel free to call us. We can help with
+          your questions or suggest other kid-friendly rock climbing gyms
+          nearby. It's important to have supervision for young climbers, and if
+          you're in a big group or plan to leave the kids alone, it may be
+          better to explore other suitable forms of entertainment.
+        </p>
+      </div>
+    </section>
+    <section id="guidelines">
+      <figure class="guidelines__img--wrapper ">
+        <img class="guidelines__img" src="./assets/under18s.jpg" alt="" />
+      </figure>
+
+      <figure class="guidelines__img--wrapper one">
+        <img class="guidelines__img" src="./assets/under18-2.jpg" alt="" />
+      </figure>
+
+      <figure class="guidelines__img--wrapper two">
+        <img class="guidelines__img" src="./assets/10-visit-pass.jpg" alt="" />
+      </figure>
+
+      <figure class="guidelines__img--wrapper three">
+        <img class="guidelines__img" src="./assets/two-week-trial.jpg" alt="" />
+      </figure>
+
+      <div class="guidelines__wrapper">
         
-            <div class="text__wrapper">
-                <div class="text__wrapper">
-                  <h1 class="team__header">Meet the team</h1>
-                  <div class="underline "></div>
-                  
-                  <h2 class="pricing__sub-header" style="color: #293833">EMBODYING  BOULDERING MAKES YOU HAPPY</h2>
-                  <p>9 Degrees started in 2015 with our first location in Alexandria, Sydney. Today, between 5 locations, we are a home to thousands of boulderers and employ over 90 staff members.
-                  </p>
-                  
-                </div>
-       
+        <div class="guidelines__list reveal">
+          <li>1.</li>
+          <h2>
+            UNDER 18s MUST HAVE THEIR <a class="waiver__link link__hover-effect" href="safety.html#waiver">WAIVER</a> SIGNED BY A PARENT OR LEGAL GUARDIAN 
+          </h2>
+          <p>
+            Siblings, parents of friends or other non-legal guardians will not
+            be eligible to sign a waiver for a child. Signed notes, emails or
+            verbal permission will not be accepted.
+          </p>
+        </div>
+        <div class="guidelines__list reveal">
+          <li>2.</li>
+          <h2>
+            KIDS UNDER 16 NEED ADULT SUPERVISION AT ALL TIMES.
+          </h2>
+          <p>
+            Although bouldering does not require an adult to belay, active
+            supervision is required at all times. Supervisors must not let
+            children run, sit or stand on the mats, climb too close to anyone
+            else, jump down from the top of the wall or otherwise act in an
+            unsafe or disruptive manner.
+          </p>
+        </div>
+        <div class="guidelines__list reveal">
+          <li>3.</li>
+          <h2>CLIMBING SHOES MUST BE WORN AT ALL TIMES</h2>
+          <p>
+            At 9 Degrees, climbers must wear climbing shoes while on the wall. Rent shoes for $7 or free on the first visit if needed. We mainly serve customers 16 and older, offering rental shoes from US size 3.5/women's size 5 or EU size 35. For small child feet, guests must bring their own. Your understanding in keeping the gym safe and clean is appreciated.
+
+
+
+
+
+          </p>
+        </div>
+        <div class="guidelines__list reveal">
+          <li>4.</li>
+          <h2>FOR EVERY 2 CLIMBING CHILDREN, THERE MUST BE ONE SUPERVISING ADULT.
+          </h2>
+          <p>
+            A group of 4 children would require 2 adults, for example. This is
+            non-negotiable. Supervision exemptions may be made by staff on a
+            case-by-case basis for competent youth competition climbers.
+          </p>
+        </div>
+        <div class="guidelines__list reveal">
+          <li>5.</li>
+          <h2>
+            IF YOU HAVE 5 OR MORE CHILDREN OR PLAN TO LEAVE KIDS UNATTENDED, CONSIDER DIFFERENT ENTERTAINMENT OPTIONS.
+          </h2>
+
+          <p>
+            If you have any unanswered questions please don't hesitate to ask.
+          </p>
+        </div>
+      </div>
+      </div>
     </section>
 
     <script id="replace_with_footer" src="footer.js"></script>
@@ -54,13 +142,210 @@
     margin-top: 10em;
   }
 
+  p {
+    font-size: 1.2em;
+    padding: 2em 0;
+    line-height: 1.5;
+    color: #242424;
+    
+  }
+
+  .guidelines__list p{
+    text-align: left;
+  }
+
+  .waiver__link{
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+  }
+  .under18__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    text-align: center;
+    padding: 2em 10em;
+    max-width: 1200px;
+  }
+
+  .underline {
+    max-width: 250px;
+    background-color: #242424;
+  }
+
   .team__header {
     text-align: center;
   }
 
+  #guidelines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    flex-direction: row;
+    padding: 3em;
+    width: 100%;
+    background: #efebe4;
+  }
+
+  .guidelines__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5em 0em;
+    background: #efebe4;
+    border: 1px solid black;
+    padding: 2em;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out;
+  }
+
+  .guidelines__list:hover{
+    background: #fff;
+    transform: translateY(5px);
+  }
+
+  .guidelines__list li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 50px;
+    margin: 0 1em 1em 1em;
+    padding: 1em;
+    max-width: 50px;
+    max-height: 50px;
+
+  }
+
+  
+
+  .guidelines__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    max-width: 600px;
+    
+    width: 50%;
+    padding: 2em 3em;
+    z-index: 2;
+  }
+
+  .guidelines__img--wrapper{
+    position: absolute;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(2vw,120vh);
+    
+  }
+
+  .one {
+    transform-origin: top right;
+    transform: translate(72vw, 200vh);
+    right: 0;
+  }
+
+  .two {
+    transform-origin: top left;
+    transform: translate(2vw, 280vh);
+    right: 0;
+  }
+
+  .three {
+    transform-origin: top right;
+    transform: translate(72vw, 360vh);
+    right: 0;
+  }
+
+  .guidelines__img{
+    position: absolute;
+    z-index: -1;
+    
+  }
+
+  .guidelines__wrapper:nth-child(1) {
+    width: 50%;
+  }
+
+  #guidelines li {
+    font-weight: 700;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 1em;
+    
+  }
+
+  .guidelines__list h2{
+    font-size: 1.5em;
+    text-align: left;
+    color: #000000;
+    line-height: 1.5;
+  }
+
   @media screen and (max-width: 932px) {
+
+  
+    .guidelines__wrapper{
+      width: 90%;
+      padding: 1em;
+    }
+    .under18__wrapper{
+      padding: 1em;
+      
+    }
+
+    .guidelines__img--wrapper{
+      display: none;
+    }
+
+    .guidelines__img{
+      transform: translate(0em, 30em);
+    }
+
+    .guidelines__img--wrapper:nth-child(1){
+      transform: translate(0em, 50em);
+    }
+
+    h2{
+      font-size: 1.2em;
+    }
+
+    .guidelines__list p{
+      font-size: 1em;
+      box-shadow: none;
+      padding: 0em;
+      
+    }
+
+    .guidelines__list{
+      margin: 1em;
+    }
+
+    .guidelines__img{
+      width: 200px;
+    }
   }
 
   @media screen and (max-width: 600px) {
+
+    #guidelines{
+      padding: 1em;
+    }
+
+    .guidelines__list{
+      margin: 3em 0em 3em 0em;
+    }
   }
 </style>
