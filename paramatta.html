@@ -1,32 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
-    </style>
-    <title>9 Degrees Bouldering</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/assets/9degrees-logo-dark.svg"
-    />
-    <script
-      src="https://kit.fontawesome.com/5082f4a3a0.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <header>
-      <!-- NAV BAR  -->
-      <script id="replace_with_navbar" src="nav.js"></script>
-    </header>
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+  </style>
+  <title>9 Degrees Bouldering</title>
+  <link rel="icon" type="image/x-icon" href="/assets/9degrees-logo-dark.svg" />
+  <script src="https://kit.fontawesome.com/5082f4a3a0.js" crossorigin="anonymous"></script>
 
-    <script id="replace_with_footer" src="footer.js"></script>
-  </body>
+</head>
+
+<body>
+  <header>
+    <!-- NAV BAR  -->
+    <script id="replace_with_navbar" src="nav.js"></script>
+  </header>
+
+  <section id="location">
+    <div class="location__header">
+      <h1 class="team__header">9 Degrees Parramatta</h1>
+      <div class="underline"></div>
+
+      <h2 class="pricing__sub-header" style="color: #293833">
+        THE BEST PLACE TO GET STRONG, SINCE 2017.
+      </h2>
+      <br />
+      <p>
+        In the spirit of reconciliation we acknowledge the Traditional Custodians of this land, the Darug people, and
+        their connections to land, sea and community.
+        We pay our respect to their elders past and present and extend that respect to all Aboriginal and Torres Strait
+        Islander peoples today.
+      </p>
+    </div>
+  </section>
+  <section id="location__header">
+    <div class="location__container">
+      <figure>
+        <img src="./assets/paramatta-1.jpg" alt="Large Image" class="left-image">
+        <div class="right-images">
+          <img src="./assets/paramatta-2.jpg" alt="Small Image 1" class="right-image">
+          <img src="./assets/paramatta-3.jpg" alt="Small Image 2" class="right-image">
+        </div>
+      </figure>
+  </section>
+  <section id="location__details">
+    <div class="location__info">
+
+      <h1 class="location__info--header reveal">LOCATION</h1>
+      <h2 class="reveal">Unit 11 Metro Centre
+        38-46 South St Rydalmere, NSW, 2116</h2>
+
+
+      <h1 class="location__info--header reveal">CONTACT DETAILS</h1>
+      <h2 class="reveal"><i class="small-icon"><img src="./assets/email-icon.svg" alt=""></i> michael@9degrees.com.au</h2>
+      <h2 class="reveal"> <i class="small-icon"><img src="./assets/phone-icon.svg" alt=""></i> 02 8872 1052</h2>
+
+
+      <h1 class="location__info--header reveal">OPENING HOURS</h1>
+      <h2>
+        <ul class="reveal">
+          <li>Mon: 4pm - 10pm</li>
+          <li>Tue: 6am - 10pm </li>
+          <li> Wed: 10am - 10pm </li>
+          <li> Thu: 10am - 10pm </li>
+          <li> Fri: 6am - 10pm </li>
+          <br>
+          <li> Weekends 8am - 10pm</li>
+        </ul>
+      </h2>
+    </div>
+    <div class="location__map reveal">
+      <div style=" overflow:hidden;max-width:100%;width:800px;height:800px;">
+        <div id="google-maps-canvas"
+          style="height:100%; width:100%;max-width:100%; display: flex; align-items: center; justify-content: center;">
+          <iframe style="width: 100%; height: 100%; max-height:600px;max-width:600px;border:0;" frameborder="0"
+            src="https://www.google.com/maps/embed/v1/place?q=9+Degrees+Parramatta,+South+Street,+Rydalmere+NSW,+Australia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        </div><a class="googlecoder" href="https://kbj9qpmy.com/hrn" id="get-data-for-map"></a>
+        <div></div>
+  </section>
+  <section id="faq">
+
+    <h1 class="location__info--header reveal">FAQ </h1>
+    <details class="reveal">
+      <summary>
+        <h2>Parking Info</h2>
+      </summary>
+      <ol>
+        Follow this <a class="link__hover-effect" href="https://goo.gl/maps/ARzTRRVtj4tPqYEM8">link </a> to find us via
+        Google Maps. Turn off South St and park in bays marked 'unit 11' near our main entrance. More parking is
+        available along South St and in the (free) Council parking lot in the park.
+      </ol>
+    </details>
+
+    <details class="reveal">
+      <summary>
+        <h2>Public Transport</h2>
+      </summary>
+      <ol>
+        Bicycle - Use the excellent bicycle path along Parramatta River. <br> <br>
+
+        Ferry - Rydalmere wharf is 600 m from our front door and provides a great way to get to anywhere along the
+        Parramatta river. <br> <br>
+
+        Train - The closest is Rydalmere station (18 min walk) but trains are more frequent from Parramatta train
+        station. <br> <br>
+      </ol>
+    </details>
+
+  </section>
+  <section id="yoga">
+    <div class="yoga__wrapper reveal">
+      <h1>FUNCTIONAL FITNESS AREA </h1>
+      <h2>FULLY AIR CONDITIONED STRENGTH & CONDITIONING AREA FREE TO USE FOR ALL MEMBERS AND DAY PASS HOLDERS.</h2>
+      <p>At 9 Degrees Parramatta we strive to provide the best training experience possible. We have facilities
+        available for strength training to break through plateaus, stretching to increase flexibility or cardio to get
+        your heart rate going. <br><br>
+
+        We are equipped with a full range of free weights and benches, cable machines, cardio training equipment, Cross
+        Fit training equipment and more. </p>
+
+      <p>Free weights available:
+        <br>
+        5:30pm-10pm weekdays
+        <br>
+        10am-10pm weekends & public holidays
+      </p>
+    </div>
+    <div class="yoga__wrapper reveal">
+
+      <img class="yoga__img" src="./assets/fitness-area.jpg" alt="">
+
+    </div>
+  </section>
+
+  <script id="replace_with_footer" src="footer.js"></script>
+  <script src="script.js"></script>
+</body>
+
+<style>
+  /* CUSTOM UNDERLINE */
+
+  .underline {
+    margin: 1em;
+    background-color: #242424;
+    max-width: 500px;
+  }
+
+  figure {
+    display: flex;
+  }
+
+  p {
+    font-size: 1.2em;
+    padding: 2em 0;
+    line-height: 1.5;
+    color: #242424;
+  }
+
+  #faq a {
+    font-weight: 700;
+
+  }
+</style>
+
 </html>

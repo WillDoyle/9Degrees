@@ -1123,6 +1123,11 @@ h2 {
   padding: 2em 10em;
 }
 
+#yt-video {
+  margin: 10em;
+  height: fit-content;
+}
+
 /* BANNER */
 
 #banner {
