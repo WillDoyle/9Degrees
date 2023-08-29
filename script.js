@@ -182,6 +182,8 @@ function scrollFunction2() {
    }
 
   }
+
+  
   
   window.addEventListener("scroll", reveal);
 
