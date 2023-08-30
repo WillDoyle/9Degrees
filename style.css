@@ -93,6 +93,7 @@ video {
   font-family: "Poppins", sans-serif;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -107,17 +108,21 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -125,6 +130,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -151,8 +157,10 @@ html {
 
 html {
   height: 100%;
-  -webkit-text-size-adjust: none; /* for iOS Safari */
-  text-size-adjust: none; /* for other mobile browsers */
+  -webkit-text-size-adjust: none;
+  /* for iOS Safari */
+  text-size-adjust: none;
+  /* for other mobile browsers */
 }
 
 .centre-main {
@@ -178,11 +186,13 @@ p {
 .h1__white {
   color: #f3efef;
 }
+
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #242424;
 }
+
 h3 {
   font-family: "Roboto", sans-serif;
 }
@@ -207,6 +217,7 @@ summary,
   font-family: "Poppins";
   font-stretch: condensed;
 }
+
 a {
   text-decoration: none;
   /* Places underlines below the descenders */
@@ -496,6 +507,7 @@ button:hover {
     transform: rotate(5deg);
   }
 }
+
 .landing__sub-header {
   display: flex;
   align-items: center;
@@ -585,6 +597,7 @@ button:hover {
     transform: translateX(100px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -695,6 +708,7 @@ button:hover {
   padding: 0rem 10rem 0rem 10rem;
   height: auto;
 }
+
 .timeline__container {
   display: flex;
   align-items: center;
@@ -729,6 +743,7 @@ button:hover {
   width: 100%;
   background-color: #000000;
 }
+
 .timeline__header--location {
   font-size: 0.01;
   white-space: nowrap;
@@ -781,6 +796,7 @@ button:hover {
   background-color: #8b4da2;
   height: 100%;
 }
+
 .testimonials__wrapper {
   display: flex;
   justify-content: center;
@@ -1034,7 +1050,7 @@ summary:before {
 }
 
 /* THE MAGIC 🧙‍♀️ */
-details[open] > summary:before {
+details[open]>summary:before {
   transform: rotate(90deg);
 }
 
@@ -1042,17 +1058,17 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-details > ol {
+details>ol {
   padding: 1em 2em;
   margin-bottom: 0;
   line-height: 1.5;
 }
 
-details > *:not(summary) {
+details>*:not(summary) {
   animation: details-close 150ms ease-in-out;
 }
 
-details[open] > *:not(summary) {
+details[open]>*:not(summary) {
   animation: details-show 300ms ease-in-out;
 }
 
@@ -1090,6 +1106,7 @@ h2 {
 #yoga h1 {
   margin: 1em 0;
 }
+
 .yoga__wrapper {
   display: flex;
   align-items: center;
@@ -1106,6 +1123,7 @@ h2 {
   max-width: 500px;
   padding: 3em;
 }
+
 .yoga__img {
   height: 100%;
   object-fit: cover;
@@ -1212,11 +1230,13 @@ h2 {
 .carbon__neutral--header {
   padding: 48px;
 }
+
 .carbon__neutral--figure {
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .carbon__neutral--image {
   max-width: 300px;
   width: 100%;
@@ -1284,6 +1304,7 @@ h2 {
   max-height: 400px;
   height: 100%;
 }
+
 .event__header {
   padding-top: 22px;
   font-size: 1.75rem;
@@ -1346,6 +1367,7 @@ h2 {
 .events__card:hover {
   background-color: #000000e8;
 }
+
 /* FOOTER */
 
 footer {
@@ -1391,6 +1413,7 @@ footer {
   .membership__options {
     flex-wrap: wrap;
   }
+
   .membership__option {
     flex-basis: calc(50% - 96px);
     margin: 24px 48px;
@@ -1500,6 +1523,7 @@ footer {
       height: 0;
       padding: 0 0px;
     }
+
     100% {
       opacity: 1;
       height: auto;
@@ -1592,6 +1616,7 @@ footer {
     padding: 0;
     margin: 0;
   }
+
   #down__arrow {
     display: none;
   }
@@ -1630,7 +1655,8 @@ footer {
   }
 
   .plus::before {
-    content: "-"; /* Initial state */
+    content: "-";
+    /* Initial state */
     top: 0;
     height: 100%;
     width: 2em;
@@ -1645,11 +1671,13 @@ footer {
   }
 
   .plus.active::before {
-    content: "+"; /* Active state */
+    content: "+";
+    /* Active state */
     top: 0;
     transform: rotate(45deg);
     right: 0px;
   }
+
   .bar1,
   .bar2,
   .bar3 {
@@ -1683,7 +1711,8 @@ footer {
   .burger__menu--button:active .nav__links,
   .burger__menu--button:active #mobile--navBar {
     display: block;
-    opacity: 1; /* or any other appropriate value to show the navigation */
+    opacity: 1;
+    /* or any other appropriate value to show the navigation */
   }
 
   h1 {
@@ -1771,6 +1800,7 @@ footer {
     width: 100%;
     margin: 8px 0px;
   }
+
   .wall {
     position: absolute;
     top: 0;
@@ -1799,6 +1829,7 @@ footer {
     height: fit-content;
     margin-bottom: 4em;
   }
+
   .timeline__container {
     flex-direction: column;
     width: 100vw;
@@ -1908,6 +1939,7 @@ footer {
     height: 130vh;
     padding: 0;
   }
+
   .difficulty__list {
     padding: 0 26px;
   }
@@ -1963,6 +1995,7 @@ footer {
   details {
     width: 100%;
   }
+
   #yoga {
     flex-direction: column;
   }
@@ -2038,6 +2071,7 @@ footer {
       padding: 0;
       margin: 0;
     }
+
     .reveal {
       opacity: 1;
     }
@@ -2073,6 +2107,7 @@ footer {
     .landing__title {
       font-size: 3.5em;
     }
+
     .landing__sub-header {
       font-size: 2em;
     }
@@ -2137,6 +2172,7 @@ footer {
       height: auto;
       width: 100vw;
     }
+
     .primary__paragraph {
       display: flex;
       justify-content: center;
@@ -2160,8 +2196,7 @@ footer {
       width: 33%;
     }
 
-    .button__white {
-    }
+    .button__white {}
 
     .banner__wrapper {
       display: flex;
