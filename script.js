@@ -46,6 +46,8 @@ if(location.pathname=="/index.html"){
 
 
 
+
+
 function toggleMenu(element) {
   // Find the closest parent <li> element
   var parentLi = element.closest('li');
@@ -183,7 +185,23 @@ function scrollFunction2() {
 
   }
 
+  const scrollContent = document.querySelector('.scroll-content');
+
+function cafeScroll(){
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const containerRect = scrollContent.getBoundingClientRect();
   
+    if (
+      containerRect.top <= windowHeight
+    ) {
+      scrollContent.classList.add('show');
+    } else {
+      scrollContent.classList.remove('show');
+    }
+    }
+
+window.addEventListener("scroll", cafeScroll);
   
   window.addEventListener("scroll", reveal);
 

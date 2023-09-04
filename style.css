@@ -343,7 +343,7 @@ nav {
 
 .nav__link {
   text-decoration-style: none;
-  padding: 0 12px;
+  padding: 0 6px;
 }
 
 .burger__menu {
@@ -396,7 +396,7 @@ button:hover {
   margin: 0 12px;
   color: #242424;
 
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 }
 

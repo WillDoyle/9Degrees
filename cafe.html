@@ -37,17 +37,40 @@
         </h2>
         <p>Wolfgang Gullich, a German pioneer of rock climbing</p>
       </div>
-      <div class="cafe__imgs">
-        <img class="cafe__img" src="./assets/cafe-2.jpg" alt="" />
-      </div>
     </section>
     <section id="fuel-up">
-      <div class="fuel__up--wrapper">
-        <h1>FUEL <br />UP!</h1>
+      <div class="container">
+        <!-- Other content -->
+        <div class="scrollable-container">
+          <img
+            src="./assets/cafe-5.jpg"
+            alt="Sticky Image"
+            class="sticky reveal"
+          />
+          <div class="scroll-content">FUEL UP</div>
+        </div>
+        <div class="still-container">
+          <img class="still__img reveal" src="./assets/cafe-4.jpg" alt="" />
+          <img class="still__img reveal" src="./assets/cafe-3.jpg" alt="" />
+          <img class="still__img reveal" src="./assets/cafe-2.jpg" alt="" />
+        </div>
       </div>
-      <div class="fuel__up--wrapper">
-        <img src="./assets/cafe-4.jpg" alt="" />
-      </div>
+    </section>
+
+    <section>
+      <h1>Specialty Coffee</h1>
+
+      <h1>Your favourite energy bars</h1>
+
+      <h1>Treats from Pat and Stick</h1>
+
+      <h1>Stone Baked Pizza</h1>
+      <h2>SERIOUSLY.</h2>
+      <p>
+        Available at 9 Degrees Alexandria, Lane Cove & Enoggera. The perfect
+        post climb feed, choose your toppings and enjoy! Vegetarian options
+        available, vegan options coming soon!
+      </p>
     </section>
 
     <script id="replace_with_footer" src="footer.js"></script>
@@ -64,6 +87,11 @@
     justify-content: center;
     height: fit-content;
     margin-top: 10em;
+  }
+
+  html,
+  body {
+    overflow: visible;
   }
 
   .cafe__imgs {
@@ -103,12 +131,14 @@
   #fuel-up {
     display: flex;
     flex-direction: row;
-    height: 100%;
+
+    height: 200vh;
     width: 100%;
+    background: #ffffff;
   }
 
   .fuel__up--wrapper {
-    height: 100%;
+    height: 100vh;
     width: 50%;
   }
 
@@ -123,6 +153,80 @@
     display: flex; /* Add this line */
     align-items: center; /* Add this line */
   }
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 5em;
+    position: relative;
+    width: 100%;
+  }
+
+  .scrollable-container {
+    /* Styles for the scrollable container, e.g., setting a max-height or overflow */
+
+    max-height: 10000px;
+    height: 100%;
+    width: 50%;
+    overflow-y: visible;
+    padding-right: 3em;
+  }
+
+  .still__img:not(:first-child) {
+    max-height: 500px;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 3em;
+  }
+
+  .still__img:nth-child(3) {
+  }
+
+  .still-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    width: 500px;
+    margin: 0 auto;
+    align-self: flex-end;
+  }
+
+  .scroll-content {
+    position: sticky;
+    white-space: nowrap;
+    top: 10%;
+    left: 50%;
+    transform: translate(60%, 0%);
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+    font-size: 0em;
+    display: flex; /* Add this */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    color: #2a2626;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  .scroll-content.show {
+    opacity: 1; /* Make it visible when it has the 'show' class */
+    font-size: 20rem; /* Increase font size when it has the 'show' class */
+    transition-delay: 0s; /* Add a delay to the animation */
+  }
+
   @media screen and (max-width: 932px) {
   }
 
