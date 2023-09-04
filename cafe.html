@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    </style>
+    <title>9 Degrees Bouldering</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/9degrees-logo-dark.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/5082f4a3a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- NAV BAR  -->
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+
+    <section id="cafe">
+      <div class="text__wrapper">
+        <h1 class="team__header">Cafe</h1>
+        <div class="underline"></div>
+
+        <h2 class="pricing__sub-header" style="color: #293833">
+          “A MAN DOESN'T GO TO DRINK COFFEE AFTER CLIMBING, COFFEE IS INTEGRAL
+          PART OF THE CLIMBING”.
+        </h2>
+        <p>Wolfgang Gullich, a German pioneer of rock climbing</p>
+      </div>
+      <div class="cafe__imgs">
+        <img class="cafe__img" src="./assets/cafe-2.jpg" alt="" />
+      </div>
+    </section>
+    <section id="fuel-up">
+      <div class="fuel__up--wrapper">
+        <h1>FUEL <br />UP!</h1>
+      </div>
+      <div class="fuel__up--wrapper">
+        <img src="./assets/cafe-4.jpg" alt="" />
+      </div>
+    </section>
+
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&family=Roboto:wght@300;500;700;900&display=swap");
+
+  #cafe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 10em;
+  }
+
+  .cafe__imgs {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .cafe__img {
+    max-width: 800px;
+    object-fit: cover;
+    margin: 0em 1em 10em 1em;
+  }
+
+  .team__header {
+    text-align: center;
+  }
+
+  .text__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 30vh;
+    text-align: center;
+  }
+
+  .underline {
+    max-width: 300px;
+  }
+
+  p {
+    margin: 3em;
+    padding: 0em 5em;
+  }
+
+  #fuel-up {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+
+  .fuel__up--wrapper {
+    height: 100%;
+    width: 50%;
+  }
+
+  .fuel__up--wrapper:nth-child(1) {
+    background-color: #858d53;
+    height: 100%;
+  }
+
+  .fuel__up--wrapper h1 {
+    font-size: 2em;
+    height: 100%; /* Add this line */
+    display: flex; /* Add this line */
+    align-items: center; /* Add this line */
+  }
+  @media screen and (max-width: 932px) {
+  }
+
+  @media screen and (max-width: 600px) {
+  }
+</style>

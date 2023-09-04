@@ -487,13 +487,20 @@ button:hover {
 }
 
 .down__arrow {
-  font-size: 56px;
+  font-size: 48px;
   position: absolute;
-  margin-top: 13em;
+  margin-top: 17.5em;
+  color: #000;
+  z-index: 3;
+  text-shadow: #000;
+
   animation: moveArrow 300ms infinite ease-in-out;
   animation-delay: 5s;
 }
-
+#down__arrow {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 @keyframes moveArrow {
   0% {
     transform: rotate(5deg);
@@ -514,6 +521,7 @@ button:hover {
   justify-content: center;
   width: 100%;
   white-space: nowrap;
+  font-size: 28px;
   color: #fff;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
@@ -864,7 +872,7 @@ button:hover {
   background-color: #f3f3f3;
   border-radius: 0 0 25px 25px;
   height: 100%;
-  padding: 12px 24px;
+  padding: 12px 12px;
 }
 
 .membership__text {
@@ -1050,7 +1058,7 @@ summary:before {
 }
 
 /* THE MAGIC 🧙‍♀️ */
-details[open]>summary:before {
+details[open] > summary:before {
   transform: rotate(90deg);
 }
 
@@ -1058,17 +1066,17 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-details>ol {
+details > ol {
   padding: 1em 2em;
   margin-bottom: 0;
   line-height: 1.5;
 }
 
-details>*:not(summary) {
+details > *:not(summary) {
   animation: details-close 150ms ease-in-out;
 }
 
-details[open]>*:not(summary) {
+details[open] > *:not(summary) {
   animation: details-show 300ms ease-in-out;
 }
 
@@ -1229,6 +1237,8 @@ h2 {
 
 .carbon__neutral--header {
   padding: 48px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .carbon__neutral--figure {
@@ -2196,7 +2206,8 @@ footer {
       width: 33%;
     }
 
-    .button__white {}
+    .button__white {
+    }
 
     .banner__wrapper {
       display: flex;
