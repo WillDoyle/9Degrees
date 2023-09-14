@@ -35,44 +35,90 @@
           “A MAN DOESN'T GO TO DRINK COFFEE AFTER CLIMBING, COFFEE IS INTEGRAL
           PART OF THE CLIMBING”.
         </h2>
+
         <p>Wolfgang Gullich, a German pioneer of rock climbing</p>
+        <img class="quote__img" src="./assets/Wolfgang_Guellich.jpg" alt="" />
       </div>
     </section>
     <section id="fuel-up">
       <div class="container">
         <!-- Other content -->
         <div class="scrollable-container">
-          <img
-            src="./assets/cafe-5.jpg"
-            alt="Sticky Image"
-            class="sticky reveal"
-          />
+          <img src="./assets/cafe-5.jpg" alt="Sticky Image" class="sticky" />
           <div class="scroll-content">FUEL UP</div>
         </div>
         <div class="still-container">
-          <img class="still__img reveal" src="./assets/cafe-4.jpg" alt="" />
+          <img class="still__img" src="./assets/cafe-4.jpg" alt="" />
           <img class="still__img reveal" src="./assets/cafe-3.jpg" alt="" />
-          <img class="still__img reveal" src="./assets/cafe-2.jpg" alt="" />
+          <img class="still__img reveal" src="./assets/cafe-1.jpg" alt="" />
         </div>
       </div>
     </section>
 
-    <section>
-      <h1>Specialty Coffee</h1>
+    <section id="fuel">
+      <div class="selection">
+        <div class="fuel__img"></div>
+        <div class="fuel__section">
+          <div class="fuel__promo">
+            <h1>Specialty Coffee</h1>
+            <p>
+              Enjoy Sample Coffee’s Pacemaker blend in our NSW gyms and Coast
+              Coffee’s Midnight Runner in 9D Enoggera, QLD. Available every day
+              until late with options for regular, oat, almond and soy milk.
+            </p>
+          </div>
 
-      <h1>Your favourite energy bars</h1>
-
-      <h1>Treats from Pat and Stick</h1>
-
-      <h1>Stone Baked Pizza</h1>
-      <h2>SERIOUSLY.</h2>
-      <p>
-        Available at 9 Degrees Alexandria, Lane Cove & Enoggera. The perfect
-        post climb feed, choose your toppings and enjoy! Vegetarian options
-        available, vegan options coming soon!
-      </p>
+          <div class="fuel__promo">
+            <h1>Your favourite energy bars</h1>
+            <p>
+              Fuel up on energy bars from Clif, Ridiculously Delicious & Blue
+              Dinosaur
+            </p>
+          </div>
+          <div class="fuel__promo">
+            <h1>Treats from Pat and Stick</h1>
+            <p>
+              Dangerously good. Grab a cookie to dip in your coffee or an ice
+              cream sandwich on a hot day. Vegan and oat milk options available.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <section id="pizza">
+      <div class="pizza__wrapper">
+        <h1>Stone Baked Pizza</h1>
+        <h2>SERIOUSLY.</h2>
+        <p>
+          Available at 9 Degrees Alexandria, Lane Cove & Enoggera. The perfect
+          post climb feed, choose your toppings and enjoy! Vegetarian options
+          available, vegan options coming soon!
+        </p>
+
+        <div class="pizza__text--left">
+          <h2>MADE WITH:</h2>
+          <ul class="ingredients__list">
+            <li class="ingredients__item">
+              All-natural ingredients sourced directly from Italy
+            </li>
+
+            <li class="ingredients__item">
+              San Marzano Tomato Polpa & Herb sauce base - no added sugar or
+              preservatives
+            </li>
+
+            <li class="ingredients__item">100% Mozzarella cheese</li>
+
+            <li class="ingredients__item">Hand stretched bases</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pizza__wrapper">
+        <img class="pizza__img" src="./assets/stone-baked-pizza.jpg" alt="" />
+      </div>
+    </section>
     <script id="replace_with_footer" src="footer.js"></script>
     <script src="script.js"></script>
   </body>
@@ -87,6 +133,18 @@
     justify-content: center;
     height: fit-content;
     margin-top: 10em;
+  }
+
+  .quote__img {
+    max-width: 100px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0.5px #858585b5;
   }
 
   html,
@@ -124,8 +182,7 @@
   }
 
   p {
-    margin: 3em;
-    padding: 0em 5em;
+    margin: 0 auto;
   }
 
   #fuel-up {
@@ -171,7 +228,7 @@
     height: 100%;
     width: 50%;
     overflow-y: visible;
-    padding-right: 3em;
+    padding-right: 1.5em;
   }
 
   .still__img:not(:first-child) {
@@ -189,6 +246,7 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
+    padding-left: 1.5em;
   }
 
   .sticky {
@@ -225,6 +283,137 @@
     opacity: 1; /* Make it visible when it has the 'show' class */
     font-size: 20rem; /* Increase font size when it has the 'show' class */
     transition-delay: 0s; /* Add a delay to the animation */
+  }
+
+  .selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+  }
+
+  #fuel {
+    position: relative;
+    height: fit-content;
+  }
+
+  .fuel__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em 5em;
+    width: 50%;
+    border-top: 1px solid #242424;
+
+    height: fit-content;
+  }
+
+  .fuel__section p {
+    padding: 0;
+    margin: 0em 0em 4em 0em;
+  }
+
+  .fuel__section h1 {
+    font-size: 3em;
+  }
+
+  .fuel__img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+    filter: brightness(0.4);
+    background-image: url("./assets/cafe-2.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+
+  .fuel__promo {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3em;
+    text-align: center;
+    border-radius: 15px;
+    margin: 2em 0em;
+    background: #5d4629;
+    color: #fff;
+    max-width: 500px;
+  }
+
+  .fuel__promo h1 {
+    font-size: 3em;
+    color: #fea941;
+    margin: 1em 0em;
+    text-align: center;
+  }
+
+  #pizza {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3em 0em;
+    border-top: 1px solid #242424;
+  }
+
+  .pizza__wrapper {
+    padding: 1em 5em;
+  }
+
+  .pizza__wrapper:nth-child(1) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 1em 5em;
+    text-align: center;
+  }
+
+  .pizza__wrapper h2 {
+    font-size: 1.5em;
+  }
+
+
+
+  .pizza__wrapper:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+
+  .pizza__img {
+    max-height: 700px;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .pizza__text--left {
+    text-align: left;
+  }
+
+  .pizza__text--left {
+    margin: 1em 0em;
+  }
+
+  .pizza__text--left h2 {
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 1em;
+  }
+
+  .ingredients__list {
+  }
+
+  .ingredients__item {
+    list-style-type: disc;
+    margin: 2em 0em;
   }
 
   @media screen and (max-width: 932px) {

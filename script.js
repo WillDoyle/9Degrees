@@ -22,10 +22,12 @@ if(location.pathname=="/index.html"){
         document.getElementById("down__arrow").style.color = "#000";
         
         document.getElementById("down__arrow").style.scale = "0.5";
+        document.getElementById("background-video").style.filter = "blur(0px) brightness(100%)";
 
 
   } else {
     document.getElementById("background-video").style.scale = "0.5";
+    document.getElementById("background-video").style.filter = "blur(2px) brightness(50%)";
 
 
     //Text
@@ -43,6 +45,9 @@ if(location.pathname=="/index.html"){
     //Do nothing
   }
 }
+
+
+
 
 
 

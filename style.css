@@ -290,8 +290,9 @@ img {
 
 .underline {
   position: relative;
+  display: block;
   height: 3.5px;
-  background-color: #293833;
+  background-color: #242424;
   border-radius: 50px;
   max-width: 800px;
   width: 100%;
@@ -438,6 +439,10 @@ button:hover {
   position: relative;
 }
 
+#pricing {
+  padding: 3em 0;
+}
+
 .sub__links {
   font-weight: 500;
   font-size: 0.8em;
@@ -470,10 +475,10 @@ button:hover {
   overflow: hidden;
 
   z-index: -1;
-  filter: blur(2px);
-  filter: brightness(80%);
+
+  filter: brightness(100%) blur(0px);
   transition: all 300ms ease-in-out;
-  padding: 35px;
+  padding: 2.5em;
 }
 
 .landing__title {
@@ -483,6 +488,8 @@ button:hover {
   color: #fff;
   white-space: nowrap;
   font-stretch: condensed;
+  font-family: "Compacta", sans-serif;
+  font-style: italic;
   transition: all 200ms ease-in-out;
 }
 
@@ -554,7 +561,8 @@ button:hover {
 
 .primary__paragraph {
   margin-top: 12px;
-  max-width: 700px;
+  max-width: 600px;
+  line-height: 1.7;
 }
 
 .text__wrapper {
@@ -640,7 +648,7 @@ button:hover {
 
 #difficulty {
   background-color: #ffc20e;
-  padding: 48px 0;
+  padding: 3em 0;
   height: fit-content;
   transition: all 300ms ease-in-out;
   display: flex;
@@ -707,6 +715,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   height: fit-content;
+  margin: 5em 0em;
+  padding: 2em 0em;
+  background-color: #eeeeee;
 }
 
 .text__wrapper--timeline {
@@ -723,7 +734,7 @@ button:hover {
   justify-content: center;
   text-align: center;
 
-  margin: 108px;
+  margin: 3em;
 }
 
 .timeline__location {
@@ -814,7 +825,7 @@ button:hover {
 .testimonials__img {
   width: 100%;
   height: 100%;
-  padding: 0 10%;
+  padding: 0 3em;
 }
 
 .pricing__wrapper {
@@ -828,7 +839,7 @@ button:hover {
   justify-content: center;
   flex-direction: row;
   transform: scale(1);
-  padding: 0 5%;
+  padding: 5em 5%;
 }
 
 .membership__option {
@@ -841,7 +852,7 @@ button:hover {
   width: 100%;
 
   border-radius: 25px;
-  margin: 56px 48px;
+  margin: 56px 1.5em;
   transition: all 200ms ease-in-out;
 }
 
@@ -1160,8 +1171,9 @@ h2 {
   /* #ff88ab */
   height: 120vh;
   opacity: 1;
-  background-color: black;
+  background-color: #fff;
   position: relative;
+  padding: 5em 25em;
 }
 
 .banner__div {
@@ -1177,11 +1189,12 @@ h2 {
 
 .h1__banner {
   font-size: 1600%;
-
+  position: relative;
   text-align: center;
   z-index: 2;
   color: rgb(255, 255, 255);
   line-height: 1;
+  -webkit-text-stroke: 2px #242424;
 }
 
 .banner__img {
@@ -1191,8 +1204,9 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 1;
   z-index: -1;
+  filter: brightness(0.5) blur(1px);
 }
 
 .banner__wrapper {
@@ -1217,16 +1231,20 @@ h2 {
   width: 100%;
   text-align: center;
   margin: 0 auto;
+  background-color: #fff;
   margin-top: 48px;
+  color: #242424;
 }
 
 .banner__sub-header {
-  top: 60%;
+  position: relative;
+  display: block;
   font-size: 32px;
   height: 60px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Poppins";
+  -webkit-text-stroke: 1px #242424;
 }
 
 /* CARBON NEUTRAL */
@@ -1301,10 +1319,15 @@ h2 {
   transition: all 200ms ease-in-out;
 }
 
+.pricing__sub-header {
+  position: relative;
+  display: block;
+}
+
 .events__section--header {
   font-size: calc(4.6rem + 2vw);
-  padding: 48px 0 0px 0;
-  color: #293833;
+  padding: 0em 0 0px 0;
+  color: #242424;
   max-height: 200px;
   white-space: nowrap;
 }
@@ -1398,7 +1421,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 16px 0;
+  margin: 16px 0em;
 }
 
 .footer__link {
@@ -1767,7 +1790,8 @@ footer {
   /* LANDING SECTION FOR MOBILE*/
 
   .row {
-    width: auto;
+    width: 100%;
+    padding: 0em;
   }
 
   .shapes {
@@ -1835,9 +1859,17 @@ footer {
     margin: 0 16px;
   }
 
+  #banner {
+    padding: 5em 2em;
+  }
+
   #timeline {
     height: fit-content;
     margin-bottom: 4em;
+  }
+
+  .difficulty__h1 {
+    padding: 0em;
   }
 
   .timeline__container {
@@ -1976,14 +2008,14 @@ footer {
   /* FOOTER SECTION FOR MOBILE */
   .footer__links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0px 24px;
     padding: 0;
-    margin: 16px 0;
+    margin: 2em 0;
   }
 
   .footer__link {
-    padding: 0;
+    padding: 2em;
     margin: 0;
     font-size: 0.8em;
     width: 33%;
@@ -2195,6 +2227,9 @@ footer {
     }
 
     .text__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 0em 0em 0em 0em;
       margin: 0;
     }
@@ -2242,6 +2277,19 @@ footer {
 
     #faq details {
       width: 100%;
+    }
+
+    .footer__links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      line-height: 1.5;
+    }
+
+    .footer__link {
+      padding: 1em;
+      font-size: 0.75em;
     }
   }
 }
