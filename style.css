@@ -469,7 +469,8 @@ button:hover {
 
 .video-background {
   background: #fff;
-  position: relative;
+  position: absolute;
+  display: block;
   top: 0;
   right: 0;
   bottom: 0;
