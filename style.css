@@ -1441,6 +1441,10 @@ footer {
   font-size: 12px;
 }
 
+.location__header {
+  margin: 10em auto;
+}
+
 /* Media Query for 1200px */
 @media (max-width: 1230px) {
   .membership__options {

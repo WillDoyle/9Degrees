@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    </style>
+    <title>9 Degrees Bouldering</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/9degrees-logo-dark.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/5082f4a3a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- NAV BAR  -->
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+    <div class="location__header">
+      <h1 class="team__header">Dogs</h1>
+      <div class="underline"></div>
+
+      <h2 class="pricing__sub-header" style="color: #293833">
+        WE LOVE OUR FURRY FRIENDS BUT OUR CUSTOMERS WILL ALWAYS BE OUR FIRST
+        PRIORITY
+      </h2>
+      <br />
+      <p>
+        Your dog is very welcome to visit all 9 Degrees gyms. We ask that dogs
+        are kept on leash for the duration of your session and do not become
+        disruptive or overly excited. Although we love dogs the climbing gym is
+        a space for them to curl up and nap, not play.
+      </p>
+      <br />
+      <h2>
+        We reserve the right to ask any dogs to leave at any time if they cannot
+        behave suitably.
+      </h2>
+    </div>
+
+    <section id="dog__section">
+      <div class="dogs__info reveal">
+        <div class="dogs__text">
+          <h1 class="dogs__header">Dog Owner House Rules</h1>
+
+          <ul class="dog__rules">
+            <li class="dog__rule">Dogs must always enter the gym on a lead</li>
+            <li class="dog__rule">
+              Do not bring a young puppy who is not yet house trained
+            </li>
+            <li class="dog__rule">
+              Chew toys are great but please leave excitable toys like balls at
+              home. Although there is plenty of space, we are not a park.
+            </li>
+            <li class="dog__rule">
+              Please do not use the gym as a space for dog socialisation or
+              play. Dog owners should do their best to keep space between dogs.
+              Play is not permitted.
+            </li>
+            <li class="dog__rule">
+              Dogs are not allowed on the mats under any circumstances
+            </li>
+          </ul>
+        </div>
+        <div class="dogs__img">
+          <img class="dog__img" src="./assets/dogs-1.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="dogs__info reveal reverse">
+        <div class="dogs__text">
+          <h1 class="dogs__header">Dog House Rules</h1>
+
+          <ul class="dog__rules">
+            <li class="dog__rule">All dogs must be 100% house trained</li>
+            <li class="dog__rule">Capable of staying off the mats</li>
+            <li class="dog__rule">
+              Comfortable in loud spaces with unfamiliar people
+            </li>
+            <li class="dog__rule">Quiet, doesn’t bark</li>
+            <li class="dog__rule">
+              No history of antisocial behaviour around other dogs or people
+            </li>
+            <li class="dog__rule">
+              Capable of relaxing when in a space with loud noises, other dogs,
+              children or other distractions
+            </li>
+          </ul>
+        </div>
+        <div class="dogs__img">
+          <img class="dog__img" src="./assets/dogs-3.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&family=Roboto:wght@300;500;700;900&display=swap");
+
+  #first-section {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 10em;
+  }
+
+  .underline {
+    max-width: 300px;
+  }
+
+  /* Styles for the dog images container */
+  .dog__images {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next row on smaller screens */
+    justify-content: center; /* Distribute space evenly between images */
+    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 2em; /* Add some padding to space out the images */
+  }
+
+  .location__header {
+    margin: 10em auto;
+  }
+
+  /* Styles for individual dog images */
+  .dog {
+    flex: 1; /* Each image should take up an equal portion of the available space */
+    max-width: calc(
+      33.33% - 20em
+    ); /* Set maximum width for each image, considering padding */
+    max-height: 400px;
+    margin: 2em;
+    margin-bottom: 20px; /* Add some spacing between images */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .dogs__info {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .divider {
+    height: 3px;
+    margin: 3em;
+  }
+
+  .dog__img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 300ms ease-in-out;
+  }
+
+  .dogs__img {
+    display: flex;
+    max-width: 50%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  .dog__img:hover {
+    transform: scale(1.1);
+  }
+
+  .dogs__header {
+    color: #242424;
+  }
+
+  .dogs__text {
+    width: 50%;
+    padding: 5%;
+    background: #ada6d1;
+  }
+
+  .dog__rules {
+    padding: 2em;
+  }
+
+  #dog__section {
+    padding-bottom: 0em;
+  }
+
+  .dog__rule {
+    list-style-type: disc;
+    padding: 1em;
+    font-size: 1.25em;
+    font-weight: 500;
+  }
+
+  .safety__img--wrapper .safety__img:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 932px) {
+    .dogs__info {
+      max-height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+  }
+</style>
