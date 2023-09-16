@@ -465,6 +465,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding: 6em;
 }
 
 .video-background {
@@ -477,6 +478,17 @@ button:hover {
   left: 0;
   z-index: -1;
   transition: all 300ms ease-in-out;
+}
+
+.padding {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 6em solid #fff;
+  padding: 6em;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 .video-foreground,
 .video-background iframe {
