@@ -11,7 +11,7 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
 if(location.pathname=="/index.html"){
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
-    document.getElementById("background-video").style.scale = "1";
+    document.getElementById("landing-video").style.scale = "1";
 
         //Text
         document.getElementById("title").style.scale = "1";
@@ -22,12 +22,12 @@ if(location.pathname=="/index.html"){
         document.getElementById("down__arrow").style.color = "#000";
         
         document.getElementById("down__arrow").style.scale = "0.5";
-        document.getElementById("background-video").style.filter = "blur(0px) brightness(100%)";
+        document.getElementById("landing-video").style.filter = "blur(0px) brightness(100%)";
 
 
   } else {
-    document.getElementById("background-video").style.scale = "0.5";
-    document.getElementById("background-video").style.filter = "blur(2px) brightness(50%)";
+    document.getElementById("landing-video").style.scale = "0.5";
+    document.getElementById("landing-video").style.filter = "blur(2px) brightness(50%)";
 
 
     //Text
