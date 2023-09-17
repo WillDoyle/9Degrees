@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    </style>
+    <title>9 Degrees Bouldering</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/9degrees-logo-dark.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/5082f4a3a0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- NAV BAR  -->
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+
+    <section id="first-visit">
+      <div class="location__header">
+        <h1 class="team__header">First Visit</h1>
+        <div class="underline"></div>
+
+        <h2 class="pricing__sub-header">GETTING STARTED AT 9 DEGREES</h2>
+        <br />
+        <br />
+        <p>EVERYTHING YOU NEED TO KNOW BEFORE YOUR FIRST VISIT</p>
+        <br />
+
+        <img src="./assets/firstvisit.webp" alt="" class="first__visit--img" />
+      </div>
+    </section>
+
+    <section id="waiver-first-visit">
+      <div class="safety__div">
+        <h2 class="house__rules--text">Waiver</h2>
+        <h3>
+          EVERY CLIMBER NEEDS TO SIGN A WAIVER ON THEIR FIRST VISIT. NO WAIVER,
+          NO CLIMBING.
+        </h3>
+
+        <button class="button__white">
+          <a
+            class="waiver__link reveal"
+            href="https://waiver.smartwaiver.com/w/5d6049a2af029/web/?fbclid=IwAR11WTJWtt6lkCnD1_oN50UYMn7RjNEGcgQCzYNVLgnnuGAWQ-C0mlMwdHY"
+          >
+            Sign Waiver
+          </a>
+        </button>
+      </div>
+
+      <div class="safety__div">
+        <h2 class="house__rules--text">Waiver</h2>
+        <h3>
+          EVERY CLIMBER NEEDS TO SIGN A WAIVER ON THEIR FIRST VISIT. NO WAIVER,
+          NO CLIMBING.
+        </h3>
+      </div>
+    </section>
+
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&family=Roboto:wght@300;500;700;900&display=swap");
+
+  #first-visit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .first__visit--img {
+    position: absolute;
+    height: 85vh;
+    width: 100%;
+    opacity: 1;
+
+    z-index: -1;
+    object-fit: cover;
+    padding: 6em;
+    filter: brightness(60%);
+  }
+
+  .pricing__sub-header {
+    text-align: center;
+    color: #fff;
+  }
+
+  .team__header {
+    color: #fff;
+  }
+
+  p {
+    color: #fff;
+  }
+
+  .underline {
+    max-width: 300px;
+    background-color: #fff;
+  }
+
+  .house__rules--text {
+    padding: 0.3em 0 0.3em 0;
+    text-align: left;
+    color: #242424;
+    font-weight: 800;
+    font-size: 4em;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffc20e;
+    padding: 0.25em;
+    margin: 0em 0em 1em 0em;
+    width: fit-content;
+  }
+
+  #waiver-first-visit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .safety__div {
+    display: flex;
+
+    justify-content: center;
+    flex-direction: column;
+    margin: 0em;
+    padding: 0em 0.5em 0em 6em;
+    margin-bottom: 3em;
+    width: 50%;
+    height: 100%;
+  }
+
+  .safety__div:nth-child(2) {
+    padding-left: 0.5em;
+    padding-right: 6em;
+  }
+
+  .waiver__link {
+    font-weight: 300;
+    transition: all 300ms ease-in-out;
+  }
+
+  .button__white:hover .waiver__link {
+    color: #fff;
+  }
+
+  @media screen and (max-width: 932px) {
+  }
+
+  @media screen and (max-width: 600px) {
+  }
+</style>

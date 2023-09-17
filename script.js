@@ -164,31 +164,17 @@ function scrollFunction2() {
   }
 }
 
-  function reveal() {
-    if (window.innerWidth < 960) {
-      var reveals = document.querySelectorAll(".reveal");
-      for (var i=0; i< reveals.length; i++){
-        reveals[i].style.transform = "translateY(0px)";
-        reveals[i].style.opacity = 1;
-      }
-   }
-   else {
-    var reveals = document.querySelectorAll(".reveal");
-  
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 0;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 100;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
     }
-   }
-
   }
+}
 
   const scrollContent = document.querySelector('.scroll-content');
 

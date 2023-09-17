@@ -53,12 +53,22 @@
 
     <section id="nature">
       <div class="nature__wrapper">
-        <div class="nature__text">Carbon Neutral</div>
+        <div class="nature__text">
+          <h2 class="nature__text nature__h2">PROUDLY</h2>
+          <br />
+          <br />
+          Carbon Neutral
+        </div>
         <img src="./assets/for-the-planet-3.jpg" alt="" class="nature__img" />
       </div>
 
       <div class="nature__wrapper">
-        <div class="nature__text">Sustainable</div>
+        <div class="nature__text">
+          <h2 class="nature__text nature__h2">100%</h2>
+          <br />
+          <br />
+          Sustainable
+        </div>
         <img src="./assets/for-the-planet.jpg" alt="" class="nature__img" />
       </div>
     </section>
@@ -106,8 +116,8 @@
           make continued efforts to reduce them.
 
           <br /><br />
-          Our world is at a tipping point: it has never been more
-          crucial to reassess our impacts on the environment, as individuals and
+          Our world is at a tipping point: it has never been more crucial to
+          reassess our impacts on the environment, as individuals and
           organisations, and take actions to reduce or eliminate this impact.
           One of the most significant ways to do this is by reducing our carbon
           footprint.
@@ -247,9 +257,10 @@
 
   #nature {
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    height: 100%;
-    padding: 0em 10em 6em 10em;
+    height: fit-content;
+    padding: 6em 0em;
   }
 
   .nature__img {
@@ -257,11 +268,15 @@
     height: 100%;
     filter: brightness(60%);
     border-radius: 10px;
+    position: relative;
+    object-fit: cover;
+    max-height: 500px;
+    max-width: 500px;
   }
 
   .nature__wrapper:nth-child(2) {
     padding-left: 3em;
-    padding-right: 0;
+    padding-right: 0em;
   }
 
   .doing-our-bit {
@@ -271,8 +286,6 @@
   }
 
   .nature__wrapper {
-    padding: 0;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,12 +297,23 @@
   }
 
   .nature__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     z-index: 2;
-    margin: 0 auto;
+    height: fit-content;
+
     font-size: 3em;
     color: #fff;
     text-align: center;
+  }
+
+  .nature__h2 {
+    font-size: 0.8em;
+    font-weight: 100;
+    font-family: "CompactaBT";
+    color: #c5cf3e;
   }
 
   .planet-bg {
