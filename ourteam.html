@@ -27,7 +27,7 @@
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
     <section id="team">
-        <div class="text__wrapper">
+        <div class="under18__wrapper">
             <div class="text__wrapper">
               <h1 class="team__header">Meet the team</h1>
               <div class="underline "></div>
@@ -91,12 +91,12 @@
     <section id="director">
         <div class="director__wrapper">
             <div class="director__text--wrapper">
-            <h1 class="director__name reveal">Martijn, Managing Director</h1>
-            <h3 class="reveal">THE BOSS. THE MAN BEHIND IT ALL, OUR MANAGING DIRECTOR.</h3>
-            <img class="reveal" style="width: 100px; height: 100px; padding: 2em;" src="./assets/9degrees-logo-dark.svg" alt=""/>
+            <h1 class="director__name">Martijn, Managing Director</h1>
+            <h3 class="">THE BOSS. THE MAN BEHIND IT ALL, OUR MANAGING DIRECTOR.</h3>
+            <img class="" style="width: 100px; height: 100px; padding: 2em;" src="./assets/9degrees-logo-dark.svg" alt=""/>
         </div>
         <div class="director__text--wrapper ">
-        <iframe class="reveal" width="100%" height="230px" src="https://www.youtube-nocookie.com/embed/TGevNSAiKL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="" width="100%" height="230px" src="https://www.youtube-nocookie.com/embed/TGevNSAiKL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
         </div>
     </section>
@@ -133,9 +133,14 @@
         max-width: 300px;
     }
 
+    .pricing__sub-header{
+      font-size: 1.5em;
+    }
+
     p{
-        margin: 3em;
+        margin: 3em auto;
         padding: 0em 5em;
+        font-size: 1.25em; 
         
     }
 
@@ -167,6 +172,21 @@
         
     }
 
+
+    .under18__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    text-align: left;
+    padding: 2em 10em;
+    max-width: 1200px;
+  }
+
+
     .hand-wave{
         position: absolute;
         display: none;
@@ -182,6 +202,8 @@
         display: block;
 
     }
+
+
 
     @keyframes hand-gesture {
   0% {
@@ -329,6 +351,17 @@
             margin: 2em 0em;
         }
 
+        .director__wrapper{
+          display: flex;
+          height: fit-content;
+        }
+
+        .director__text--wrapper{
+          height: fit-content;
+          position: relative;
+          
+        }
+
 
         @keyframes hand-gesture {
   0% {
@@ -361,6 +394,7 @@
         }
 
         #director{
+          display: flex;
             height: fit-content;
         }
 
@@ -368,17 +402,33 @@
             height: fit-content;
             flex-direction: column;
             width: 100%;
+            padding: 0;
+            position: relative;
         }
 
         .director__text--wrapper{
+            height: fit-content;
             width: 100%;
-            height: 100%;
-            padding: 2em;
+            
+            padding: 0.5em;
         }
 
         .director__text--wrapper:nth-child(2){
             width: 100%;
             height: 100%;
+        }
+
+        .director__name{
+          margin: 0;
+        }
+
+        .director__text--wrapper img{
+          padding: 0;
+
+        }
+
+        .director__text--wrapper h3{
+          text-align: center;
         }
 
         @keyframes hand-gesture {

@@ -53,14 +53,27 @@
 
     <div class="safety__div">
       <h2 class="house__rules--text">Entry</h2>
-      <h3>
+      <h2 class="waiver__text">
+        $24 First Vist + full week of free access. 16+ only. <a class="link__hover-effect kids__link" href="">Learn more. </a>
+      </h2>
+      <h2 class="waiver__text">
+        $24 Standard Entry
+      </h2>
+      
+    </div>
 
+    <div class="safety__div">
+      <h2 class="house__rules--text">Shoe Hire</h2>
+      <h3 class="waiver__text">
+        $7 per session or free for your first visit 
+<br><br>
+        Read more about our climbing shoes <a class="link__hover-effect kids__link" href="./safety.html">house rules </a>
       </h3>
     </div>
   </section>
 
   <section id="first-visit-faq">
-    <h1 class="faq__header">FAQ for your first visit</h1>
+    <h1 class="faq__header">FAQ about your First Visit</h1>
     <h3 class="faq__sub-header">IF WE’VE MISSED YOUR QUESTION GIVE US A CALL OR SEND THROUGH AN EMAIL WITH ANYTHING YOU WOULD LIKE TO KNOW ABOUT
       BOULDERING AND 9 DEGREES.
     </h3>
@@ -211,18 +224,21 @@ We reserve the right to ask any dogs to leave at any time if they cannot behave 
     font-family: "Poppins", sans-serif;
     background-color: #ffc20e;
     padding: 0.25em;
-    margin: 0em 0em 1em 0em;
+    margin: 0em 0em 0.5em 0em;
     width: fit-content;
   }
 
   #waiver-first-visit {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
   }
 
   .waiver__text {
     font-size: 1.5em;
+    margin: 0.5em;
   }
 
   .safety__div {
@@ -233,12 +249,18 @@ We reserve the right to ask any dogs to leave at any time if they cannot behave 
     margin: 0em;
     padding: 0em 0.5em 0em 6em;
     margin-bottom: 3em;
-    width: 50%;
+    width: calc(50% - 10px);
     height: 100%;
+
+
+  }
+
+  .button__white:hover .waiver__link {
+    color: #fff;
   }
 
   .safety__div:nth-child(2) {
-    padding-left: 0.5em;
+    
     padding-right: 6em;
   }
 
@@ -297,6 +319,7 @@ We reserve the right to ask any dogs to leave at any time if they cannot behave 
     padding: 1em;
     text-align: center;
   }
+
 
 
 

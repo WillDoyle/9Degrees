@@ -26,7 +26,7 @@
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
     <section id="safety-landing">
-      <div class="safety__wrapper">
+      <div class="text__wrapper">
         <h1 class="team__header">Safety In Bouldering</h1>
         <div class="underline"></div>
 
@@ -41,7 +41,7 @@
       </div>
 
       <div class="safety__container">
-        <div class="safety__div reveal">
+        <div class="safety__div">
           <h2 class="house__rules--text">House Rules</h2>
           <ol class="house__rules">
             <li>
@@ -59,7 +59,7 @@
             <li>8. Climbing shoes must be worn</li>
           </ol>
         </div>
-        <div class="safety__div reveal">
+        <div class="safety__div">
           <figure class="safety__img--wrapper">
             <img class="safety__img" src="./assets/safety-img-1.jpg" alt="" />
           </figure>
@@ -271,6 +271,27 @@
     width: 70%;
   }
 
+
+  .text__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    text-align: center;
+    padding: 2em 10em;
+    max-width: 1200px;
+    }
+
+    p{
+        margin: 3em auto;
+        padding: 0em 5em;
+        font-size: 1.25em; 
+        
+    }
+
   .house__rules {
     display: flex;
     align-items: start;
@@ -283,6 +304,7 @@
   }
 
   .waiver {
+    position: relative;
     font-weight: 700;
   }
 
@@ -467,6 +489,9 @@
   }
 
   @media screen and (max-width: 600px) {
+    .team__header{
+      font-size: 3em;
+    }
     .safety__wrapper {
       padding: 0 1em;
     }
@@ -479,8 +504,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 2em;
+      padding: 0em;
       text-align: center;
+      height: 100%;
     }
 
     .house__rules--text {
@@ -508,12 +534,13 @@
       width: 33%;
     }
 
+   
     .house__rules {
       font-size: 1.2em;
     }
 
     .risk__list {
-      padding: 0;
+      padding: 1em;
     }
 
     li {
@@ -523,7 +550,28 @@
 
     .safety__div {
       padding: 0 1em;
+      position: relative;
+      
     }
+
+    #waiver .safety__container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    #safety-video{
+      position: relative;
+      height: 100%;
+      padding: 0;
+    }
+
+    .waiver__link {
+      position: relative;
+    font-weight: 300;
+    transition: all 300ms ease-in-out;
+  }
 
     #waiver .safety__div:nth-child(2) {
       padding: 1em;
@@ -531,8 +579,8 @@
     }
 
     #waiver .safety__div:nth-child(1) {
-      padding: 1em;
-      margin: 5em;
+      padding: 0em;
+      margin: 0em;
       width: 100%;
     }
   }

@@ -36,7 +36,7 @@
     </section>
     <section id="location__header">
         <div class="location__container">
-            <figure>
+            <figure class="location__images">
                 <div class="right-images">
                     <img src="./assets/routesetting-1.jpg" alt="Large Image" class="left-image reveal">
                     <img src="./assets/routesetting-2.jpg" alt="Large Image" class="left-image reveal">
@@ -86,7 +86,7 @@
 
     <section id="location__header">
         <div class="location__container">
-            <figure>
+            <figure class="location__images">
                 <div class="right-images">
                     <h1 class="reveal">Its all about joy!</h1>
                     <h2 class="reveal">SO, BY NOW, YOU'VE PROBABLY HEARD THAT BOULDERING MAKES YOU HAPPY, RIGHT? </h2>
@@ -182,10 +182,20 @@
     }
 
     p {
-        font-size: 1.2em;
+        
         padding: 2em 0;
         line-height: 1.5;
         color: #242424;
+    }
+
+
+    .pricing__sub-header{
+      font-size: 1.5em;
+    }
+
+    p{
+        font-size: 1.25em; 
+        
     }
 
 
@@ -320,6 +330,10 @@
         font-weight: 400;
     }
 
+    .location__header{
+        margin: 0 auto;
+    }
+
 
 
 
@@ -358,5 +372,50 @@
         
     }
 
-    @media screen and (max-width: 600px) {}
+    @media screen and (max-width: 600px) {
+        #location{
+            margin-top: 0;
+
+        }
+
+        .location__container{
+            margin-bottom: 0em;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        #location__header{
+            position: relative;
+            padding: 0;
+            height: fit-content;
+        }
+
+        .location__images{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .location__images{
+            position: relative;
+        }
+
+        .right-images{
+            padding: 0;
+            height: fit-content;
+            position: relative;
+        }
+
+        .right-image{
+            position: relative;
+            width: 100%;
+            height: 10%;
+        
+        }
+
+        #routesetting__question{
+            flex-direction: column;
+            padding: 0;
+        }
+    }
 </style>
