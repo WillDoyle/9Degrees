@@ -575,9 +575,14 @@ button:hover {
   transition: all 200ms ease-in-out;
 }
 
+.button__link:hover{
+  color: white;
+  opacity: 1;
+}
+
 /* Primary action section */
 #primary-action {
-  display: flex;
+    display: flex;
 
   height: 80vh;
 }
@@ -598,7 +603,7 @@ button:hover {
   margin-top: 12px;
   max-width: 600px;
   line-height: 1.7;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .text__wrapper {
@@ -815,11 +820,13 @@ figure{
 .timeline__location:hover,
 .timeline__location:hover .timeline__img {
   flex-basis: 25%;
-  border-radius: 20px;
+  
 }
 
 .timeline__location:hover .timeline__img {
   opacity: 0.2;
+  border-radius: 0px;
+
 }
 
 .timeline__location:hover .timeline__header,
@@ -831,7 +838,7 @@ figure{
 .timeline__img {
   height: 100%;
   width: 100%;
-
+  flex-grow:100;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -1263,6 +1270,7 @@ details[open] > *:not(summary) {
 }
 
 .banner__img {
+  display: flex;
   height: 100%;
   width: 100%;
   background-image: url("./assets/first-time.jpg");
@@ -1272,7 +1280,9 @@ details[open] > *:not(summary) {
   opacity: 1;
   z-index: -1;
   filter: brightness(0.5) blur(1px);
+  flex-grow:100;
 }
+
 
 .banner__wrapper {
   height: 100%;
@@ -1297,8 +1307,13 @@ details[open] > *:not(summary) {
   text-align: center;
   margin: 0 auto;
   background-color: #fff;
+  border: 2px solid #242424;
   margin-top: 48px;
   color: #242424;
+}
+
+.banner__button:hover{
+  border: 2px solid #fff;
 }
 
 .banner__sub-header {
