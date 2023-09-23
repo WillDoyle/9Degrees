@@ -589,9 +589,7 @@ button:hover {
 
 .first__time--wrapper {
   display: flex;
-
   flex-direction: column;
-
   float: left;
   text-align: left;
   width: 50%;
