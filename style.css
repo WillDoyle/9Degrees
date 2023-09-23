@@ -598,6 +598,7 @@ button:hover {
   margin-top: 12px;
   max-width: 600px;
   line-height: 1.7;
+  font-size: 1.5em;
 }
 
 .text__wrapper {
@@ -1178,8 +1179,8 @@ details[open] > *:not(summary) {
 }
 
 #yoga p,
-h1,
-h2 {
+#yoga h1,
+#yoga h2 {
   color: #242424;
   line-height: 1.5;
   text-align: left;
@@ -2288,6 +2289,8 @@ footer {
       justify-content: center;
       align-items: center;
       width: 100%;
+      
+
     }
 
     h1 {
