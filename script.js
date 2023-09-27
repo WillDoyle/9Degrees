@@ -179,6 +179,7 @@ function reveal() {
   const scrollContent = document.querySelector('.scroll-content');
 
 function cafeScroll(){
+  if(location.pathname=="/cafe.html"){
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
     const containerRect = scrollContent.getBoundingClientRect();
@@ -191,6 +192,7 @@ function cafeScroll(){
       scrollContent.classList.remove('show');
     }
     }
+  }
 
 window.addEventListener("scroll", cafeScroll);
   
