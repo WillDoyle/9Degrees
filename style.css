@@ -298,6 +298,11 @@ img {
   width: 100%;
   margin: 0px 0px 16px 0px;
 }
+.underline {
+  max-width: 300px;
+  background-color: #000;   
+  
+}
 
 .white {
   color: #fff;
@@ -1401,6 +1406,7 @@ details[open] > *:not(summary) {
   position: relative;
   display: block;
   font-size: 1.5em;
+  
 }
 
 .events__section--header {
@@ -1409,6 +1415,7 @@ details[open] > *:not(summary) {
   color: #242424;
   max-height: 200px;
   white-space: nowrap;
+  padding-bottom: 0.25em;
 }
 
 .event__text--wrapper {
