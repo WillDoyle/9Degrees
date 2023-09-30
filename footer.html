@@ -18,6 +18,7 @@
       src="https://kit.fontawesome.com/5082f4a3a0.js"
       crossorigin="anonymous"
     ></script>
+    
     <script src="script.js"></script>
   </head>
 
@@ -51,13 +52,83 @@
           <img class="footer__image" src="./assets/1-percent-of-profits-6504a3e1bc086.webp" alt="" />
         </ul>
         <p class="footer__text">Copyright &copy; 9 Degrees 2023</p>
+        <button onclick="topFunction()" id="up-btn" class="go-up"><span class="up-text">Up</span></button>
       </div>
     </div>
     </div>
   </footer>
+<style>
+  .go-up{
+    position: absolute;
+  right: 0;
+  left: 0;
+  top: 60%;
+  bottom: 0;
+  padding: 3em auto;
+  margin: 10em auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-image: url('./assets/down-arrow.svg');
+    background-repeat: no-repeat;
+    
+    transform: rotate(180deg);
+    text-align: center;
+    background-position: center center;
+  }
 
+  #up-btn{
+    transition: all 300ms ease-in-out;
+  }
+
+  .up-text{
+    opacity: 0;
+    position: absolute;
+    
+    transform: translate(0px, -10px) rotate(180deg);
+    color: #000;
+    transition: all 300ms ease-in-out;
+  }
+
+
+  .go-up:hover .up-text{
+    position: absolute;
+    opacity: 1;
+    transform: translate(-70px, -10px) rotate(180deg);
+    color: #000;
+
+    
+  }
+
+  @media screen and (max-width: 932px) {
+.go-up{
+  position: fixed;
+  border: none;
+  left: 80%;
+  top: 80%;
+  height: 80px;
+  opacity: 0.5;
+  width: 80px;
+  border-radius: 50%;
+  
+}
+
+.go-up:hover{
+  border: none;
+}
+
+.up-text{
+  display: none;
+}
+
+
+  }
+
+</style>
   
 </body>
+
 </html>
+
 
   

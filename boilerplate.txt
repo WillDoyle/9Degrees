@@ -26,6 +26,17 @@
       <!-- NAV BAR  -->
       <script id="replace_with_navbar" src="nav.js"></script>
     </header>
+     <div class="under18__wrapper">
+        <div class="text__wrapper">
+            <h1 class="team__header">Pricing</h1>
+            <div class="underline "></div>
+            
+            <h2 class="pricing__sub-header" style="color: #293833">DAY PASSES & MEMBERSHIPS</h2>
+            <p>Student and concession card holders are welcome to a 9% discount on all of these prices with a valid ID.
+
+            </p>
+            </div>
+            </div>
 
     <script id="replace_with_footer" src="footer.js"></script>
     <script src="script.js"></script>
@@ -41,10 +52,89 @@
   margin-top: 10em;
     }
 
+        .text__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+        text-align: center;
+        max-width: 1200px;
+    }
+    .under18__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    text-align: left;
+    padding: 2em 10em;
+    height: fit-content;
+    max-width: 1200px;
+  }
+
+   .pricing__sub-header{
+      font-size: 1.5em;
+    }
+
+    p{
+        margin: 3em auto;
+        padding: 0em 5em;
+        font-size: 1.25em; 
+        
+    }
+
+    .button__white {
+        width: 100%;
+        max-width: 30%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 2em;
+       
+    }
+
+    .button__link {
+        display: block;
+        position: relative;
+        white-space: normal;
+        flex-wrap: nowrap;
+        width: 100%;
+        font-weight: 500;
+        padding: 1em;
+        text-align: center; /* Center the text within the button */
+        text-decoration: none; /* Remove underlines from the link */
+         /* Button background color */
+        color: #333333; /* Text color */
+        
+        transition: all 300ms ease-in-out;
+        
+    }
+
     @media screen and (max-width: 932px) {
     }
 
 
       @media screen and (max-width: 600px) {
+        .under18__wrapper{
+            padding: 0.5em;
+
+        }
+
+        p{
+            padding: 0.5em;
+        }
+
+        .button__white{
+            max-width: 90%;
+        }
+
+      
       }
 </style>

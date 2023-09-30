@@ -60,8 +60,8 @@
 
         <div class="newbie__wrapper">
           <div class="newbie__offer">
-          <h2 class="newbie__header"><span style="background-color: #cfff4e; line-height: 1.5; text-align: left;">First visit? </span></h2>
-          <h3 class="newbie__sub-header">Welcome to 9 Degrees
+          <h2 class="newbie__header"><span style="background-color: #cfff4e; line-height: 1.5; text-align: left;">First visit?</span></h2>
+          <h3 class="newbie__sub-header">First week on us, after your first session
           </h3>
           <br><br>
 
@@ -81,7 +81,7 @@
       </div>
       </div>
 
-      <button class="button__white"><a class="button__link" href="memberships.html">View all pricing</a></button>
+      <button class="button__white"><a class="button__link" href="memberships.html">View all offers</a></button>
 
     </section>
     <script id="replace_with_footer" src="footer.js"></script>
@@ -120,6 +120,7 @@
   
   overflow: hidden;
   position: relative;
+  
   border-right: 4px solid #fff;
 }
 
@@ -166,6 +167,9 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  
+  filter: brightness(60%);
+
 }
 
 .promo__spinner{
@@ -310,6 +314,8 @@
         
     }
 
+   
+
 
     @media screen and (max-width: 932px) {
 
@@ -321,6 +327,8 @@
         text-align: left;
       }
 
+      
+
       h2{
         display: block;
       }
@@ -328,6 +336,7 @@
       .under18__wrapper{
         margin-bottom: 0;
       }
+
     }
 
 
@@ -337,6 +346,28 @@
             padding: 0.5em;
 
         }
+
+        .newbie__img{
+          max-height: 200px;
+          width: 100%;
+          filter: blur(2px) brightness(60%);
+          border: none;
+        }
+
+        .newbie__offer:nth-child(odd){
+          border-right: none;
+        }
+
+        .newbie__wrapper{
+          border: none;
+        }
+
+        .newbie__offer:nth-child(even){
+        
+        height: auto;
+        width: 100%;
+        
+      }
 
         p{
             padding: 0.5em;

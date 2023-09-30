@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    </style>
+    <title>9 Degrees Bouldering</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/9degrees-logo-dark.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/5082f4a3a0.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+
+  <body>
+    <header>
+      <!-- NAV BAR  -->
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+    <section id="classes">
+     <div class="under18__wrapper">
+        <div class="text__wrapper">
+            <h1 class="team__header">Classes</h1>
+            <div class="underline "></div>
+            
+            <h2 class="pricing__sub-header" style="color: #293833">TAKE YOUR CLIMBING TO THE NEXT LEVEL
+            </h2>
+<p>Something for everyone, whether it’s your first time on the wall or you’re looking to fine tune what you already know
+
+</p>
+            
+            </div>
+            </div>
+        </section>
+
+        <section id="climbing-qts">
+            <div class="newbie__wrapper">
+                <div class="newbie__offer">
+                <h2 class="newbie__header"><span style="background-color: #383838; line-height: 1.5; text-align: left;">CLIMBINGQTS X 9D
+                </span></h2>
+                <h3 class="newbie__sub-header">WE’RE PROUD TO BE PARTNERING WITH CLIMBINGQTS, ARC’TERYX AND GOOD GRIP TO OFFER A SERIES OF CLIMBING CLASSES FOR OUR LGBTQ+ COMMUNITY
+
+                </h3>
+                <br><br>
+      
+                <p class="newbie__para">Classes are at 6pm and run once a month at our Waterloo location with alternating beginner and intermediate classes. 
+      
+                </p>
+                
+            </div>
+            <div class="newbie__offer">
+                <img class="newbie__img" src="./assets/climbingqts.jpeg" alt="">
+              
+      
+      
+            </div>
+            </div>
+        
+            <div class="newbie__wrapper">
+                <div class="newbie__offer">
+                <h2 class="newbie__header"><span style="background-color: #383838; line-height: 1.5; text-align: left;">BOULDER BASICS
+                </span></h2>
+                <h3 class="newbie__sub-header">AN INTRODUCTION TO BOULDERING FOR THOSE NEW TO THE SPORT
+
+                </h3>
+                <br><br>
+      
+                <p class="newbie__para">6:30 - 8pm, run twice a month on Tuesday evenings at our Waterloo location by coach and gym manager Jack Masel. 
+                 <br><br>   $35 on top of your entry with a maximum of 6 participants.
+
+
+                </p>
+                
+            </div>
+            <div class="newbie__offer">
+                <img class="newbie__img" src="./assets/boulder basics.jpeg" alt="">
+              
+      
+      
+            </div>
+            </div>
+        </section>
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&family=Roboto:wght@300;500;700;900&display=swap");
+
+    #classes{
+        display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 10em;
+    }
+
+        .text__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+        text-align: center;
+        max-width: 1200px;
+    }
+    .under18__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    text-align: left;
+    padding: 2em 10em;
+    height: fit-content;
+    max-width: 1200px;
+  }
+
+   .pricing__sub-header{
+      font-size: 1.5em;
+    }
+
+    p{
+        margin: 3em auto;
+        padding: 0em 5em;
+        font-size: 1.25em; 
+        
+    }
+
+    .button__white {
+        width: 100%;
+        max-width: 30%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 2em;
+       
+    }
+
+    .button__link {
+        display: block;
+        position: relative;
+        white-space: normal;
+        flex-wrap: nowrap;
+        width: 100%;
+        font-weight: 500;
+        padding: 1em;
+        text-align: center; /* Center the text within the button */
+        text-decoration: none; /* Remove underlines from the link */
+         /* Button background color */
+        color: #333333; /* Text color */
+        
+        transition: all 300ms ease-in-out;
+        
+    }
+
+    .newbie__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  border-top: 3px solid #fff;
+  
+  
+}
+
+.newbie__wrapper:nth-child(3){
+  flex-direction: row-reverse;
+}
+
+.newbie__offer {
+  width: 50%; /* 50% minus margin to create two columns */
+   /* Add margin between rows */
+  
+  overflow: hidden;
+  position: relative;
+  
+  border-right: 4px solid #fff;
+  border-top: 1px solid #242424;
+}
+
+.newbie__offer:nth-child(odd){
+    padding: 8vw;
+    background-color: #fff;
+    border-right: 4px solid #fff;
+    
+    
+}
+
+.newbie__wrapper:nth-child(2){
+  flex-direction: row-reverse;
+}
+
+.newbie__header {
+  text-align: left;
+  font-size: 3em;
+  color:  #f43c34;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 1em 0em;
+  
+  padding:0em;
+  
+}
+
+.newbie__wrapper:nth-child(2) .newbie__header{
+    
+    color: #fff;
+}
+
+.newbie__para{
+    margin: 0;
+    padding: 0;
+    color: #383838;
+}
+
+.newbie__sub-header{
+    font-size: 1.75em;
+    color: #383838;
+    
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+
+.newbie__img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  
+  filter: brightness(100%);
+
+}
+
+
+    @media screen and (max-width: 932px) {
+    }
+
+
+      @media screen and (max-width: 600px) {
+        .under18__wrapper{
+            padding: 0.5em;
+
+        }
+
+        p{
+            padding: 0.5em;
+        }
+
+        .button__white{
+            max-width: 90%;
+        }
+
+      
+      }
+</style>

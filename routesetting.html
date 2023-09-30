@@ -36,14 +36,14 @@
     </section>
     <section id="location__header">
         <div class="location__container">
-            <figure class="location__images">
-                <div class="right-images">
-                    <img src="./assets/routesetting-2.jpg" alt="Large Image" class="left-image reveal">
-                </div>
+            <figure class="image-container">
+
+                <img src="./assets/routesetting-2.jpg" alt="Large Image" class="left-image reveal">
+
                 <div class="right-images">
                     <img src="./assets/routesetting-3.jpg" alt="Small Image 1" class="right-image reveal">
                     <img src="./assets/routesetting-4.jpg" alt="Small Image 2" class="right-image reveal">
-                    <iframe class="reveal" width="560" height="315"
+                    <iframe id="routesetting-video" class="reveal" width="560" height="315"
                         src="https://www.youtube.com/embed/6x9sUTH-I88?si=eOy2m3pJbEjTNTug" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -81,6 +81,7 @@
                 for you to send and something for you to work on!
             </p>
         </div>
+
     </section>
 
     <section id="location__header">
@@ -181,20 +182,20 @@
     }
 
     p {
-        
+
         padding: 2em 0;
         line-height: 1.5;
         color: #242424;
     }
 
 
-    .pricing__sub-header{
-      font-size: 1.5em;
+    .pricing__sub-header {
+        font-size: 1.5em;
     }
 
-    p{
-        font-size: 1.25em; 
-        
+    p {
+        font-size: 1.25em;
+
     }
 
 
@@ -214,6 +215,11 @@
         max-width: 1400px;
         width: 100%;
         margin: 0 auto;
+        background-image: url('./assets/climbing\ holds.svg');
+        background-position: center;
+        background-size: 150%;
+
+        background-repeat: repeat;
     }
 
     .routesetting__wrapper {
@@ -241,7 +247,11 @@
 
     .routesetting__wrapper:nth-child(1) {
         background-color: #242424;
-        border-radius: 50px;
+        border-radius: 15px;
+    }
+
+    .routesetting__wrapper:nth-child(2) {
+        background: #fff;
     }
 
     #routesetting__question .routesetting__wrapper:nth-child(1) p,
@@ -254,13 +264,11 @@
         font-weight: 300;
     }
 
-    .routesetting__wrapper:hover {
-        transform: translateY(15px);
-    }
+
 
     .routesetting__wrapper:nth-child(2) {
         border: 3px solid black;
-        border-radius: 50px;
+        border-radius: 15px;
 
 
     }
@@ -291,6 +299,8 @@
 
     }
 
+
+
     /* Style for team members */
     .setting__team--wrapper {
         display: flex;
@@ -299,8 +309,16 @@
         align-items: flex-start;
     }
 
+    .right-images h1 {
+        margin-bottom: 1em;
+    }
+
+    .right-images h2 {
+        font-size: 1.5em;
+    }
+
     .team__wrapper {
-        width: 15%;
+        width: 30%;
         /* Each team member takes up 25% of the row */
         box-sizing: border-box;
         padding: 0 10px;
@@ -317,7 +335,7 @@
         height: 100%;
         /* Set the height to 100% to fill the available space */
         object-fit: cover;
-        border-radius: 50px;
+        border-radius: 15px;
         /* To make the images circular with a border radius of 50px */
     }
 
@@ -329,7 +347,7 @@
         font-weight: 400;
     }
 
-    .location__header{
+    .location__header {
         margin: 0 auto;
     }
 
@@ -362,76 +380,126 @@
         margin-top: 10em;
     }
 
+    .image-container {
+      display: flex;
+      flex-direction: row; /* Use flexbox to arrange the images */
+    }
+
     .left-image {
-        max-width: 100%;
+      flex: 1; /* Make the large image take up 1/3 of the available space */
+      margin-right: 10px; /* Add some margin for spacing */
     }
 
-    @media screen and (max-width: 932px) {
-
-    
+    .right-images {
+      flex: 2; /* Make the container of smaller images take up 2/3 of the available space */
+      display: flex; /* Use flexbox for the smaller images */
+      flex-direction: column; /* Stack smaller images vertically */
     }
+
+    .right-image {
+      margin-bottom: 10px; /* Add margin to separate the smaller images vertically */
+    }
+
+    .location__container {
+        max-width: 800px;
+
+    }
+
+    @media screen and (max-width: 932px) {}
 
     @media screen and (max-width: 600px) {
-        #location{
+        #location {
             margin-top: 10em;
 
         }
 
-        .location__container{
+        .location__container {
             margin-bottom: 0em;
             max-width: 100%;
             width: 100%;
         }
 
-        .right-images{
+        .right-images {
             width: 100%;
         }
 
-        #location__header{
+        #location__header {
             position: relative;
             padding: 0;
             height: fit-content;
         }
 
-        .location__images{
+        .location__images {
             display: flex;
             flex-direction: column;
 
         }
 
-        .location__images{
+        .location__images {
             position: relative;
         }
 
-        .right-images{
+        .right-images {
             padding: 0;
             height: fit-content;
             position: relative;
         }
 
-        .right-image{
+        .right-image {
             position: relative;
             width: 100%;
-            height: 10%;
-        
+            height: 100%;
+            object-fit: cover;
+            transform-origin: center center;
+
         }
 
-        #routesetting__question{
+        #routesetting-video {
+            width: 100%;
+        }
+
+        #routesetting__question {
             flex-direction: column;
             padding: 0;
+            height: fit-content;
         }
 
-        .setting__team--wrapper{
+        .setting__team--wrapper {
             display: flex;
             flex-wrap: wrap;
 
         }
 
-        .team__wrapper{
+        .routesetting__wrapper h1 {
+            font-size: 2em;
+        }
+
+        .routesetting__wrapper {
+            padding: 1em;
+            margin: 0.5em;
+            margin-bottom: 2em;
+            border-radius: 0px;
+        }
+
+        .routesetting__wrapper p {
+            font-size: 1em;
+        }
+
+        .right-images h1 {
+            margin-bottom: 1em;
+        }
+
+        .right-images p {
+            font-size: 1em;
+        }
+
+
+
+        .team__wrapper {
             width: 100%;
         }
 
-        #location__header{
+        #location__header {
             padding: 1em;
         }
     }

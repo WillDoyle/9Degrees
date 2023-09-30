@@ -1503,6 +1503,7 @@ footer {
   text-align: center;
   border-top: 1px solid black;
   padding: 24px 0px 24px 0px;
+  height: fit-content;
 }
 
 .gym__links {
@@ -1523,10 +1524,15 @@ footer {
 }
 
 .footer__image {
+  
   padding: 16px 0;
   max-width: 1200px;
   width: 50%;
   margin: 0 auto;
+}
+
+.footer__images{
+  position: relative;
 }
 
 .footer__text {
@@ -2122,6 +2128,7 @@ footer {
     padding: 0;
     width: 100%;
   }
+
 
   /* MOBILE LOCATION PAGES STYLING  */
 
