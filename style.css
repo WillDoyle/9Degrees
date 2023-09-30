@@ -536,7 +536,7 @@ button:hover {
 .down__arrow {
   font-size: 48px;
   position: absolute;
-  margin-top: 17.5em;
+  margin-top: 90vh;
   color: #000;
   z-index: 3;
   text-shadow: #000;
