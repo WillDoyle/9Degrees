@@ -10,6 +10,8 @@ const mediaQuery = window.matchMedia('(min-width: 768px)')
 console.log(document.getElementById("landing-video").style.transform);
 
 if(location.pathname=="/index.html"){
+  console.log('on index.html');
+
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
     document.getElementById("landing-video").style.transform = "scale(1)";
@@ -45,6 +47,7 @@ if(location.pathname=="/index.html"){
 }
   else{
     //Do nothing
+    console.log('not on index.html');
   }
 }
 
