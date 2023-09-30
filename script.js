@@ -4,7 +4,6 @@ let navOpen = false;
 
 function scrollFunction() {
 // Check if the media query is true
-console.log('hi');
 
 // Get the current pathname
 const currentPath = window.location.pathname;
@@ -17,7 +16,7 @@ if (currentPath.endsWith(expectedPath)) {
   // Your code for when the pathname matches
   console.log("Path matches:", currentPath);
 
-  console.log('on index.html');
+ 
 
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
@@ -54,7 +53,8 @@ if (currentPath.endsWith(expectedPath)) {
 }
   else{
     //Do nothing
-    console.log('not on index.html');
+    console.log("Path doesn't match:", currentPath);
+
   }
 }
 
