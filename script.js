@@ -12,7 +12,7 @@ if(location.pathname=="/index.html"){
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
     document.getElementById("landing-video").style.transform = "scale(1)";
-
+    console.log(document.getElementById("landing-video").style.transform);
         //Text
         document.getElementById("title").style.scale = "1";
         document.getElementById("subtitle").style.fontSize = "28px";
@@ -28,6 +28,7 @@ if(location.pathname=="/index.html"){
   } else {
     document.getElementById("landing-video").style.transform = "scale(0.5)";
     document.getElementById("landing-video").style.filter = "blur(2px) brightness(50%)";
+    console.log(document.getElementById("landing-video").style.transform);
 
 
     //Text
