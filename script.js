@@ -1,4 +1,4 @@
-window.onscroll = function() {scrollFunction(), scrollFunction2()};
+window.onscroll = function() {scrollFunction()};
 
 let navOpen = false;
 
@@ -7,7 +7,7 @@ function scrollFunction() {
   // Create a media condition that targets viewports at least 768px wide
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 // Check if the media query is true
-console.log(document.getElementById("landing-video").style.transform);
+console.log('hi');
 
 if(location.pathname=="/index.html"){
   console.log('on index.html');
@@ -156,18 +156,6 @@ function smoothNavTransition(){
 }
 
 
-
-function scrollFunction2() {
-  if(location.pathname=="/index.html"){
-
-  
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      document.getElementById("difficulty").style.scale = "1";
-    } else {
-      document.getElementById("difficulty").style.scale = "1";
-    }
-  }
-}
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
