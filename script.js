@@ -3,13 +3,20 @@ window.onscroll = function() {scrollFunction()};
 let navOpen = false;
 
 function scrollFunction() {
-  
-  // Create a media condition that targets viewports at least 768px wide
-const mediaQuery = window.matchMedia('(min-width: 768px)')
 // Check if the media query is true
 console.log('hi');
 
-if(location.pathname=="/index.html"){
+// Get the current pathname
+const currentPath = window.location.pathname;
+
+// Define the expected pathname you want to match
+const expectedPath = "/index.html";
+
+// Check if the current pathname ends with the expected pathname
+if (currentPath.endsWith(expectedPath)) {
+  // Your code for when the pathname matches
+  console.log("Path matches:", currentPath);
+
   console.log('on index.html');
 
   if (window.innerWidth > 960) {
