@@ -54,7 +54,6 @@ if (currentPath.endsWith(expectedPath)) {
   else{
     //Do nothing
     console.log("Path doesn't match:", currentPath);
-
   }
 }
 

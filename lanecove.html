@@ -40,13 +40,13 @@
   </section>
   <section id="location__header">
     <div class="location__container">
-      <figure>
+      <div class="image-container">
         <img src="./assets/lanecove-1.jpg" alt="Large Image" class="left-image">
         <div class="right-images">
           <img src="./assets/lanecove-2.jpg" alt="Small Image 1" class="right-image">
           <img src="./assets/lanecove-3.jpg" alt="Small Image 2" class="right-image">
         </div>
-      </figure>
+      </div>
   </section>
   <section id="location__details">
     <div class="location__info">
@@ -160,6 +160,25 @@
     line-height: 1.5;
     color: #242424;
   }
+
+  .image-container {
+      display: flex; /* Use flexbox to arrange the images */
+    }
+
+    .left-image {
+      flex: 1; /* Make the large image take up 1/3 of the available space */
+      margin-right: 10px; /* Add some margin for spacing */
+    }
+
+    .right-images {
+      flex: 2; /* Make the container of smaller images take up 2/3 of the available space */
+      display: flex; /* Use flexbox for the smaller images */
+      flex-direction: column; /* Stack smaller images vertically */
+    }
+
+    .right-image {
+      margin-bottom: 10px; /* Add margin to separate the smaller images vertically */
+    }
   
   .yoga__wrapper button{
     border: 1px solid black;

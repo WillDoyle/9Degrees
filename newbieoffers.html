@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
+    </style>
+    <title>9 Degrees Bouldering</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/9degrees-logo-dark.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/5082f4a3a0.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+
+  <body>
+    <header>
+      <!-- NAV BAR  -->
+      <script id="replace_with_navbar" src="nav.js"></script>
+    </header>
+    <section id="newbieoffer">
+        <div class="under18__wrapper">
+            <div class="text__wrapper">
+                <h1 class="team__header">Newbie Offers</h1>
+                <div class="underline "></div>
+                
+                <h2 class="pricing__sub-header" style="color: #293833">A FEW SPECIAL OFFERS TO ANYONE NEW TO 9 DEGREES</h2>
+            </div>
+        </div>
+
+        <div class="newbie__wrapper">
+            <div class="newbie__offer">
+            <h2 class="newbie__header"><span style="background-color: #cfff4e; line-height: 1.5; text-align: left;">2 weeks, unlimited climbing </span></h2>
+            <h3 class="newbie__sub-header">$49 — The perfect option for new climbers</h3>
+            <br><br>
+
+            <p class="newbie__para">If you're new to climbing and want to see if 9 Degrees is your climbing home, this offer is tailored for you. 
+                
+                <br><br>It's available to first-time members and customers who haven't purchased a 10-pass at 9 Degrees before.</p>
+            
+        </div>
+        <div class="newbie__offer">
+            <img class="newbie__img" src="./assets/two-week-trial-6504a512caed9.webp" alt="">
+            <div class="promo__spinner">
+              
+                <h2 class="promo__text">2 WEEKS</h2>
+                <h2 class="promo__text2">2 WEEKS</h2>
+        </div>
+
+        <div class="newbie__offer">
+            <h2 class="newbie__header">Two Week Trial</h2>
+        </div>
+        <div class="newbie__offer">
+            <h2 class="newbie__header">Two Week Trial</h2>
+        </div>
+        </div>
+    </section>
+    <script id="replace_with_footer" src="footer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&family=Roboto:wght@300;500;700;900&display=swap");
+
+    #newbieoffer{
+        display: flex;
+  flex-direction: column;
+  height: fit-content;
+  margin-top: 10em;
+    }
+
+    .underline{
+        max-width: 300px;
+        margin: 1em;
+
+    }
+
+    .newbie__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  
+  
+}
+
+.newbie__offer {
+  flex-basis: calc(50% - 10px); /* 50% minus margin to create two columns */
+   /* Add margin between rows */
+  
+  overflow: hidden;
+  position: relative;
+  
+  
+}
+
+.newbie__offer:nth-child(odd){
+    padding: 8vw;
+    background-color: #AC9160;
+    border-right: 4px solid #fff;
+    
+}
+
+.newbie__header {
+  text-align: left;
+  font-size: 3em;
+  color: #FFEECB;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  margin: 1em 0em;
+  
+  padding:0em;
+  color: #242424;
+}
+
+.newbie__para{
+    margin: 0;
+    padding: 0;
+    color: #FFEECB;
+}
+
+.newbie__sub-header{
+    font-size: 1.75em;
+    color: #FFEECB;
+    
+    font-weight: 400;
+    margin-bottom: 2em;
+}
+
+
+.newbie__img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.promo__spinner{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cfff4e;
+  position: absolute;
+  
+  animation: rotate 2s infinite ease;
+}
+
+.promo__text, .promo__text2{
+  font-size: 2em;
+  text-align: center;
+}
+
+.promo__text{
+  animation: text1 1s infinite;
+}
+
+.promot__text2{
+  animation: text2 1s infinite;
+}
+
+
+@keyframes text1{
+  0% {
+    display: block;
+  }
+
+  50%{
+    display: none;
+
+  }
+
+  100%{
+    display: block;
+  }
+}
+
+@keyframes text2{
+  0% {
+    opacity: 0;
+  }
+
+  50%{
+    display: block;
+
+  }
+
+  100%{
+    display: none;
+  }
+}
+
+
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  50%{
+    transform: rotate(180deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
+   
+
+
+    .under18__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    text-align: left;
+    padding: 2em 10em;
+    height: fit-content;
+    max-width: 1200px;
+    margin-bottom: 10em;
+  }
+
+  .text__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+        text-align: center;
+        max-width: 1200px;
+    }
+
+    p{
+        margin: 3em auto;
+        padding: 0em 5em;
+        font-size: 1.25em; 
+        
+    }
+
+
+    @media screen and (max-width: 932px) {
+    }
+
+
+      @media screen and (max-width: 600px) {
+
+        .under18__wrapper{
+            padding: 0.5em;
+
+        }
+
+        p{
+            padding: 0.5em;
+        }
+
+      }
+</style>
