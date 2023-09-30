@@ -8,7 +8,7 @@ function scrollFunction() {
 const mediaQuery = window.matchMedia('(min-width: 768px)')
 // Check if the media query is true
 
-if(location.pathname=="/index.html"){
+if(location.pathname=="index.html"){
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
     document.getElementById("landing-video").style.transform = "scale(1)";
