@@ -4,7 +4,6 @@ window.onscroll = function() {upFunction()};
 
 let navOpen = false;
 
-console.log(mybutton);
 // When the user scrolls down 20px from the top of the document, show the button
 
 
@@ -100,10 +99,19 @@ function toggleMenu(element) {
 
   // Toggle the visibility of the sub-links using the visible class
   subLinks.classList.toggle('hidden');
-  
+
   // Toggle the 'active' class on the clicked button
   element.classList.toggle('active');
-  
+
+  // Check if the menu is open
+  var isMenuOpen = document.querySelector('.mobile--nav__links:not(.hidden)');
+
+  // Toggle the 'menu-open' class on the body to disable main content scrolling
+  if (isMenuOpen) {
+    document.body.classList.add('menu-open');
+  } else {
+    document.body.classList.remove('menu-open');
+  }
 }
 
 
@@ -127,48 +135,41 @@ function setNavStyle(){
  }
 
  function toggleNavBarOpacity() {
-  var mobileNavLinks = document.querySelectorAll('.mobile--nav__link');
-  var mobileNavLinksAfter = document.querySelectorAll('.mobile--nav__link::after');
-  var darkOverlay = document.getElementById('dark__overlay::after');
-  var navBar = document.getElementById('mobile--navBar');
+  var mobileNavLinks = document.getElementById('mobile--navBar');
+  var mainContent = document.querySelector('.main-content'); // Reference to your main content container
   var anchors = document.querySelectorAll('.mobile--nav__link--anchor');
-  if (navBar.style.opacity === '' || navBar.style.opacity === '1') {
-    navOpen = false;
-    navBar.style.zIndex = '-7';
-    navBar.style.opacity = '0';
-    navBar.style.height = '0';
-    navBar.style.transform = "translate(-40px, 0px)";
 
-    
+  if (mobileNavLinks.style.opacity === '' || mobileNavLinks.style.opacity === '1') {
+    // Mobile navigation menu is currently open
+    mobileNavLinks.style.zIndex = '-7';
+    mobileNavLinks.style.opacity = '0';
+    mobileNavLinks.style.height = '0';
+    mobileNavLinks.style.transform = "translate(-40px, 0px)";
 
     for (var i = 0; i < anchors.length; i++) {
       anchors[i].style.height = '0';
       anchors[i].style.opacity = '0';
-      anchors[i].style.zIndex = -3;  
-      
+      anchors[i].style.zIndex = -3;
     }
-    setTimeout(smoothNavTransition, 300);
-    
-  } else {
-    navOpen = true;
-    navBar.style.zIndex = '3';
-    navBar.style.opacity = '1';
-    navBar.style.transform = "translate(0, 0px)"; 
-    navBar.style.height = 'auto';
 
-    for (var i = 0; i < mobileNavLinks.length; i++) {
-      mobileNavLinks[i].style.height = '100%';
-      
-    }
+    // Add a CSS class to disable scrolling of the main content
+    document.body.classList.remove('menu-open');
+  } else {
+    // Mobile navigation menu is currently closed
+    mobileNavLinks.style.zIndex = '3';
+    mobileNavLinks.style.opacity = '1';
+    mobileNavLinks.style.transform = "translate(0, 0px)";
+    mobileNavLinks.style.height = 'auto';
+
     for (var i = 0; i < anchors.length; i++) {
-      anchors[i].style.height = '10vh';
+      anchors[i].style.height = 'auto';
       anchors[i].style.opacity = '1';
       anchors[i].style.zIndex = 3;
-      console.log('set Zindex to -3');
     }
-    
-  }
 
+    // Remove the CSS class to enable scrolling of the main content
+    document.body.classList.add('menu-open');
+  }
 }
 
 function smoothNavTransition(){
@@ -222,6 +223,6 @@ function cafeScroll(){
 
 window.addEventListener("scroll", cafeScroll);
   
-  window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", reveal);
 
   

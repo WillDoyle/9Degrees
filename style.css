@@ -425,16 +425,19 @@ button:hover {
   align-items: center;
   flex-direction: column;
   top: 30px;
-  left: 50px;
-  padding: 0 16px;
-  max-width: 300px;
+  left: 0em;
+
+  
+  max-width: 450px;
+  margin: 0em 0em;
   width: 100%;
   z-index: 1;
   text-align: left;
   transition: all 0.3s ease-in-out;
   opacity: 0;
-  white-space: nowrap;
-  transform: translateX(-50px);
+  
+  
+  
   background-color: white;
 }
 
@@ -449,10 +452,33 @@ button:hover {
 }
 
 .sub__links {
+  width: 80%;
   font-weight: 500;
   font-size: 0.8em;
-  white-space: normal;
+
+  padding: 0em 0.5em;
+  margin: 0.5em 0em;
+  
+  
+
+  white-space: break-word;
   text-align: center;
+  
+}
+
+.pricing .nav__sub--links{
+  width: 150%;
+  transform: translate(-1.5em, -0.75em);
+  
+  background: #fff;
+  overflow-wrap: break-word;
+}
+
+.sub__links:hover{
+  background-color: #c7c7c7;
+  color: #000;
+  border-radius: 15px;
+  opacity: 1;
 }
 
 .locations:hover .nav__sub--links,
@@ -1637,20 +1663,55 @@ footer {
   .pricing:hover .plus::after {
     opacity: 0;
   }
+  .main-content {
+    /* Style your main content container */
+    position: relative;
+    z-index: 1;
+    background-color: #fff; /* Adjust as needed */
+    /* Other styles for your main content */
+  }
+  
 
   .mobile--nav__links {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed; /* Change from absolute to fixed */
     top: 0;
     left: 0;
     margin-top: 78px;
     padding: 24px 24px 24px 42px;
     background: #fff;
     width: 100vw;
-    overflow-y: scroll;
+    max-height: 100vh; /* Set a maximum height for the menu */
+    overflow-y: auto; /* Use auto to show scrollbar when content exceeds the max-height */
+    -webkit-overflow-scrolling: touch;
     transition: all 300ms ease-in-out;
     border-bottom: 1px solid black;
+  }
+
+  .padding{
+    padding: 0;
+    
+  }
+
+  .mobile--nav__links {
+    /* Style your mobile navigation menu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* Adjust as needed */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    opacity: 0;
+    /* Other styles for your mobile navigation menu */
+  }
+  
+  
+  /* Add this CSS to hide the main content when the menu is open */
+  body.menu-open {
+    overflow: hidden;
   }
 
   @keyframes fadeInAndExpand {
@@ -1701,10 +1762,12 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 2.5em;
+    position: relative;
     display: inline-block;
-    overflow: hidden;
+    
     font-weight: 500;
     line-height: 1;
+    margin: 0.25em 0em;
   }
 
   .mobile--sub__links {
@@ -1741,7 +1804,7 @@ footer {
     max-width: 800px;
     top: 0;
     left: 0;
-
+    
     height: 0;
     background: #c7c7c7;
   }
@@ -2317,7 +2380,7 @@ footer {
       justify-content: start;
       align-items: flex-start;
       flex-wrap: wrap;
-      height: 60%;
+      height: 100%;
       flex: 0 0 100%;
       padding: 0;
       margin: 0;
