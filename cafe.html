@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="./style.css" />
     <style>
+      
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700;1,900&display=swap");
     </style>
     <title>9 Degrees Bouldering</title>
@@ -56,31 +57,53 @@
     </section>
 
     <section id="fuel">
-      <div class="selection">
-        <div class="fuel__img"></div>
+     
+        
+   
+       
         <div class="fuel__section">
-          <div class="fuel__promo">
+        
+          <div class="fuel__img"></div>
+          <div class="fuel__promo" id="coffee" onmouseenter="changeBackgroundImage(id)" onmouseleave="resetBackgroundImage();">
+
             <h1>Specialty Coffee</h1>
-            <p>
+
+           
+            <p id="coffeeid">
               Enjoy Sample Coffee’s Pacemaker blend in our NSW gyms and Coast
               Coffee’s Midnight Runner in 9D Enoggera, QLD. Available every day
               until late with options for regular, oat, almond and soy milk.
             </p>
+
+            <img class="fuel__arrow" src="./assets/angle-down-solid.svg" alt="">
+            
+
+
           </div>
 
-          <div class="fuel__promo">
+          
+
+          <div class="fuel__promo" id="energybars"  onmouseenter="changeBackgroundImage(id)" onmouseleave="resetBackgroundImage();">
             <h1>Your favourite energy bars</h1>
-            <p>
+            <p id="energyid">
               Fuel up on energy bars from Clif, Ridiculously Delicious & Blue
               Dinosaur
             </p>
+
+            <img class="fuel__arrow" src="./assets/angle-down-solid.svg" alt="">
+            
+
           </div>
-          <div class="fuel__promo">
+          <div class="fuel__promo" id="icecream" onmouseenter="changeBackgroundImage(id)" onmouseleave="resetBackgroundImage();">
             <h1>Treats from Pat and Stick</h1>
-            <p>
+            <p id="icecreamid">
               Dangerously good. Grab a cookie to dip in your coffee or an ice
               cream sandwich on a hot day. Vegan and oat milk options available.
             </p>
+
+            <img class="fuel__arrow" src="./assets/angle-down-solid.svg" alt="">
+            
+
           </div>
         </div>
       </div>
@@ -136,14 +159,10 @@
   }
 
   .quote__img {
-    max-width: 100px;
-    width: 100%;
-    max-height: 100px;
-    height: 100%;
-    min-width: 100px;
-    min-height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 15px;
     margin-top: 3em;
   }
 
@@ -209,6 +228,7 @@
     height: 100%; /* Add this line */
     display: flex; /* Add this line */
     align-items: center; /* Add this line */
+    
   }
 
   .container {
@@ -220,6 +240,8 @@
     position: relative;
     width: 100%;
   }
+
+  
 
   .scrollable-container {
     /* Styles for the scrollable container, e.g., setting a max-height or overflow */
@@ -274,9 +296,42 @@
     align-items: center; /* Center vertically */
     width: auto; /* Adjust width as needed */
     height: auto; /* Adjust height as needed */
-    color: #2a2626;
+    color: #fff;
+    -webkit-text-stroke: 3px black;
     text-align: center;
     font-weight: 900;
+  }
+
+  .fuel__arrow{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 50%;
+    margin-top: 3em;
+    transition: all 300ms ease-in-out;
+    
+  }
+
+  .fuel__promo:hover .fuel__arrow{
+    transform: rotate(0deg);
+    background-color: #d3f258;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+
+  }
+
+  #icecream:hover .fuel__arrow{
+    background-color: #fff;
   }
 
   .scroll-content.show {
@@ -290,13 +345,21 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    flex-wrap: wrap;
     height: 100%;
+    flex-direction: row;
+  }
+
+  #coffeeid, #energyid, #icecreamid{
+    display: absolute;
+    transition: all 300ms ease-in-out;
   }
 
   #fuel {
+    display: flex;
+    flex-direction: row;
     position: relative;
     height: fit-content;
+  
   }
 
 
@@ -314,52 +377,74 @@
     position: absolute;
     height: 100%;
     width: 100%;
-
     z-index: -1;
-    filter: brightness(0.4);
+    filter: brightness(0.3);
+    transition: all 300ms ease-in-out;
     background-image: url("./assets/cafe-2.jpg");
-    background-position: 50% 50%;
+    
     background-size: cover;
   }
+
+  
+
+
 
   .fuel__section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Adjust this based on your layout preferences */
-  padding: 3em 5em;
+  /* Adjust this based on your layout preferences */
+  padding: 0em 0em;
+  margin: 0;
   width: 100%;
-  height: fit-content;
+  justify-content: space-between;
 }
 
 .fuel__promo {
   display: flex;
   flex-direction: column;
-  padding: 3em;
+  position: relative;
   text-align: center;
-  border-radius: 15px;
-  margin: 2em 1%;
-  width: calc(33.33% - 2em); /* Adjust the width to create equal columns */
-  max-width: 500px;
-  background-color: #333; /* Added background color for better visibility */
-  color: #fff;
-  transition: all 300ms ease-in-out;
-  border: 1px solid transparent;
+  padding: 2em;
+  width: calc(33.33%); /* Adjust the width to create equal columns and account for padding */
+  min-height: 700px;
+  /* Added background color for better visibility */
+  background-color: transparent;
+  color: white;
+  border-right: 3px solid white;
+  z-index: 2;
 }
 
-.fuel__promo:hover{
-  background: #333333ae;
-  border: 1px solid white;
+.fuel__promo:nth-child(4){
+  border-right: none;
 }
 
+
+
+
+  
+
+.fuel__header{
+  color: white;
+  font-size: 10em;
+  margin-top: 0.5em;
+}
 .fuel__promo h1 {
   font-size: 3em;
-  color: #fea941;
+  color: white;
   margin: 1em 0;
   text-align: center;
+  font-stretch: expanded;
+  font-weight: 600;
+  text-align: left;
+  
 }
+
 
 .fuel__promo p {
   margin: 0; /* Reset margin to ensure consistent alignment */
+  padding-right: 0em;
+  font-size: 1.5em;
+  text-align: left;
 }
 
   #pizza {

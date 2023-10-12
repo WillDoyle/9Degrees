@@ -308,6 +308,27 @@ img {
   color: #fff;
 }
 
+.graphics__animation--container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#svg-graphic {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.text {
+  height: 100vh;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
 /* NAVIGATION BAR */
 
 nav {
@@ -1391,9 +1412,15 @@ details[open] > *:not(summary) {
 }
 
 .button__white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 18px;
   background-color: #ffffff00;
   color: #242424;
+  padding: 1em 0em;
+
+  z-index: 2;
   border: 1px solid rgb(5, 5, 5);
 }
 
