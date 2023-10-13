@@ -337,14 +337,21 @@ nav {
   left: 50%;
   transform: translate(-50%, 0);
   height: 80px;
-  max-width: 1000px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 12px;
-  background-color: #ffffff;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.749);
+box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(20px);
+border: 1px solid rgba(255, 255, 255, 0.16);
+  
+  
   z-index: 3;
 }
 
@@ -441,12 +448,14 @@ button:hover {
   display: flex;
   visibility: hidden;
   line-height: 2;
+ 
 
   position: absolute;
   align-items: center;
   flex-direction: column;
   top: 30px;
   left: 0em;
+  
 
   
   max-width: 450px;
@@ -456,10 +465,8 @@ button:hover {
   text-align: left;
   transition: all 0.3s ease-in-out;
   opacity: 0;
+  background: white;
   
-  
-  
-  background-color: white;
 }
 
 .locations,
@@ -489,14 +496,14 @@ button:hover {
 
 .pricing .nav__sub--links{
   width: 150%;
-  transform: translate(-1.5em, -0.75em);
+  transform: translate(-1.5em);
   
   background: #fff;
   overflow-wrap: break-word;
 }
 
 .sub__links:hover{
-  background-color: #c7c7c7;
+  background-color: aliceblue;
   color: #000;
   border-radius: 15px;
   opacity: 1;
