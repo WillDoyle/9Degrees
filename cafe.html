@@ -66,7 +66,7 @@
           <div class="fuel__img"></div>
           <div class="fuel__promo" id="coffee" onmouseenter="changeBackgroundImage(id)" onmouseleave="resetBackgroundImage();">
 
-            <h1>Specialty Coffee</h1>
+            <h1 class="fuel__header">Specialty Coffee</h1>
 
            
             <p id="coffeeid">
@@ -84,7 +84,7 @@
           
 
           <div class="fuel__promo" id="energybars"  onmouseenter="changeBackgroundImage(id)" onmouseleave="resetBackgroundImage();">
-            <h1>Your favourite energy bars</h1>
+            <h1 class="fuel__header">Your favourite energy bars</h1>
             <p id="energyid">
               Fuel up on energy bars from Clif, Ridiculously Delicious & Blue
               Dinosaur
@@ -95,7 +95,7 @@
 
           </div>
           <div class="fuel__promo" id="icecream" onmouseenter="changeBackgroundImage(id)" onmouseleave="resetBackgroundImage();">
-            <h1>Treats from Pat and Stick</h1>
+            <h1 class="fuel__header">Treats from Pat and Stick</h1>
             <p id="icecreamid">
               Dangerously good. Grab a cookie to dip in your coffee or an ice
               cream sandwich on a hot day. Vegan and oat milk options available.
@@ -359,6 +359,7 @@
     flex-direction: row;
     position: relative;
     height: fit-content;
+    margin: 10em 0em 0em;
   
   }
 
@@ -392,6 +393,7 @@
   .fuel__section {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   /* Adjust this based on your layout preferences */
   padding: 0em 0em;
   margin: 0;
@@ -403,6 +405,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  flex-direction: column;
   text-align: center;
   padding: 2em;
   width: calc(33.33%); /* Adjust the width to create equal columns and account for padding */
@@ -411,6 +414,7 @@
   background-color: transparent;
   color: white;
   border-right: 3px solid white;
+  transition: all 300ms ease-in-out;
   z-index: 2;
 }
 
@@ -422,12 +426,6 @@
 
 
   
-
-.fuel__header{
-  color: white;
-  font-size: 10em;
-  margin-top: 0.5em;
-}
 .fuel__promo h1 {
   font-size: 3em;
   color: white;
@@ -452,7 +450,6 @@
     flex-direction: row;
     justify-content: center;
     padding: 0em 0em;
-    border-top: 1px solid #242424;
   }
 
   .pizza__wrapper {
@@ -541,6 +538,73 @@
   }
 
   @media screen and (max-width: 932px) {
+
+  .fuel__section{
+      flex-direction: column;
+      text-align: left;
+  }
+
+  .fuel__promo h1{
+    align-items: normal;
+    margin: 1em 2em;
+  }
+
+  .fuel__promo p{
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pizza__img{
+    max-height: fit-content;
+  }
+
+  .pizza__wrapper{
+    text-align: left;
+  }
+
+  .pizza__wrapper p{
+    text-align: left;
+  }
+
+  .fuel__arrow{
+    top: 8%;
+  }
+
+  .fuel__promo:hover .fuel__arrow{
+    top: 65%;
+    
+  }
+
+  .fuel__header{
+    transition: all 300ms ease-in-out;
+  }
+
+  .fuel__promo:hover .fuel__header{
+    margin: 1em 0em 0.5em;
+  }
+
+  #pizza{
+      flex-direction: column;
+    }
+
+  .pizza__wrapper:nth-child(1), .pizza__wrapper:nth-child(2){
+    width: 100%;
+  }
+
+  .fuel__promo{
+    width: 100%;
+    min-height: 350px;
+    text-align: left;
+    align-items: flex-start;
+    border-bottom: 3px solid white;
+    border-right: none;
+
+  }
+
+  .fuel__promo:nth-child(4){
+    border-bottom: none;
+  }
   }
 
   @media screen and (max-width: 600px) {
@@ -557,7 +621,7 @@
 
     .fuel__section{
       width: 100%;
-      padding: 1em;
+      padding: 0em;
       flex-direction: column;
       margin: 0;
     }
@@ -565,8 +629,38 @@
     .fuel__promo{
       width: 100%;
       padding: 3em 0.5em;
-      margin: 1em 0em;
-      margin-bottom: 2em;
+      margin: 0;
+      overflow: hidden;
+      min-height: 500px;
+    }
+
+    .fuel__arrow{
+      top: 25%;
+    }
+
+    .fuel__promo:nth-child(3) .fuel__arrow{
+      top: 35%;
+    }
+
+    .fuel__promo:nth-child(3):hover .fuel__arrow{
+      top: 60%;
+    }
+
+    .fuel__promo h1{
+      margin: 0.5em 0em;
+      width: 100%;
+      word-wrap: break-word;
+    }
+
+    
+
+    .fuel__promo p{
+      margin: 0;
+      padding: 0;
+    }
+
+    .fuel__promo:hover .fuel__header{
+      margin: 0.5em 0em;
     }
 
     .selection{
@@ -584,6 +678,7 @@
     .pizza__wrapper, .pizza__wrapper:nth-child(1), .pizza__wrapper:nth-child(2){
       width: 100%;
     }
+    
 
     .pizza__img{
       max-height: 500px;
