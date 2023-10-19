@@ -39,16 +39,18 @@
             <figure class="image-container">
 
                 <img src="./assets/routesetting-2.jpg" alt="Large Image" class="left-image reveal">
+                <img src="./assets/routesetting-3.jpg" alt="Small Image 1" class="left-image reveal">
 
-                <div class="right-images">
-                    <img src="./assets/routesetting-3.jpg" alt="Small Image 1" class="right-image reveal">
+            </figure>
+            <figure class="image-container">
+
                     <img src="./assets/routesetting-4.jpg" alt="Small Image 2" class="right-image reveal">
                     <iframe id="routesetting-video" class="reveal" width="560" height="315"
                         src="https://www.youtube.com/embed/6x9sUTH-I88?si=eOy2m3pJbEjTNTug" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
-                </div>
+                
             </figure>
     </section>
 
@@ -215,7 +217,6 @@
         max-width: 1400px;
         width: 100%;
         margin: 0 auto;
-        background-image: url('./assets/climbing\ holds.svg');
         background-position: center;
         background-size: 150%;
 
@@ -246,20 +247,17 @@
     }
 
     .routesetting__wrapper:nth-child(1) {
-        background-color: #242424;
         border-radius: 15px;
+        background: #fff;
+        border: 1px solid #ccc;
+        color: #242424;
     }
 
     .routesetting__wrapper:nth-child(2) {
         background: #fff;
     }
 
-    #routesetting__question .routesetting__wrapper:nth-child(1) p,
-    #routesetting__question .routesetting__wrapper:nth-child(1) h1 {
-        color: white;
-
-    }
-
+   
     #routesetting__question p {
         font-weight: 300;
     }
@@ -267,7 +265,7 @@
 
 
     .routesetting__wrapper:nth-child(2) {
-        border: 3px solid black;
+        border: 1px solid #ccc;
         border-radius: 15px;
 
 
@@ -381,13 +379,17 @@
     }
 
     .image-container {
-      display: flex;
-      flex-direction: row; /* Use flexbox to arrange the images */
+        flex: 1;
+        padding: 20px;
+        margin: 5px;
     }
 
     .left-image {
       flex: 1; /* Make the large image take up 1/3 of the available space */
-      margin-right: 10px; /* Add some margin for spacing */
+      margin-bottom: 10px;
+      width: 100%;
+      object-fit: cover;
+      max-width: 100%;
     }
 
     .right-images {
@@ -401,7 +403,8 @@
     }
 
     .location__container {
-        max-width: 800px;
+        display: flex;
+        flex-direction: row;
 
     }
 

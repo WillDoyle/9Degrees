@@ -1,4 +1,3 @@
-window.onscroll = function() {scrollFunction()};
 window.onscroll = function() {upFunction()};
 // Get the button:
 
@@ -50,6 +49,10 @@ if (currentPath.endsWith(expectedPath)) {
     console.log(document.getElementById("landing-video").style.transform);
         //Text
         document.getElementById("title").style.scale = "1";
+        document.getElementById("navBar").style.maxWidth = "100%";
+        console.log(document.getElementById("navBar").style.maxWidth);
+
+
         document.getElementById("subtitle").style.fontSize = "28px";
         document.getElementById("title").style.padding = "0px 0";
         document.getElementById("subtitle").style.padding = "0px 0";
@@ -64,6 +67,7 @@ if (currentPath.endsWith(expectedPath)) {
     document.getElementById("landing-video").style.transform = "scale(0.5)";
     document.getElementById("landing-video").style.filter = "blur(2px) brightness(50%)";
     console.log(document.getElementById("landing-video").style.transform);
+    document.getElementById("navBar").style.maxWidth = "800px";
 
 
     //Text
@@ -376,7 +380,7 @@ function cafeScroll(){
   }
 
 window.addEventListener("scroll", cafeScroll);
-  
+window.addEventListener("scroll", scrollFunction);
 window.addEventListener("scroll", reveal);
 
   

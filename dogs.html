@@ -212,6 +212,31 @@
   @media screen and (max-width: 932px) {
     .dogs__info {
       max-height: 100%;
+      flex-direction: column;
+    }
+
+    .dogs__text, .dogs__img, .dog__img{
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .dogs__img{
+      max-height: 300px;
+
+    }
+
+    .dog__img{
+      object-position: center 10%;
+
+    }
+
+    .dogs__info:nth-child(2) .dog__img{
+      object-position: center 40%;
+    }
+
+
+    .divider{
+      display: none;
     }
   }
 
