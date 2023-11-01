@@ -300,8 +300,7 @@ img {
 }
 .underline {
   max-width: 300px;
-  background-color: #000;   
-  
+  background-color: #000;
 }
 
 .white {
@@ -345,17 +344,16 @@ nav {
   align-items: center;
   padding: 0 12px;
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.749);
-box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(20px);
--webkit-backdrop-filter: blur(20px);
-border: 1px solid rgba(255, 255, 255, 0.16);
-  
-  
+  background: rgba(255, 255, 255, 0.749);
+  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
   z-index: 3;
 }
 
-#navBar{
+#navBar {
   transition: all 300ms ease-in-out;
 }
 
@@ -452,16 +450,13 @@ button:hover {
   display: flex;
   visibility: hidden;
   line-height: 2;
- 
 
   position: absolute;
   align-items: center;
   flex-direction: column;
   top: 30px;
   left: 0em;
-  
 
-  
   max-width: 450px;
   margin: 0em 0em;
   width: 100%;
@@ -470,7 +465,6 @@ button:hover {
   transition: all 0.3s ease-in-out;
   opacity: 0;
   background: white;
-  
 }
 
 .locations,
@@ -490,23 +484,20 @@ button:hover {
 
   padding: 0em 0.5em;
   margin: 0.5em 0em;
-  
-  
 
   white-space: break-word;
   text-align: center;
-  
 }
 
-.pricing .nav__sub--links{
+.pricing .nav__sub--links {
   width: 150%;
   transform: translate(-1.5em);
-  
+
   background: #fff;
   overflow-wrap: break-word;
 }
 
-.sub__links:hover{
+.sub__links:hover {
   background-color: aliceblue;
   color: #000;
   border-radius: 15px;
@@ -547,7 +538,7 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  border: 6em solid #fff;
+  border: 0em solid #fff;
   padding: 6em;
   width: 100%;
   height: 100%;
@@ -580,12 +571,11 @@ button:hover {
 }
 
 .landing__title {
-  font-size: 150px;
+  font-size: 7em;
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
     -1px -1px 0 #000;
   color: #fff;
   white-space: nowrap;
-  font-stretch: condensed;
   font-family: "Compacta", sans-serif;
   font-style: italic;
   transition: all 200ms ease-in-out;
@@ -638,14 +628,14 @@ button:hover {
   transition: all 200ms ease-in-out;
 }
 
-.button__link:hover{
+.button__link:hover {
   color: white;
   opacity: 1;
 }
 
 /* Primary action section */
 #primary-action {
-    display: flex;
+  display: flex;
 
   height: 80vh;
 }
@@ -771,7 +761,7 @@ button:hover {
   padding: 0 256px;
 }
 
-figure{
+figure {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -881,13 +871,11 @@ figure{
 .timeline__location:hover,
 .timeline__location:hover .timeline__img {
   flex-basis: 25%;
-  
 }
 
 .timeline__location:hover .timeline__img {
   opacity: 0.2;
   border-radius: 0px;
-
 }
 
 .timeline__location:hover .timeline__header,
@@ -899,7 +887,7 @@ figure{
 .timeline__img {
   height: 100%;
   width: 100%;
-  flex-grow:100;
+  flex-grow: 100;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -967,7 +955,7 @@ figure{
   transition: all 200ms ease-in-out;
 }
 
-.membership__option p{
+.membership__option p {
   font-size: 1.5em;
   line-height: 1.25;
 }
@@ -984,8 +972,8 @@ figure{
   background: #c1ff9d;
 }
 
-.membership__option figure{
-  width: 100%; 
+.membership__option figure {
+  width: 100%;
 }
 
 .membership__img {
@@ -1205,15 +1193,21 @@ details summary::-webkit-details-marker {
 }
 
 details[open] summary ~ * {
-  animation: sweep .5s ease-in-out;
+  animation: sweep 0.5s ease-in-out;
 }
 
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px; height: 0px;}
-  100%  {opacity: 1; margin-left: 0px; height: 100%;}
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+    height: 100%;
+  }
 }
-
-
 
 details > ol {
   padding: 1em 2em;
@@ -1258,7 +1252,6 @@ details[open] > *:not(summary) {
   color: #242424;
   line-height: 1.5;
   text-align: left;
-
 }
 
 #yoga h1 {
@@ -1347,9 +1340,8 @@ details[open] > *:not(summary) {
   opacity: 1;
   z-index: -1;
   filter: brightness(0.5) blur(1px);
-  flex-grow:100;
+  flex-grow: 100;
 }
-
 
 .banner__wrapper {
   height: 100%;
@@ -1379,7 +1371,7 @@ details[open] > *:not(summary) {
   color: #242424;
 }
 
-.banner__button:hover{
+.banner__button:hover {
   border: 2px solid #fff;
 }
 
@@ -1476,7 +1468,6 @@ details[open] > *:not(summary) {
   position: relative;
   display: block;
   font-size: 1.5em;
-  
 }
 
 .events__section--header {
@@ -1560,13 +1551,13 @@ details[open] > *:not(summary) {
 /* FOOTER */
 
 footer {
-  background-color: #ffffff;
+  background-color: #ececec;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-top: 1px solid black;
-  padding: 24px 0px 24px 0px;
+  border-top: 1px solid #ccc;
+  padding: 5em 0em;
   height: fit-content;
 }
 
@@ -1588,14 +1579,13 @@ footer {
 }
 
 .footer__image {
-  
   padding: 16px 0;
   max-width: 1200px;
   width: 50%;
   margin: 0 auto;
 }
 
-.footer__images{
+.footer__images {
   position: relative;
 }
 
@@ -1708,7 +1698,6 @@ footer {
     background-color: #fff; /* Adjust as needed */
     /* Other styles for your main content */
   }
-  
 
   .mobile--nav__links {
     display: flex;
@@ -1727,9 +1716,8 @@ footer {
     border-bottom: 1px solid black;
   }
 
-  .padding{
+  .padding {
     padding: 0;
-    
   }
 
   .mobile--nav__links {
@@ -1745,8 +1733,7 @@ footer {
     opacity: 0;
     /* Other styles for your mobile navigation menu */
   }
-  
-  
+
   /* Add this CSS to hide the main content when the menu is open */
   body.menu-open {
     overflow: hidden;
@@ -1802,7 +1789,7 @@ footer {
     font-size: 2.5em;
     position: relative;
     display: inline-block;
-    
+
     font-weight: 500;
     line-height: 1;
     margin: 0.25em 0em;
@@ -1842,7 +1829,7 @@ footer {
     max-width: 800px;
     top: 0;
     left: 0;
-    
+
     height: 0;
     background: #c7c7c7;
   }
@@ -1903,8 +1890,6 @@ footer {
     font-size: 2em;
   }
 
-
-
   .plus.active::before {
     content: "+";
     /* Active state */
@@ -1952,7 +1937,6 @@ footer {
 
   h1 {
     width: 100%;
-    
   }
 
   .promo__image {
@@ -2156,7 +2140,6 @@ footer {
   }
 
   .membership__background {
-
     background: #d8e4d1;
   }
 
@@ -2229,7 +2212,6 @@ footer {
     padding: 0;
     width: 100%;
   }
-
 
   /* MOBILE LOCATION PAGES STYLING  */
 
@@ -2308,7 +2290,6 @@ footer {
   h1,
   h2 {
     text-align: center;
-    
   }
   /* Extra small devices (phones, 600px and down) */
   @media screen and (max-width: 600px) {
@@ -2370,13 +2351,13 @@ footer {
       font-size: 2vw;
     }
 
-    .padding { 
+    .padding {
       padding: 0;
       margin: 0 auto;
       border: 0em solid #fff;
     }
 
-    #landing-video{
+    #landing-video {
       display: none;
     }
 
@@ -2389,20 +2370,14 @@ footer {
       height: 50vh;
     }
 
-    .text__wrapper--right{
+    .text__wrapper--right {
       display: flex;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+      padding: 0;
+      margin: 0;
+      width: 100%;
     }
 
-    
-
-    
-
-    
-
-    .row{
+    .row {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -2456,17 +2431,13 @@ footer {
       flex-wrap: wrap;
       height: auto;
       width: 100%;
-      
     }
 
-   
     .primary__paragraph {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
-      
-
     }
 
     h1 {

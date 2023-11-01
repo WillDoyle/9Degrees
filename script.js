@@ -49,7 +49,7 @@ if (currentPath.endsWith(expectedPath)) {
     console.log(document.getElementById("landing-video").style.transform);
         //Text
         document.getElementById("title").style.scale = "1";
-        document.getElementById("navBar").style.maxWidth = "100%";
+        document.getElementById("navBar").style.maxWidth = "800px";
         console.log(document.getElementById("navBar").style.maxWidth);
 
 
@@ -67,7 +67,7 @@ if (currentPath.endsWith(expectedPath)) {
     document.getElementById("landing-video").style.transform = "scale(0.5)";
     document.getElementById("landing-video").style.filter = "blur(2px) brightness(50%)";
     console.log(document.getElementById("landing-video").style.transform);
-    document.getElementById("navBar").style.maxWidth = "800px";
+    document.getElementById("navBar").style.maxWidth = "100%";
 
 
     //Text
