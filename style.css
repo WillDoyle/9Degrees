@@ -535,6 +535,21 @@ button:hover {
   transition: all 300ms ease-in-out;
 }
 
+.progressive img.reveal {
+  animation: progressiveReveal 1s linear;
+}
+
+@keyframes progressiveReveal {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .padding {
   position: absolute;
   top: 0;
@@ -580,6 +595,7 @@ button:hover {
   font-family: "Compacta", sans-serif;
   font-style: italic;
   transition: all 200ms ease-in-out;
+  letter-spacing: -0.05em;
 }
 
 .down__arrow {

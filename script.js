@@ -45,7 +45,7 @@ if (currentPath.endsWith(expectedPath)) {
 
   if (window.innerWidth > 960) {
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop < 100) {
-    document.getElementById("landing-video").style.transform = "scale(1)";
+    //document.getElementById("landing-video").style.transform = "scale(1)";
     console.log(document.getElementById("landing-video").style.transform);
         //Text
         document.getElementById("title").style.scale = "1";
@@ -64,7 +64,7 @@ if (currentPath.endsWith(expectedPath)) {
 
 
   } else {
-    document.getElementById("landing-video").style.transform = "scale(0.5)";
+    //document.getElementById("landing-video").style.transform = "scale(0.5)";
     document.getElementById("landing-video").style.filter = "blur(2px) brightness(50%)";
     console.log(document.getElementById("landing-video").style.transform);
     document.getElementById("navBar").style.maxWidth = "100%";
