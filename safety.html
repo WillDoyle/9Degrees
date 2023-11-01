@@ -61,7 +61,12 @@
         </div>
         <div class="safety__div">
           <figure class="safety__img--wrapper">
-            <img class="safety__img" src="./assets/safety-img-1.jpg" alt="" />
+            <img
+              class="safety__img"
+              src="./assets/safety-img-1.jpg"
+              alt=""
+              loading="lazy"
+            />
           </figure>
         </div>
       </div>
@@ -92,6 +97,7 @@
               class="safety__img"
               src="./assets/risks-of-falling.jpg"
               alt=""
+              loading="lazy"
             />
           </figure>
         </div>
@@ -119,7 +125,7 @@
             </a>
           </button>
 
-          <img class="qr__code" src="./assets/waiver-qr-code.png" alt="" />
+          <img class="qr__code" src="./assets/waiver-qr-code.png" alt="" loading="lazy"/>
         </div>
         <div class="safety__div">
           <h2 class="house__rules--text">Waiver</h2>
@@ -186,7 +192,7 @@
 
   .divider {
     height: 5px;
-    background-color:#deab13;
+    background-color: #deab13;
   }
 
   .safety__container:nth-child(2) {
@@ -207,7 +213,7 @@
     padding: 0em 3em;
   }
 
-  .risk__list li{
+  .risk__list li {
     list-style: circle;
   }
 
@@ -274,8 +280,7 @@
     width: 70%;
   }
 
-
-  .text__wrapper{
+  .text__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,14 +291,13 @@
     text-align: center;
     padding: 2em 10em;
     max-width: 1200px;
-    }
+  }
 
-    p{
-        margin: 3em auto;
-        padding: 0em 5em;
-        font-size: 1.25em; 
-        
-    }
+  p {
+    margin: 3em auto;
+    padding: 0em 5em;
+    font-size: 1.25em;
+  }
 
   .house__rules {
     display: flex;
@@ -434,8 +438,6 @@
       margin: 0em 0;
     }
 
-    
-
     #safety-landing .safety__container:nth-child(2) {
       flex-direction: column;
     }
@@ -495,7 +497,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    .team__header{
+    .team__header {
       font-size: 3em;
     }
     .safety__wrapper {
@@ -506,7 +508,9 @@
       padding: 0em 1em;
     }
 
-    .text__wrapper{padding: 0em;}
+    .text__wrapper {
+      padding: 0em;
+    }
 
     #safety-landing .safety__div:nth-child(1) {
       display: flex;
@@ -542,7 +546,6 @@
       width: 33%;
     }
 
-   
     .house__rules {
       font-size: 1.2em;
     }
@@ -559,17 +562,16 @@
     .safety__div {
       padding: 0 1em;
       position: relative;
-      
     }
 
-    #waiver .safety__container{
+    #waiver .safety__container {
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
     }
 
-    #safety-video{
+    #safety-video {
       position: relative;
       height: 100%;
       padding: 0;
@@ -577,9 +579,9 @@
 
     .waiver__link {
       position: relative;
-    font-weight: 300;
-    transition: all 300ms ease-in-out;
-  }
+      font-weight: 300;
+      transition: all 300ms ease-in-out;
+    }
 
     #waiver .safety__div:nth-child(2) {
       padding: 1em;

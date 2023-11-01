@@ -72,7 +72,12 @@
           </ul>
         </div>
         <div class="dogs__img">
-          <img class="dog__img" src="./assets/dogs-1.jpg" alt="" />
+          <img
+            class="dog__img"
+            src="./assets/dogs-1.jpg"
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
 
@@ -215,27 +220,26 @@
       flex-direction: column;
     }
 
-    .dogs__text, .dogs__img, .dog__img{
+    .dogs__text,
+    .dogs__img,
+    .dog__img {
       width: 100%;
       max-width: 100%;
     }
 
-    .dogs__img{
+    .dogs__img {
       max-height: 300px;
-
     }
 
-    .dog__img{
+    .dog__img {
       object-position: center 10%;
-
     }
 
-    .dogs__info:nth-child(2) .dog__img{
+    .dogs__info:nth-child(2) .dog__img {
       object-position: center 40%;
     }
 
-
-    .divider{
+    .divider {
       display: none;
     }
   }
