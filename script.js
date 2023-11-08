@@ -88,6 +88,48 @@ if (currentPath.endsWith(expectedPath)) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll(".lazy-image");
+
+  lazyImages.forEach((image) => {
+      const highResImageSrc = image.getAttribute("data-src");
+
+      const img = new Image();
+      img.src = highResImageSrc;
+
+      img.onload = function () {
+          image.src = highResImageSrc;
+          image.classList.add("loaded");
+      };
+  });
+
+  // Add a scroll event listener to trigger loading images when they are in the viewport
+  window.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+
+  lazyLoad();
+
+  function lazyLoad() {
+      lazyImages.forEach((image) => {
+          if (isInViewport(image) && !image.classList.contains("loaded")) {
+              image.src = image.getAttribute("data-src");
+              image.classList.add("loaded");
+          }
+      });
+  }
+
+  function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+          rect.bottom >= 0 &&
+          rect.right >= 0 &&
+          rect.top <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+  }
+});
+
 
 
 
