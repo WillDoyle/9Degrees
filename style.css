@@ -1143,6 +1143,7 @@ figure {
 }
 
 .image-container {
+  display: flex;
   position: relative;
   overflow: hidden;
 }
@@ -1272,7 +1273,7 @@ summary {
 summary:before {
   content: " ►";
   position: absolute;
-  top: 2rem;
+  top: 1.5rem;
   left: 1rem;
   transform: rotate(0);
   transform-origin: 50% 50%;
