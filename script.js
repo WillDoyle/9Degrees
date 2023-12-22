@@ -55,7 +55,6 @@ function scrollFunction() {
         document.getElementById("title").style.padding = "0px 0";
         document.getElementById("subtitle").style.padding = "0px 0";
         //Button
-        document.getElementById("down__arrow").style.color = "#000";
 
         document.getElementById("down__arrow").style.scale = "0.5";
         document.getElementById("landing-video").style.filter =
@@ -147,61 +146,18 @@ function toggleMenu(element) {
   }
 }
 
-function setNavStyle() {
-  var mobileNavLinks = document.querySelectorAll(".mobile--nav__link");
-  var mobileNavLinksAfter = document.querySelectorAll(
-    ".mobile--nav__link::after"
-  );
-  var navBar = document.getElementById("mobile--navBar");
-  var anchors = document.querySelectorAll(".mobile--nav__link--anchor");
-  navBar.style.zIndex = "-7";
-  navBar.style.opacity = "0";
-  navBar.style.height = "0";
-}
-
 function myFunction(x) {
   x.classList.toggle("change");
 }
 
 function toggleNavBarOpacity() {
   var mobileNavLinks = document.getElementById("mobile--navBar");
-  var mainContent = document.querySelector(".main-content"); // Reference to your main content container
   var anchors = document.querySelectorAll(".mobile--nav__link--anchor");
 
-  if (
-    mobileNavLinks.style.opacity === "" ||
-    mobileNavLinks.style.opacity === "1"
-  ) {
-    // Mobile navigation menu is currently open
-    mobileNavLinks.style.zIndex = "-7";
-    mobileNavLinks.style.opacity = "0";
-    mobileNavLinks.style.height = "0";
-    mobileNavLinks.style.transform = "translate(-40px, 0px)";
+  mobileNavLinks.classList.toggle("open-mobile-nav");
 
-    for (var i = 0; i < anchors.length; i++) {
-      anchors[i].style.height = "0";
-      anchors[i].style.opacity = "0";
-      anchors[i].style.zIndex = -3;
-    }
-
-    // Add a CSS class to disable scrolling of the main content
-    document.body.classList.remove("menu-open");
-  } else {
-    // Mobile navigation menu is currently closed
-    mobileNavLinks.style.zIndex = "3";
-    mobileNavLinks.style.opacity = "1";
-    mobileNavLinks.style.transform = "translate(0, 0px)";
-    mobileNavLinks.style.height = "auto";
-
-    for (var i = 0; i < anchors.length; i++) {
-      anchors[i].style.height = "auto";
-      anchors[i].style.opacity = "1";
-      anchors[i].style.zIndex = 3;
-    }
-
-    // Remove the CSS class to enable scrolling of the main content
-    document.body.classList.add("menu-open");
-  }
+  // Remove the CSS class to enable scrolling of the main content
+  document.body.classList.toggle("menu-open");
 }
 
 function smoothNavTransition() {

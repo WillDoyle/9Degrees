@@ -573,6 +573,7 @@ button:hover {
   width: 100%;
   height: 100%;
   z-index: 2;
+  filter: brightness(80%) blur(4px);
 }
 .video-foreground,
 .video-background iframe {
@@ -1763,11 +1764,16 @@ footer {
     align-self: center;
   }
 
+  #navBar {
+    max-width: 100%;
+  }
+
   .hidden {
     opacity: 0;
-    height: 0px;
+    height: 0px !important;
     visibility: hidden;
     transform: translate(-60px, 0);
+    transition: all 300ms ease-in-out;
   }
 
   .visible {
@@ -1799,6 +1805,7 @@ footer {
 
   .mobile--nav__sub--links {
     overflow: hidden;
+    height: auto;
     transition: all 300ms ease-in-out;
   }
 
@@ -1829,7 +1836,6 @@ footer {
     left: 0;
     margin-top: 78px;
     padding: 24px 24px 24px 42px;
-    background: #fff;
 
     max-height: 100vh; /* Set a maximum height for the menu */
     overflow-y: auto; /* Use auto to show scrollbar when content exceeds the max-height */
@@ -1847,18 +1853,44 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
-    background: #fff; /* Adjust as needed */
-    overflow-y: scroll;
+    right: 0;
+    height: 0px;
+
+    /* Adjust as needed */
+
     -webkit-overflow-scrolling: touch;
     opacity: 0;
+
     /* Other styles for your mobile navigation menu */
   }
 
   /* Add this CSS to hide the main content when the menu is open */
   body.menu-open {
-    overflow: hidden;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.749);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(30px);
+  }
+
+  .open-mobile-nav {
+    display: flex;
+    align-items: center;
+
+    opacity: 100% !important;
+    z-index: 3;
+    height: 100vh;
+
+    z-index: 5;
   }
 
   @keyframes fadeInAndExpand {
@@ -1912,6 +1944,7 @@ footer {
     font-size: 2.5em;
     position: relative;
     display: inline-block;
+    color: #242424;
 
     font-weight: 500;
     line-height: 1;
@@ -1923,6 +1956,7 @@ footer {
     font-weight: 500;
     font-size: 1.25em;
     margin-bottom: 0.5em;
+    color: #242424;
   }
 
   .show {
@@ -2479,6 +2513,11 @@ footer {
       padding: 0;
       margin: 0 auto;
       border: 0em solid #fff;
+      background-image: url(./assets/pngtree-background-of-abstract-granite-stone-surface-rendered-in-three-dimensions-picture-image_3653833.jpg);
+      background-size: cover;
+      height: 80vh;
+      z-index: -1;
+      transform: scale(1.2);
     }
 
     #landing-video {
@@ -2486,12 +2525,13 @@ footer {
     }
 
     #landing {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0em;
-      margin-top: 10em;
-      height: 50vh;
+      height: 80vh;
+      overflow: hidden;
     }
 
     .text__wrapper--right {
