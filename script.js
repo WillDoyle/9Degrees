@@ -272,6 +272,21 @@ reveals.forEach((elem) => {
   revealObserver.observe(elem);
 });
 
+const paddingBanner = document.querySelector("#banner");
+
+const animationObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("paddingTransition", entry.isIntersecting);
+      if (entry.isIntersecting) revealObserver.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.5,
+  }
+);
+animationObserver.observe(paddingBanner);
+
 // function reveal() {
 //   for (var i = 0; i < reveals.length; i++) {
 //     var windowHeight = window.innerHeight;
