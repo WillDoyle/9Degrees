@@ -610,7 +610,7 @@ button:hover {
   font-family: "Compacta", sans-serif;
   font-style: italic;
   transition: all 200ms ease-in-out;
-  letter-spacing: -0.05em;
+  letter-spacing: 0em;
 }
 
 .down__arrow {
